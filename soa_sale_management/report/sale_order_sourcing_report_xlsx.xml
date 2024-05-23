@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="sale_order_sourcing_xlsx" model="ir.actions.report">
+        <field name="name">Proforma Invoice Sourcing Excel</field>
+        <field name="model">sale.order</field>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">soa_sale_management.sale_order_sourcing_xlsx</field>
+        <field name="report_file">soa_sale_management.sale_order_sourcing_xlsx</field>
+        <field name="print_report_name">'Sale Order Sourcing (%s)' % (object.name)</field>
+    </record>
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--  TT200 Report  -->
+     <menuitem id="tt200_report_xlsx_root"
+            name="TT200 Reports (XLSX)"
+            sequence="4"
+            parent="account.menu_finance_reports"
+            groups="account.group_account_user,account.group_account_manager">
+        <menuitem id="menu_trial_balance_report"
+                name="Trial Balance Report"
+                sequence="50"
+                action="action_trial_balance_report"/>
+    </menuitem>
+
+
+    <menuitem id="menu_general_journal_report"
+            name="General Journal Report"
+            sequence="30"
+            parent="onnet_vas_base.tt200_report_root"
+            action="action_general_journal_report"/>
+
+    <menuitem id="menu_ledger_journal_report"
+            name="Ledger Journal Report"
+            sequence="40"
+            parent="onnet_vas_base.tt200_report_root"
+            action="action_ledger_journal_report"/>
+</odoo>
+

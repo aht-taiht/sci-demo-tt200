@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="asset_sell_form_account_asset_custom" model="ir.ui.view">
+        <field name="name">asset.sell.form.account_asset_custom</field>
+        <field name="model">account.asset.sell</field>
+        <field name="inherit_id" ref="account_asset.asset_sell_form"/>
+        <field name="arch" type="xml">
+            <field name="action" position="after">
+                <field name="x_receive_company_id" string="To Company"
+                       attrs="{'invisible': [('action','!=','transfer')],'required': [('action','=','transfer')]}"/>
+            </field>
+            <field name="gain_account_id" position="replace">
+                <field name="gain_account_id"
+                       attrs="{'invisible': ['|',('gain_or_loss', '!=', 'gain'),('action','=','transfer')], 'required': [('gain_or_loss', '=', 'gain'),('action','!=','transfer')]}"/>
+            </field>
+            <field name="loss_account_id" position="replace">
+                <field name="loss_account_id"
+                       attrs="{'invisible': ['|',('gain_or_loss', '!=', 'loss'),('action','=','transfer')],'required': [('gain_or_loss', '=', 'loss'),('action','!=','transfer')]}"/>
+            </field>
+            <button name="do_action" position="after">
+                <button name="action_transfer" string="Transfer" type="object" class="btn-primary"
+                        attrs="{'invisible': [('action', '!=', 'transfer')]}"/>
+            </button>
+        </field>
+    </record>
+
+</odoo>

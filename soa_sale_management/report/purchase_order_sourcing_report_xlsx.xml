@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="purchase_order_sourcing_xlsx" model="ir.actions.report">
+        <field name="name">Purchase Order Sourcing Excel</field>
+        <field name="model">purchase.order</field>
+        <field name="binding_model_id" ref="purchase.model_purchase_order"/>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">soa_sale_management.purchase_order_sourcing_xlsx</field>
+        <field name="report_file">soa_sale_management.purchase_order_sourcing_xlsx</field>
+        <field name="print_report_name">'Purchase Order Sourcing (%s)' % (object.name)</field>
+    </record>
+</odoo>

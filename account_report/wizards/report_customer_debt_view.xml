@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="customer_debt_report_wizard_form_view" model="ir.ui.view">
+            <field name="name">customer.debt.form</field>
+            <field name="model">customer.debt.report</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="from_date" required="1"/>
+                            <field name="to_date" required="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_print" string="Export" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="customer_debt_report_action" model="ir.actions.act_window">
+            <field name="name">Revenue Product Category Report</field>
+            <field name="res_model">customer.debt.report</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem action="customer_debt_report_action" id="menu_customer_debt_report_report"
+                  name="Báo cáo theo dõi công nợ khách hàng" sequence="30" parent="account.account_reports_management_menu"/>
+    </data>
+</odoo>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>        
+        <menuitem id="menu_action_vas_trial_balance_report"
+        name="VAS - Trial Balance"
+            parent="onnet_vas_base.tt200_report_root"
+                sequence="50"
+                action="onnet_vas_trial_balance_report.action_vas_trial_balance_report"/>
+</odoo>

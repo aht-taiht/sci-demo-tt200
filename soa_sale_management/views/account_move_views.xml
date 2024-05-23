@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="sale_move_out_refund_type_action" name="Credit Notes" parent="sale.menu_sale_invoicing"
+                  action="account.action_move_out_refund_type" sequence="30"/>
+
+        <menuitem id="sale_move_in_refund_type_action" name="Debit Notes" parent="sale.menu_sale_invoicing"
+                  action="account.action_move_in_refund_type" sequence="40"/>
+
+    </data>
+</odoo>

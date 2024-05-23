@@ -1,0 +1,149 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_asset_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-01 14:57+0000\n"
+"PO-Revision-Date: 2022-01-01 14:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_asset
+#: model:ir.model.fields,field_description:account_asset.field_account_asset__analytic_tag_ids
+msgid "Analytic Tag"
+msgstr "Phân bổ khoản mục chi phí"
+
+#. module: account_asset
+#: model:ir.model.fields,field_description:account_asset.field_account_asset__account_analytic_id
+msgid "Analytic Account"
+msgstr "Bộ phận"
+
+#. module: account_asset_custom
+#: model:ir.model.fields,help:account_asset_custom.field_res_currency__x_payable_account_id
+msgid "Account using for transfer account asset"
+msgstr "Tài khoản phải trả sử dụng cho chức năng điều chuyển tài sản"
+
+#. module: account_asset_custom
+#: model:ir.model.fields,field_description:account_asset_custom.field_account_asset_sell__action
+msgid "Action"
+msgstr "Thực hiện"
+
+#. module: account_asset_custom
+#: model:ir.model,name:account_asset_custom.model_account_asset
+msgid "Asset/Revenue Recognition"
+msgstr "Ghi nhận tài sản/Doanh thu"
+
+#. module: account_asset_custom
+#: code:addons/account_asset_custom/models/account_asset_sell.py:0
+#, python-format
+msgid "Cannot transfer asset not in state OPEN, PAUSED, CLOSE!"
+msgstr ""
+"Không thể điều chuyển khi không ở trạng thái ĐANG CHẠY, TẠM DỪNG, ĐÃ ĐÓNG"
+
+#. module: account_asset_custom
+#: code:addons/account_asset_custom/models/account_asset_sell.py:0
+#, python-format
+msgid "Cannot transfer asset to same company. Please select other company!"
+msgstr "Không thể điều chuyển trong cùng công ty. Vui lòng chọn công ty khác!"
+
+#. module: account_asset_custom
+#: model:ir.model,name:account_asset_custom.model_res_currency
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: account_asset_custom
+#: code:addons/account_asset_custom/models/account_asset_sell.py:0
+#, python-format
+msgid "Depreciated Value for Asset: "
+msgstr "Giá trị đã khấu hao của Tài sản: "
+
+#. module: account_asset_custom
+#: model:ir.model.fields,field_description:account_asset_custom.field_account_asset__display_name
+#: model:ir.model.fields,field_description:account_asset_custom.field_account_asset_sell__display_name
+#: model:ir.model.fields,field_description:account_asset_custom.field_res_currency__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: account_asset_custom
+#: model:ir.model.fields,field_description:account_asset_custom.field_account_asset__id
+#: model:ir.model.fields,field_description:account_asset_custom.field_account_asset_sell__id
+#: model:ir.model.fields,field_description:account_asset_custom.field_res_currency__id
+msgid "ID"
+msgstr ""
+
+#. module: account_asset_custom
+#: model:ir.model.fields,help:account_asset_custom.field_res_currency__x_transfer_journal_id
+msgid "Journal using for transfer account asset"
+msgstr "Sổ nhật ký sử dụng cho chức năng điều chuyển tài sản"
+
+#. module: account_asset_custom
+#: model:ir.model.fields,field_description:account_asset_custom.field_account_asset____last_update
+#: model:ir.model.fields,field_description:account_asset_custom.field_account_asset_sell____last_update
+#: model:ir.model.fields,field_description:account_asset_custom.field_res_currency____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: account_asset_custom
+#: model:ir.model.fields,field_description:account_asset_custom.field_res_currency__x_payable_account_id
+msgid "Payable Account"
+msgstr "Tài khoản phải trả nội bộ"
+
+#. module: account_asset_custom
+#: code:addons/account_asset_custom/models/account_asset_sell.py:0
+#, python-format
+msgid "Please config Transfer Journal and Payable Account in Currency %s"
+msgstr ""
+"Vui lòng cấu hình Sổ nhật ký điều chuyển nội bộ và Tài khoản phải trả nội bộ"
+" của Tiền tệ %s"
+
+#. module: account_asset_custom
+#: model:ir.model.fields,field_description:account_asset_custom.field_account_asset_sell__x_receive_company_id
+msgid "Receive Company"
+msgstr "Tới Công ty"
+
+#. module: account_asset_custom
+#: model:ir.model,name:account_asset_custom.model_account_asset_sell
+msgid "Sell Asset"
+msgstr "Bán tài sản"
+
+#. module: account_asset_custom
+#: model_terms:ir.ui.view,arch_db:account_asset_custom.view_account_asset_form_account_asset_custom
+msgid "Sell or Dispose or Transfer"
+msgstr "Bán/ Tiêu hủy hoặc Điều chuyển"
+
+#. module: account_asset_custom
+#: model_terms:ir.ui.view,arch_db:account_asset_custom.asset_sell_form_account_asset_custom
+msgid "To Company"
+msgstr "Tới Công ty"
+
+#. module: account_asset_custom
+#: code:addons/account_asset_custom/models/account_asset_sell.py:0
+#: model:ir.model.fields.selection,name:account_asset_custom.selection__account_asset_sell__action__transfer
+#: model_terms:ir.ui.view,arch_db:account_asset_custom.asset_sell_form_account_asset_custom
+#, python-format
+msgid "Transfer"
+msgstr "Điều chuyển"
+
+#. module: account_asset_custom
+#: model:ir.model.fields,field_description:account_asset_custom.field_res_currency__x_transfer_journal_id
+msgid "Transfer Account Journal"
+msgstr "Sổ nhật ký điều chuyển nội bộ"
+
+#. module: account_asset_custom
+#: code:addons/account_asset_custom/models/account_asset_sell.py:0
+#, python-format
+msgid "Value Asset for: "
+msgstr "Giá trị Tài sản: "
+
+#. module: account_asset_custom
+#: code:addons/account_asset_custom/models/account_asset_sell.py:0
+#, python-format
+msgid "Value Residual for Asset: "
+msgstr "Giá trị khấu hao của Tài sản: "

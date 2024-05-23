@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="cash_book_report" model="account.report">
+        <field name="name">Cash Book Report</field>
+        <field name="filter_journals" eval="True"/>
+        <field name="filter_show_draft" eval="True"/>
+        <field name="filter_unfold_all" eval="True"/>
+        <field name="filter_period_comparison" eval="False"/>
+        <field name="filter_unreconciled" eval="False"/>
+        <field name="filter_hide_0_lines">never</field>
+        <field name="default_opening_date_filter">this_year</field>
+        <field name="custom_handler_model_id" ref="soa_finance_report.model_account_cash_book_report_handler"/>
+        <field name="load_more_limit" eval="80"/>
+        <field name="column_ids">
+            <record id="cash_book_report_move_line_name" model="account.report.column">
+                <field name="name">Label</field>
+                <field name="expression_label">name</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record id="cash_book_report_move_line_offset_account" model="account.report.column">
+                <field name="name">Offset Account</field>
+                <field name="expression_label">offset_account</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record id="cash_book_report_move_line_date" model="account.report.column">
+                <field name="name">Date</field>
+                <field name="expression_label">invoice_date</field>
+                <field name="figure_type">string</field>
+                <field name="sortable" eval="True"/>
+            </record>
+            <record id="cash_book_report_amount_currency" model="account.report.column">
+                <field name="name">Debit</field>
+                <field name="expression_label">debit</field>
+            </record>
+            <record id="cash_book_report_debit" model="account.report.column">
+                <field name="name">Credit</field>
+                <field name="expression_label">credit</field>
+            </record>
+            <record id="cash_book_report_balance" model="account.report.column">
+                <field name="name">Balance</field>
+                <field name="expression_label">balance</field>
+            </record>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_einvoice_viettel_branch_form">
+        <field name="name">einvoice.viettel.branch.form</field>
+        <field name="model">einvoice.viettel.branch</field>
+        <field name="arch" type="xml">
+            <form string="Logs of Revenue Recognize">
+                <header>
+                    <button name="action_get_token" string="Get Token" class="oe_highlight" type="object" invisible="version != '2'"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" required="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="version"/>
+                            <field name="vsi_tin"/>
+                            <field name="vsi_template"/>
+                            <field name="vsi_template_type"/>
+                            <field name="vsi_series"/>
+                            <field name="swap"/>
+                        </group>
+                        <group>
+                            <!-- <field name="code"/> -->
+                            <field name="vsi_domain"/>
+                            <field name="business_service_domain"/>
+                            <field name="portal_service_domain"/>
+                            <field name="vsi_username"/>
+                            <field name="vsi_password" widget="password"/>
+                        </group>
+                    </group>
+                    <group invisible="version != '2'">
+                        <field name="vsi_token"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_einvoice_viettel_branch_tree">
+        <field name="name">einvoice.viettel.branch.tree</field>
+        <field name="model">einvoice.viettel.branch</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <!-- <field name="code"/> -->
+                <field name="vsi_tin"/>
+                <field name="vsi_template"/>
+                <field name="vsi_series"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_einvoice_viettel_branch" model="ir.actions.act_window">
+        <field name="name">E-invoice Viettel Branch</field>
+        <field name="res_model">einvoice.viettel.branch</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p>
+                Create E-invoice Viettel Branch
+            </p>
+        </field>
+    </record>
+
+
+
+    <menuitem id="menu_einvoice_branch" parent="base.menu_custom" 
+        sequence="100" groups="account.group_account_manager" name="E-invoice"/>
+
+    <menuitem id="menu_action_einvoice_viettel_branch" parent="menu_einvoice_branch" 
+        action="action_einvoice_viettel_branch" sequence="10" groups="account.group_account_readonly" name="Viettel Branch"/>
+</odoo>

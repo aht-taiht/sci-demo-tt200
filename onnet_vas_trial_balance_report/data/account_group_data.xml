@@ -1,0 +1,1390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="111_group" model="account.group">
+            <field name="name">Tiền mặt</field>
+            <field name="code_prefix_start">111</field>
+            <field name="code_prefix_end">111</field>
+        </record>
+
+        <record id="1111_group" model="account.group">
+            <field name="name">Tiền Việt Nam</field>
+            <field name="code_prefix_start">1111</field>
+            <field name="code_prefix_end">1111</field>
+        </record>
+
+        <record id="1112_group" model="account.group">
+            <field name="name">Ngoại tệ</field>
+            <field name="code_prefix_start">1112</field>
+            <field name="code_prefix_end">1112</field>
+        </record>
+
+        <record id="1113_group" model="account.group">
+            <field name="name">Vàng tiền tệ</field>
+            <field name="code_prefix_start">1113</field>
+            <field name="code_prefix_end">1113</field>
+        </record>
+
+        <record id="112_group" model="account.group">
+            <field name="name">Tiền gửi ngân hàng</field>
+            <field name="code_prefix_start">112</field>
+            <field name="code_prefix_end">112</field>
+        </record>
+
+        <record id="1121_group" model="account.group">
+            <field name="name">Tiền Việt Nam</field>
+            <field name="code_prefix_start">1121</field>
+            <field name="code_prefix_end">1121</field>
+        </record>
+
+        <record id="1122_group" model="account.group">
+            <field name="name">Ngoại tệ</field>
+            <field name="code_prefix_start">1122</field>
+            <field name="code_prefix_end">1122</field>
+        </record>
+
+        <record id="1123_group" model="account.group">
+            <field name="name">Vàng tiền tệ</field>
+            <field name="code_prefix_start">1123</field>
+            <field name="code_prefix_end">1123</field>
+        </record>
+
+        <record id="113_group" model="account.group">
+            <field name="name">Tiền đang chuyển</field>
+            <field name="code_prefix_start">113</field>
+            <field name="code_prefix_end">113</field>
+        </record>
+
+        <record id="1131_group" model="account.group">
+            <field name="name">Tiền Việt Nam</field>
+            <field name="code_prefix_start">1131</field>
+            <field name="code_prefix_end">1131</field>
+        </record>
+
+        <record id="1132_group" model="account.group">
+            <field name="name">Ngoại tệ</field>
+            <field name="code_prefix_start">1132</field>
+            <field name="code_prefix_end">1132</field>
+        </record>
+
+        <record id="121_group" model="account.group">
+            <field name="name">Chứng khoán kinh doanh</field>
+            <field name="code_prefix_start">121</field>
+            <field name="code_prefix_end">121</field>
+        </record>
+
+        <record id="1211_group" model="account.group">
+            <field name="name">Cổ phiếu</field>
+            <field name="code_prefix_start">1211</field>
+            <field name="code_prefix_end">1211</field>
+        </record>
+
+        <record id="1212_group" model="account.group">
+            <field name="name">Trái phiếu</field>
+            <field name="code_prefix_start">1212</field>
+            <field name="code_prefix_end">1212</field>
+        </record>
+
+        <record id="1218_group" model="account.group">
+            <field name="name">Chứng khoán và công cụ tài chính khác</field>
+            <field name="code_prefix_start">1218</field>
+            <field name="code_prefix_end">1218</field>
+        </record>
+
+        <record id="1281_group" model="account.group">
+            <field name="name">Tiền ký gửi có hạn</field>
+            <field name="code_prefix_start">1281</field>
+            <field name="code_prefix_end">1281</field>
+        </record>
+
+        <record id="1282_group" model="account.group">
+            <field name="name">Trái phiếu</field>
+            <field name="code_prefix_start">1282</field>
+            <field name="code_prefix_end">1282</field>
+        </record>
+
+        <record id="1283_group" model="account.group">
+            <field name="name">Cho vay</field>
+            <field name="code_prefix_start">1283</field>
+            <field name="code_prefix_end">1283</field>
+        </record>
+
+        <record id="1288_group" model="account.group">
+            <field name="name">Các khoản đầu tư khác nắm giữ đến ngày đáo hạn</field>
+            <field name="code_prefix_start">1288</field>
+            <field name="code_prefix_end">1288</field>
+        </record>
+
+        <record id="133_group" model="account.group">
+            <field name="name">	Thuế GTGT được khấu trừ</field>
+            <field name="code_prefix_start">133</field>
+            <field name="code_prefix_end">133</field>
+        </record>
+
+        <record id="1331_group" model="account.group">
+            <field name="name">Thuế GTGT được khấu trừ của hàng hóa, dịch vụ</field>
+            <field name="code_prefix_start">1331</field>
+            <field name="code_prefix_end">1331</field>
+        </record>
+
+        <record id="1332_group" model="account.group">
+            <field name="name">Thuế GTGT được khấu trừ của TSCĐ</field>
+            <field name="code_prefix_start">1332</field>
+            <field name="code_prefix_end">1332</field>
+        </record>
+
+        <record id="136_group" model="account.group">
+            <field name="name">Phải thu nội bộ</field>
+            <field name="code_prefix_start">136</field>
+            <field name="code_prefix_end">136</field>
+        </record>
+
+        <record id="1361_group" model="account.group">
+            <field name="name">Vốn kinh doanh ở các đơn vị trực thuộc</field>
+            <field name="code_prefix_start">1361</field>
+            <field name="code_prefix_end">1361</field>
+        </record>
+
+        <record id="1362_group" model="account.group">
+            <field name="name">Phải thu nội bộ về chênh lệch tỷ giá</field>
+            <field name="code_prefix_start">1362</field>
+            <field name="code_prefix_end">1362</field>
+        </record>
+
+        <record id="1363_group" model="account.group">
+            <field name="name">Phải thu nội bộ về chi phí đi vay đủ điều kiện được vốn hoá</field>
+            <field name="code_prefix_start">1363</field>
+            <field name="code_prefix_end">1363</field>
+        </record>
+
+        <record id="1368_group" model="account.group">
+            <field name="name">Phải thu nội bộ khác</field>
+            <field name="code_prefix_start">1368</field>
+            <field name="code_prefix_end">1368</field>
+        </record>
+
+        <record id="138_group" model="account.group">
+            <field name="name">Phải thu khác</field>
+            <field name="code_prefix_start">138</field>
+            <field name="code_prefix_end">138</field>
+        </record>
+
+        <record id="1381_group" model="account.group">
+            <field name="name">Tài sản thiếu chờ xử lý</field>
+            <field name="code_prefix_start">1381</field>
+            <field name="code_prefix_end">1381</field>
+        </record>
+
+        <record id="1385_group" model="account.group">
+            <field name="name">Phải thu về cổ phần hoá</field>
+            <field name="code_prefix_start">1385</field>
+            <field name="code_prefix_end">1385</field>
+        </record>
+
+        <record id="1388_group" model="account.group">
+            <field name="name">Phải thu khác</field>
+            <field name="code_prefix_start">1388</field>
+            <field name="code_prefix_end">1388</field>
+        </record>
+
+        <record id="141_group" model="account.group">
+            <field name="name">Tạm ứng</field>
+            <field name="code_prefix_start">141</field>
+            <field name="code_prefix_end">141</field>
+        </record>
+
+        <record id="151_group" model="account.group">
+            <field name="name">Hàng mua đang đi đường</field>
+            <field name="code_prefix_start">151</field>
+            <field name="code_prefix_end">151</field>
+        </record>
+
+        <record id="152_group" model="account.group">
+            <field name="name">Nguyên liệu, vật liệu</field>
+            <field name="code_prefix_start">152</field>
+            <field name="code_prefix_end">152</field>
+        </record>
+
+        <record id="153_group" model="account.group">
+            <field name="name">Công cụ, dụng cụ</field>
+            <field name="code_prefix_start">153</field>
+            <field name="code_prefix_end">153</field>
+        </record>
+
+        <record id="1531_group" model="account.group">
+            <field name="name">Công cụ, dụng cụ</field>
+            <field name="code_prefix_start">1531</field>
+            <field name="code_prefix_end">1531</field>
+        </record>
+
+        <record id="1532_group" model="account.group">
+            <field name="name">Bao bì luân chuyển</field>
+            <field name="code_prefix_start">1532</field>
+            <field name="code_prefix_end">1532</field>
+        </record>
+
+        <record id="1533_group" model="account.group">
+            <field name="name">Đồ dùng cho thuê</field>
+            <field name="code_prefix_start">1533</field>
+            <field name="code_prefix_end">1533</field>
+        </record>
+
+        <record id="1534_group" model="account.group">
+            <field name="name">Thiiết bị, phụ tùng thay thế</field>
+            <field name="code_prefix_start">1534</field>
+            <field name="code_prefix_end">1534</field>
+        </record>
+
+        <record id="154_group" model="account.group">
+            <field name="name">Chi phí sản xuất, kinh doanh dở dang</field>
+            <field name="code_prefix_start">154</field>
+            <field name="code_prefix_end">154</field>
+        </record>
+
+        <record id="155_group" model="account.group">
+            <field name="name">Thành phẩm</field>
+            <field name="code_prefix_start">155</field>
+            <field name="code_prefix_end">155</field>
+        </record>
+
+        <record id="1551_group" model="account.group">
+            <field name="name">Thành phẩm nhập kho</field>
+            <field name="code_prefix_start">1551</field>
+            <field name="code_prefix_end">1551</field>
+        </record>
+
+        <record id="1557_group" model="account.group">
+            <field name="name">Thành phẩm bất động sản</field>
+            <field name="code_prefix_start">1557</field>
+            <field name="code_prefix_end">1557</field>
+        </record>
+
+        <record id="156_group" model="account.group">
+            <field name="name">Hàng hóa</field>
+            <field name="code_prefix_start">156</field>
+            <field name="code_prefix_end">156</field>
+        </record>
+
+        <record id="1561_group" model="account.group">
+            <field name="name">Giá hàng hóa</field>
+            <field name="code_prefix_start">1561</field>
+            <field name="code_prefix_end">1561</field>
+        </record>
+
+        <record id="1562_group" model="account.group">
+            <field name="name">Chi phí thu mua hàng hóa</field>
+            <field name="code_prefix_start">1562</field>
+            <field name="code_prefix_end">1562</field>
+        </record>
+
+        <record id="1567_group" model="account.group">
+            <field name="name">Hàng hóa bất động sản</field>
+            <field name="code_prefix_start">1567</field>
+            <field name="code_prefix_end">1567</field>
+        </record>
+
+        <record id="157_group" model="account.group">
+            <field name="name">Hàng gửi đi bán</field>
+            <field name="code_prefix_start">157</field>
+            <field name="code_prefix_end">157</field>
+        </record>
+
+        <record id="158_group" model="account.group">
+            <field name="name">Hàng hóa kho bảo thuế</field>
+            <field name="code_prefix_start">158</field>
+            <field name="code_prefix_end">158</field>
+        </record>
+
+        <record id="161_group" model="account.group">
+            <field name="name">Chi sự nghiệp</field>
+            <field name="code_prefix_start">161</field>
+            <field name="code_prefix_end">161</field>
+        </record>
+
+        <record id="1611_group" model="account.group">
+            <field name="name">Chi sự nghiệp năm trước</field>
+            <field name="code_prefix_start">1611</field>
+            <field name="code_prefix_end">1611</field>
+        </record>
+
+        <record id="1612_group" model="account.group">
+            <field name="name">Chi sự nghiệp năm nay</field>
+            <field name="code_prefix_start">1612</field>
+            <field name="code_prefix_end">1612</field>
+        </record>
+
+        <record id="171_group" model="account.group">
+            <field name="name">Giao dịch mua bán lại trái phiếu chính phủ</field>
+            <field name="code_prefix_start">171</field>
+            <field name="code_prefix_end">171</field>
+        </record>
+
+        <record id="211_group" model="account.group">
+            <field name="name">Tài sản cố định hữu hình</field>
+            <field name="code_prefix_start">211</field>
+            <field name="code_prefix_end">211</field>
+        </record>
+
+        <record id="2111_group" model="account.group">
+            <field name="name">Nhà cửa, vật kiến trúc</field>
+            <field name="code_prefix_start">2111</field>
+            <field name="code_prefix_end">2111</field>
+        </record>
+
+        <record id="2112_group" model="account.group">
+            <field name="name">Máy móc, thiết bị</field>
+            <field name="code_prefix_start">2112</field>
+            <field name="code_prefix_end">2112</field>
+        </record>
+
+        <record id="2113_group" model="account.group">
+            <field name="name">Phương tiện vận tải, truyền dẫn</field>
+            <field name="code_prefix_start">2113</field>
+            <field name="code_prefix_end">2113</field>
+        </record>
+
+        <record id="2114_group" model="account.group">
+            <field name="name">Thiết bị, dụng cụ quản lý</field>
+            <field name="code_prefix_start">2114</field>
+            <field name="code_prefix_end">2114</field>
+        </record>
+
+        <record id="2115_group" model="account.group">
+            <field name="name">Cây lâu năm, súc vật làm việc và cho sản phẩm</field>
+            <field name="code_prefix_start">2115</field>
+            <field name="code_prefix_end">2115</field>
+        </record>
+
+        <record id="2118_group" model="account.group">
+            <field name="name">TSCĐ khác</field>
+            <field name="code_prefix_start">2118</field>
+            <field name="code_prefix_end">2118</field>
+        </record>
+
+        <record id="212_group" model="account.group">
+            <field name="name">Tài sản cố định thuê tài chính</field>
+            <field name="code_prefix_start">212</field>
+            <field name="code_prefix_end">212</field>
+        </record>
+
+        <record id="2121_group" model="account.group">
+            <field name="name">TSCĐ hữu hình thuê tài chính</field>
+            <field name="code_prefix_start">2121</field>
+            <field name="code_prefix_end">2121</field>
+        </record>
+
+        <record id="2122_group" model="account.group">
+            <field name="name">TSCĐ vô hình thuê tài chính</field>
+            <field name="code_prefix_start">2122</field>
+            <field name="code_prefix_end">2122</field>
+        </record>
+
+        <record id="213_group" model="account.group">
+            <field name="name">Tài sản cố định vô hình</field>
+            <field name="code_prefix_start">213</field>
+            <field name="code_prefix_end">213</field>
+        </record>
+
+        <record id="2131_group" model="account.group">
+            <field name="name">Quyền sử dụng đất</field>
+            <field name="code_prefix_start">2131</field>
+            <field name="code_prefix_end">2131</field>
+        </record>
+
+        <record id="2132_group" model="account.group">
+            <field name="name">Quyền phát hành</field>
+            <field name="code_prefix_start">2132</field>
+            <field name="code_prefix_end">2132</field>
+        </record>
+
+        <record id="2133_group" model="account.group">
+            <field name="name">Bản quyền, bằng sáng chế</field>
+            <field name="code_prefix_start">2133</field>
+            <field name="code_prefix_end">2133</field>
+        </record>
+
+        <record id="2134_group" model="account.group">
+            <field name="name">Nhãn hiệu, tên thương mại</field>
+            <field name="code_prefix_start">2134</field>
+            <field name="code_prefix_end">2134</field>
+        </record>
+
+        <record id="2135_group" model="account.group">
+            <field name="name">Chương trình phần mềm</field>
+            <field name="code_prefix_start">2135</field>
+            <field name="code_prefix_end">2135</field>
+        </record>
+
+        <record id="2136_group" model="account.group">
+            <field name="name">Giấy phép và giấy phép nhượng quyền</field>
+            <field name="code_prefix_start">2136</field>
+            <field name="code_prefix_end">2136</field>
+        </record>
+
+        <record id="2138_group" model="account.group">
+            <field name="name">TSCĐ vô hình khác</field>
+            <field name="code_prefix_start">2138</field>
+            <field name="code_prefix_end">2138</field>
+        </record>
+
+        <record id="214_group" model="account.group">
+            <field name="name">Hao mòn tài sản cố định</field>
+            <field name="code_prefix_start">214</field>
+            <field name="code_prefix_end">214</field>
+        </record>
+
+        <record id="2141_group" model="account.group">
+            <field name="name">Hao mòn TSCĐ hữu hình</field>
+            <field name="code_prefix_start">2141</field>
+            <field name="code_prefix_end">2141</field>
+        </record>
+
+        <record id="2142_group" model="account.group">
+            <field name="name">Hao mòn TSCĐ thuê tài chính</field>
+            <field name="code_prefix_start">2142</field>
+            <field name="code_prefix_end">2142</field>
+        </record>
+
+        <record id="2143_group" model="account.group">
+            <field name="name">Hao mòn TSCĐ vô hình</field>
+            <field name="code_prefix_start">2143</field>
+            <field name="code_prefix_end">2143</field>
+        </record>
+
+        <record id="2147_group" model="account.group">
+            <field name="name">Hao mòn bất động sản đầu tư</field>
+            <field name="code_prefix_start">2147</field>
+            <field name="code_prefix_end">2147</field>
+        </record>
+
+        <record id="217_group" model="account.group">
+            <field name="name">Bất động sản đầu tư</field>
+            <field name="code_prefix_start">217</field>
+            <field name="code_prefix_end">217</field>
+        </record>
+
+        <record id="221_group" model="account.group">
+            <field name="name">Đầu tư vào công ty con</field>
+            <field name="code_prefix_start">221</field>
+            <field name="code_prefix_end">221</field>
+        </record>
+
+        <record id="222_group" model="account.group">
+            <field name="name">Đầu tư vào công ty liên doanh, liên kết</field>
+            <field name="code_prefix_start">222</field>
+            <field name="code_prefix_end">222</field>
+        </record>
+
+        <record id="228_group" model="account.group">
+            <field name="name">Đầu tư khác</field>
+            <field name="code_prefix_start">228</field>
+            <field name="code_prefix_end">228</field>
+        </record>
+
+        <record id="2281_group" model="account.group">
+            <field name="name">Đầu tư góp vốn vào đơn vị khác</field>
+            <field name="code_prefix_start">2281</field>
+            <field name="code_prefix_end">2281</field>
+        </record>
+
+        <record id="2288_group" model="account.group">
+            <field name="name">Đầu tư khác</field>
+            <field name="code_prefix_start">2288</field>
+            <field name="code_prefix_end">2288</field>
+        </record>
+
+        <record id="229_group" model="account.group">
+            <field name="name">Dự phòng tổn thất tài sản</field>
+            <field name="code_prefix_start">229</field>
+            <field name="code_prefix_end">229</field>
+        </record>
+
+        <record id="2291_group" model="account.group">
+            <field name="name">Dự phòng giảm giá chứng khoán kinh doanh</field>
+            <field name="code_prefix_start">2291</field>
+            <field name="code_prefix_end">2291</field>
+        </record>
+
+        <record id="2292_group" model="account.group">
+            <field name="name">Dự phòng tổn thất đầu tư vào đơn vị khác</field>
+            <field name="code_prefix_start">2292</field>
+            <field name="code_prefix_end">2292</field>
+        </record>
+
+        <record id="2293_group" model="account.group">
+            <field name="name">Dự phòng phải thu khó đòi</field>
+            <field name="code_prefix_start">2293</field>
+            <field name="code_prefix_end">2293</field>
+        </record>
+
+        <record id="2294_group" model="account.group">
+            <field name="name">Dự phòng giảm giá hàng tồn kho</field>
+            <field name="code_prefix_start">2294</field>
+            <field name="code_prefix_end">2294</field>
+        </record>
+
+        <record id="2411_group" model="account.group">
+            <field name="name">Mua sắm TSCĐ</field>
+            <field name="code_prefix_start">2411</field>
+            <field name="code_prefix_end">2411</field>
+        </record>
+
+        <record id="2412_group" model="account.group">
+            <field name="name">Xây dựng cơ bản</field>
+            <field name="code_prefix_start">2412</field>
+            <field name="code_prefix_end">2412</field>
+        </record>
+
+        <record id="2413_group" model="account.group">
+            <field name="name">Sửa chữa lớn TSCĐ</field>
+            <field name="code_prefix_start">2413</field>
+            <field name="code_prefix_end">2413</field>
+        </record>
+
+        <record id="242_group" model="account.group">
+            <field name="name">Chi phí phải trả</field>
+            <field name="code_prefix_start">242</field>
+            <field name="code_prefix_end">242</field>
+        </record>
+
+        <record id="243_group" model="account.group">
+            <field name="name">Tài sản thuế thu nhập hoãn lại</field>
+            <field name="code_prefix_start">243</field>
+            <field name="code_prefix_end">243</field>
+        </record>
+
+        <record id="244_group" model="account.group">
+            <field name="name">Cầm cố, thế chấp, ký quỹ, ký cược</field>
+            <field name="code_prefix_start">244</field>
+            <field name="code_prefix_end">244</field>
+        </record>
+
+        <record id="331_group" model="account.group">
+            <field name="name">Phải trả cho người bán</field>
+            <field name="code_prefix_start">331</field>
+            <field name="code_prefix_end">331</field>
+        </record>
+
+        <record id="333_group" model="account.group">
+            <field name="name">Thuế và các khoản phải nộp nhà nước</field>
+            <field name="code_prefix_start">333</field>
+            <field name="code_prefix_end">333</field>
+        </record>
+
+        <record id="3331_group" model="account.group">
+            <field name="name">Thuế GTGT phải nộp</field>
+            <field name="code_prefix_start">3331</field>
+            <field name="code_prefix_end">3331</field>
+        </record>
+
+        <record id="33311_group" model="account.group">
+            <field name="name">Thuế GTGT đầu ra</field>
+            <field name="code_prefix_start">33311</field>
+            <field name="code_prefix_end">33311</field>
+        </record>
+
+        <record id="33312_group" model="account.group">
+            <field name="name">Thuế GTGT hàng nhập khẩu</field>
+            <field name="code_prefix_start">33312</field>
+            <field name="code_prefix_end">33312</field>
+        </record>
+
+        <record id="3332_group" model="account.group">
+            <field name="name">Thuế tiêu thụ đặc biệt</field>
+            <field name="code_prefix_start">3332</field>
+            <field name="code_prefix_end">3332</field>
+        </record>
+
+        <record id="3333_group" model="account.group">
+            <field name="name">Thuế xuất, nhập khẩu</field>
+            <field name="code_prefix_start">3333</field>
+            <field name="code_prefix_end">3333</field>
+        </record>
+
+        <record id="3334_group" model="account.group">
+            <field name="name">Thuế thu nhập doanh nghiệp</field>
+            <field name="code_prefix_start">3334</field>
+            <field name="code_prefix_end">3334</field>
+        </record>
+
+        <record id="3335_group" model="account.group">
+            <field name="name">Thuế thu nhập cá nhân</field>
+            <field name="code_prefix_start">3335</field>
+            <field name="code_prefix_end">3335</field>
+        </record>
+
+        <record id="3336_group" model="account.group">
+            <field name="name">Thuế tài nguyên</field>
+            <field name="code_prefix_start">3336</field>
+            <field name="code_prefix_end">3336</field>
+        </record>
+
+        <record id="3337_group" model="account.group">
+            <field name="name">Thuế nhà đất, tiền thuê đất</field>
+            <field name="code_prefix_start">3337</field>
+            <field name="code_prefix_end">3337</field>
+        </record>
+
+        <record id="3338_group" model="account.group">
+            <field name="name">Thuế bảo vệ môi trường và các loại thuế khác</field>
+            <field name="code_prefix_start">3338</field>
+            <field name="code_prefix_end">3338</field>
+        </record>
+
+        <record id="33381_group" model="account.group">
+            <field name="name">Thuế bảo vệ môi trường</field>
+            <field name="code_prefix_start">33381</field>
+            <field name="code_prefix_end">33381</field>
+        </record>
+
+        <record id="33382_group" model="account.group">
+            <field name="name">Các loại thuế khác</field>
+            <field name="code_prefix_start">33382</field>
+            <field name="code_prefix_end">33382</field>
+        </record>
+
+        <record id="3339_group" model="account.group">
+            <field name="name">Phí, lệ phí và các khoản phải nộp khác</field>
+            <field name="code_prefix_start">3339</field>
+            <field name="code_prefix_end">3339</field>
+        </record>
+
+        <record id="334_group" model="account.group">
+            <field name="name">Phải trả người lao động</field>
+            <field name="code_prefix_start">334</field>
+            <field name="code_prefix_end">334</field>
+        </record>
+
+        <record id="335_group" model="account.group">
+            <field name="name">Chi phí phải trả</field>
+            <field name="code_prefix_start">335</field>
+            <field name="code_prefix_end">335</field>
+        </record>
+
+        <record id="336_group" model="account.group">
+            <field name="name">Phải trả nội bộ</field>
+            <field name="code_prefix_start">336</field>
+            <field name="code_prefix_end">336</field>
+        </record>
+
+        <record id="3361_group" model="account.group">
+            <field name="name">Phải trả nội bộ về vốn kinh doanh</field>
+            <field name="code_prefix_start">3361</field>
+            <field name="code_prefix_end">3361</field>
+        </record>
+
+        <record id="3362_group" model="account.group">
+            <field name="name">Phải trả nội bộ về chênh lệch tỷ giá</field>
+            <field name="code_prefix_start">3362</field>
+            <field name="code_prefix_end">3362</field>
+        </record>
+
+        <record id="3363_group" model="account.group">
+            <field name="name">Phải trả nội bộ về chi phí đi vay đủ điều kiện được vốn hoá</field>
+            <field name="code_prefix_start">3363</field>
+            <field name="code_prefix_end">3363</field>
+        </record>
+
+        <record id="3368_group" model="account.group">
+            <field name="name">Phải trả nội bộ khác</field>
+            <field name="code_prefix_start">3368</field>
+            <field name="code_prefix_end">3368</field>
+        </record>
+
+        <record id="337_group" model="account.group">
+            <field name="name">Thanh toán theo tiến độ kế hoạch hợp đồng xây dựng</field>
+            <field name="code_prefix_start">337</field>
+            <field name="code_prefix_end">337</field>
+        </record>
+
+        <record id="338_group" model="account.group">
+            <field name="name">Phải trả và phải nộp khác</field>
+            <field name="code_prefix_start">338</field>
+            <field name="code_prefix_end">338</field>
+        </record>
+
+        <record id="3381_group" model="account.group">
+            <field name="name">Tài sản thừa chờ giải quyết</field>
+            <field name="code_prefix_start">3381</field>
+            <field name="code_prefix_end">3381</field>
+        </record>
+
+        <record id="3382_group" model="account.group">
+            <field name="name">Kinh phí công đoàn</field>
+            <field name="code_prefix_start">3382</field>
+            <field name="code_prefix_end">3382</field>
+        </record>
+
+        <record id="3383_group" model="account.group">
+            <field name="name">Bảo hiểm xã hội</field>
+            <field name="code_prefix_start">3383</field>
+            <field name="code_prefix_end">3383</field>
+        </record>
+
+        <record id="3384_group" model="account.group">
+            <field name="name">Bảo hiểm y tế</field>
+            <field name="code_prefix_start">3384</field>
+            <field name="code_prefix_end">3384</field>
+        </record>
+
+        <record id="3385_group" model="account.group">
+            <field name="name">Phải trả về cổ phần hóa</field>
+            <field name="code_prefix_start">3385</field>
+            <field name="code_prefix_end">3385</field>
+        </record>
+
+        <record id="3386_group" model="account.group">
+            <field name="name">Bảo hiểm thất nghiệp</field>
+            <field name="code_prefix_start">3386</field>
+            <field name="code_prefix_end">3386</field>
+        </record>
+
+        <record id="3387_group" model="account.group">
+            <field name="name">Doanh thu chưa thực hiện</field>
+            <field name="code_prefix_start">3387</field>
+            <field name="code_prefix_end">3387</field>
+        </record>
+
+        <record id="3388_group" model="account.group">
+            <field name="name">Phải trả, phải nộp khác</field>
+            <field name="code_prefix_start">3388</field>
+            <field name="code_prefix_end">3388</field>
+        </record>
+
+        <record id="341_group" model="account.group">
+            <field name="name">Vay và nợp thuê tài chính</field>
+            <field name="code_prefix_start">341</field>
+            <field name="code_prefix_end">341</field>
+        </record>
+
+        <record id="3411_group" model="account.group">
+            <field name="name">Các khoản đi vay</field>
+            <field name="code_prefix_start">3411</field>
+            <field name="code_prefix_end">3411</field>
+        </record>
+
+        <record id="3412_group" model="account.group">
+            <field name="name">Nợ thuê tài chính</field>
+            <field name="code_prefix_start">3412</field>
+            <field name="code_prefix_end">3412</field>
+        </record>
+
+        <record id="343_group" model="account.group">
+            <field name="name">Trái phiếu phát hành</field>
+            <field name="code_prefix_start">343</field>
+            <field name="code_prefix_end">343</field>
+        </record>
+
+        <record id="3431_group" model="account.group">
+            <field name="name">Trái phiếu thường</field>
+            <field name="code_prefix_start">3431</field>
+            <field name="code_prefix_end">3431</field>
+        </record>
+
+        <record id="34311_group" model="account.group">
+            <field name="name">Mệnh giá trái phiếu</field>
+            <field name="code_prefix_start">34311</field>
+            <field name="code_prefix_end">34311</field>
+        </record>
+
+        <record id="34312_group" model="account.group">
+            <field name="name">Chiết khấu trái phiếu</field>
+            <field name="code_prefix_start">34312</field>
+            <field name="code_prefix_end">34312</field>
+        </record>
+
+        <record id="34313_group" model="account.group">
+            <field name="name">Phụ trội trái phiếu</field>
+            <field name="code_prefix_start">34313</field>
+            <field name="code_prefix_end">34313</field>
+        </record>
+
+        <record id="3432_group" model="account.group">
+            <field name="name">Trái phiếu chuyển đổi</field>
+            <field name="code_prefix_start">3432</field>
+            <field name="code_prefix_end">3432</field>
+        </record>
+
+        <record id="344_group" model="account.group">
+            <field name="name">Nhận ký quỹ, ký cược</field>
+            <field name="code_prefix_start">344</field>
+            <field name="code_prefix_end">344</field>
+        </record>
+
+        <record id="347_group" model="account.group">
+            <field name="name">Thuế thu nhập hoãn lại phải trả</field>
+            <field name="code_prefix_start">347</field>
+            <field name="code_prefix_end">347</field>
+        </record>
+
+        <record id="352_group" model="account.group">
+            <field name="name">Dự phòng phải trả</field>
+            <field name="code_prefix_start">352</field>
+            <field name="code_prefix_end">352</field>
+        </record>
+
+        <record id="3521_group" model="account.group">
+            <field name="name">Dự phòng bao hành sản phẩm hàng hóa</field>
+            <field name="code_prefix_start">3521</field>
+            <field name="code_prefix_end">3521</field>
+        </record>
+
+        <record id="3522_group" model="account.group">
+            <field name="name">Dự phòng bảo hành công trình xây dựng</field>
+            <field name="code_prefix_start">3522</field>
+            <field name="code_prefix_end">3522</field>
+        </record>
+
+        <record id="3523_group" model="account.group">
+            <field name="name">Dự phòng tái cơ cấu doanh nghiệp</field>
+            <field name="code_prefix_start">3523</field>
+            <field name="code_prefix_end">3523</field>
+        </record>
+
+        <record id="3524_group" model="account.group">
+            <field name="name">Dự phòng phải trả khác</field>
+            <field name="code_prefix_start">3524</field>
+            <field name="code_prefix_end">3524</field>
+        </record>
+
+        <record id="353_group" model="account.group">
+            <field name="name">Quỹ khen thưởng phúc lợi</field>
+            <field name="code_prefix_start">353</field>
+            <field name="code_prefix_end">353</field>
+        </record>
+
+        <record id="3531_group" model="account.group">
+            <field name="name">Quỹ khen thưởng</field>
+            <field name="code_prefix_start">3531</field>
+            <field name="code_prefix_end">3531</field>
+        </record>
+
+        <record id="3532_group" model="account.group">
+            <field name="name">Quỹ phúc lợi</field>
+            <field name="code_prefix_start">3532</field>
+            <field name="code_prefix_end">3532</field>
+        </record>
+
+        <record id="3533_group" model="account.group">
+            <field name="name">Quỹ phúc lợi đã hình thành TSCĐ</field>
+            <field name="code_prefix_start">3533</field>
+            <field name="code_prefix_end">3533</field>
+        </record>
+
+        <record id="3534_group" model="account.group">
+            <field name="name">Quỹ thưởng ban quản lý điều hành công ty</field>
+            <field name="code_prefix_start">3534</field>
+            <field name="code_prefix_end">3534</field>
+        </record>
+
+        <record id="356_group" model="account.group">
+            <field name="name">Quỹ phát triển khoa học và công nghệ</field>
+            <field name="code_prefix_start">356</field>
+            <field name="code_prefix_end">356</field>
+        </record>
+
+        <record id="3561_group" model="account.group">
+            <field name="name">Quỹ phát triển khoa học và công nghệ</field>
+            <field name="code_prefix_start">3561</field>
+            <field name="code_prefix_end">3561</field>
+        </record>
+
+        <record id="3562_group" model="account.group">
+            <field name="name">Quỹ phát triển khoa học và công nghệ đã hình thành TSCĐ</field>
+            <field name="code_prefix_start">3562</field>
+            <field name="code_prefix_end">3562</field>
+        </record>
+
+        <record id="357_group" model="account.group">
+            <field name="name">Quỹ bình ổn giá</field>
+            <field name="code_prefix_start">357</field>
+            <field name="code_prefix_end">357</field>
+        </record>
+
+        <record id="411_group" model="account.group">
+            <field name="name">Vốn đầu tư của chủ sở hữu</field>
+            <field name="code_prefix_start">411</field>
+            <field name="code_prefix_end">411</field>
+        </record>
+
+        <record id="4111_group" model="account.group">
+            <field name="name">Vốn góp chủ sở hữu</field>
+            <field name="code_prefix_start">4111</field>
+            <field name="code_prefix_end">4111</field>
+        </record>
+
+        <record id="41111_group" model="account.group">
+            <field name="name">Cổ phiếu phổ thông có quyền biểu quyết</field>
+            <field name="code_prefix_start">41111</field>
+            <field name="code_prefix_end">41111</field>
+        </record>
+
+        <record id="41112_group" model="account.group">
+            <field name="name">Cổ phiếu ưu đãi</field>
+            <field name="code_prefix_start">41112</field>
+            <field name="code_prefix_end">41112</field>
+        </record>
+
+        <record id="4112_group" model="account.group">
+            <field name="name">Thặng dư vốn cổ phần</field>
+            <field name="code_prefix_start">4112</field>
+            <field name="code_prefix_end">4112</field>
+        </record>
+
+        <record id="4113_group" model="account.group">
+            <field name="name">Quyền chọn chuyển đổi trái phiếu</field>
+            <field name="code_prefix_start">4113</field>
+            <field name="code_prefix_end">4113</field>
+        </record>
+
+        <record id="4118_group" model="account.group">
+            <field name="name">Vốn khác</field>
+            <field name="code_prefix_start">4118</field>
+            <field name="code_prefix_end">4118</field>
+        </record>
+
+        <record id="412_group" model="account.group">
+            <field name="name">Chênh lệch đánh giá lại tài sản</field>
+            <field name="code_prefix_start">412</field>
+            <field name="code_prefix_end">412</field>
+        </record>
+
+        <record id="413_group" model="account.group">
+            <field name="name">Chênh lệch tỷ giá hối đoái</field>
+            <field name="code_prefix_start">413</field>
+            <field name="code_prefix_end">413</field>
+        </record>
+
+        <record id="4131_group" model="account.group">
+            <field name="name">Chênh lệch tỷ giá do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ</field>
+            <field name="code_prefix_start">4131</field>
+            <field name="code_prefix_end">4131</field>
+        </record>
+
+        <record id="4132_group" model="account.group">
+            <field name="name">Chênh lệch tỷ giá hối đoái trong giai đoạn trước hoạt động</field>
+            <field name="code_prefix_start">4132</field>
+            <field name="code_prefix_end">4132</field>
+        </record>
+
+        <record id="414_group" model="account.group">
+            <field name="name">Quỹ đầu tư phát triển</field>
+            <field name="code_prefix_start">414</field>
+            <field name="code_prefix_end">414</field>
+        </record>
+
+        <record id="417_group" model="account.group">
+            <field name="name">Quỹ hỗ trợ sắp xếp doanh nghiệp</field>
+            <field name="code_prefix_start">417</field>
+            <field name="code_prefix_end">417</field>
+        </record>
+
+        <record id="418_group" model="account.group">
+            <field name="name">Các quỹ khác thuộc vốn chủ sở hữu</field>
+            <field name="code_prefix_start">418</field>
+            <field name="code_prefix_end">418</field>
+        </record>
+
+        <record id="419_group" model="account.group">
+            <field name="name">Cổ phiếu quỹ</field>
+            <field name="code_prefix_start">419</field>
+            <field name="code_prefix_end">419</field>
+        </record>
+
+        <record id="421_group" model="account.group">
+            <field name="name">Lợi nhuận sau thuế chưa phân phối</field>
+            <field name="code_prefix_start">421</field>
+            <field name="code_prefix_end">421</field>
+        </record>
+
+        <record id="4211_group" model="account.group">
+            <field name="name">Lợi nhuận sau thuế chưa phân phối năm trước</field>
+            <field name="code_prefix_start">4211</field>
+            <field name="code_prefix_end">4211</field>
+        </record>
+
+        <record id="4212_group" model="account.group">
+            <field name="name">Lợi nhuận sau thuế chưa phân phối năm nay</field>
+            <field name="code_prefix_start">4212</field>
+            <field name="code_prefix_end">4212</field>
+        </record>
+
+        <record id="441_group" model="account.group">
+            <field name="name">Nguồn vốn đầu tư xây dựng cơ bản</field>
+            <field name="code_prefix_start">441</field>
+            <field name="code_prefix_end">441</field>
+        </record>
+
+        <record id="461_group" model="account.group">
+            <field name="name">Nguồn kinh phí sự nghiệp</field>
+            <field name="code_prefix_start">461</field>
+            <field name="code_prefix_end">461</field>
+        </record>
+
+        <record id="4611_group" model="account.group">
+            <field name="name">Nguồn kinh phí sự nghiệp năm trước</field>
+            <field name="code_prefix_start">4611</field>
+            <field name="code_prefix_end">4611</field>
+        </record>
+
+        <record id="4612_group" model="account.group">
+            <field name="name">Nguồn kinh phí sự nghiệp năm nay</field>
+            <field name="code_prefix_start">4612</field>
+            <field name="code_prefix_end">4612</field>
+        </record>
+
+        <record id="466_group" model="account.group">
+            <field name="name">Nguồn kinh phí đã hình thành TSCĐ</field>
+            <field name="code_prefix_start">466</field>
+            <field name="code_prefix_end">466</field>
+        </record>
+
+        <record id="511_group" model="account.group">
+            <field name="name">Doanh thu bán hàng</field>
+            <field name="code_prefix_start">511</field>
+            <field name="code_prefix_end">511</field>
+        </record>
+
+        <record id="5111_group" model="account.group">
+            <field name="name">Doanh thu bán hàng hóa</field>
+            <field name="code_prefix_start">5111</field>
+            <field name="code_prefix_end">5111</field>
+        </record>
+
+        <record id="5112_group" model="account.group">
+            <field name="name">Doanh thu bán các thành phẩm</field>
+            <field name="code_prefix_start">5112</field>
+            <field name="code_prefix_end">5112</field>
+        </record>
+
+        <record id="5113_group" model="account.group">
+            <field name="name">Doanh thu cung cấp dịch vụ</field>
+            <field name="code_prefix_start">5113</field>
+            <field name="code_prefix_end">5113</field>
+        </record>
+
+        <record id="5114_group" model="account.group">
+            <field name="name">Doanh thu trợ cấp, trợ giá</field>
+            <field name="code_prefix_start">5114</field>
+            <field name="code_prefix_end">5114</field>
+        </record>
+
+        <record id="5117_group" model="account.group">
+            <field name="name">Doanh thu kinh doanh bất động sản đầu tư</field>
+            <field name="code_prefix_start">5117</field>
+            <field name="code_prefix_end">5117</field>
+        </record>
+
+        <record id="5118_group" model="account.group">
+            <field name="name">Doanh thu khác</field>
+            <field name="code_prefix_start">5118</field>
+            <field name="code_prefix_end">5118</field>
+        </record>
+
+        <record id="515_group" model="account.group">
+            <field name="name">Doanh thu hoạt động tài chính</field>
+            <field name="code_prefix_start">515</field>
+            <field name="code_prefix_end">515</field>
+        </record>
+
+        <record id="521_group" model="account.group">
+            <field name="name">Các khoản giảm trừ doanh thu</field>
+            <field name="code_prefix_start">521</field>
+            <field name="code_prefix_end">521</field>
+        </record>
+
+        <record id="5211_group" model="account.group">
+            <field name="name">Chiết khấu thương mại</field>
+            <field name="code_prefix_start">5211</field>
+            <field name="code_prefix_end">5211</field>
+        </record>
+
+        <record id="5212_group" model="account.group">
+            <field name="name">Giảm giá hàng bán</field>
+            <field name="code_prefix_start">5212</field>
+            <field name="code_prefix_end">5212</field>
+        </record>
+
+        <record id="5213_group" model="account.group">
+            <field name="name">Hàng bán bị trả lại</field>
+            <field name="code_prefix_start">5213</field>
+            <field name="code_prefix_end">5213</field>
+        </record>
+
+        <record id="611_group" model="account.group">
+            <field name="name">Mua hàng</field>
+            <field name="code_prefix_start">611</field>
+            <field name="code_prefix_end">611</field>
+        </record>
+
+        <record id="6111_group" model="account.group">
+            <field name="name">Mua nguyên liệu, vật liệu</field>
+            <field name="code_prefix_start">6111</field>
+            <field name="code_prefix_end">6111</field>
+        </record>
+
+        <record id="6112_group" model="account.group">
+            <field name="name">Mua hàng hóa</field>
+            <field name="code_prefix_start">6112</field>
+            <field name="code_prefix_end">6112</field>
+        </record>
+
+        <record id="621_group" model="account.group">
+            <field name="name">Chi phí nguyên liệu, vật liệu trực tiếp</field>
+            <field name="code_prefix_start">621</field>
+            <field name="code_prefix_end">621</field>
+        </record>
+
+        <record id="622_group" model="account.group">
+            <field name="name">Chi phí nhân công trực tiếp</field>
+            <field name="code_prefix_start">622</field>
+            <field name="code_prefix_end">622</field>
+        </record>
+
+        <record id="623_group" model="account.group">
+            <field name="name">Chi phí sử dụng máy thi công</field>
+            <field name="code_prefix_start">623</field>
+            <field name="code_prefix_end">623</field>
+        </record>
+
+        <record id="6231_group" model="account.group">
+            <field name="name">Chi phí nhân công</field>
+            <field name="code_prefix_start">6231</field>
+            <field name="code_prefix_end">6231</field>
+        </record>
+
+        <record id="6232_group" model="account.group">
+            <field name="name">Chi phí nguyên, vật liệu</field>
+            <field name="code_prefix_start">6232</field>
+            <field name="code_prefix_end">6232</field>
+        </record>
+
+        <record id="6233_group" model="account.group">
+            <field name="name">Chi phí dụng cụ sản xuất</field>
+            <field name="code_prefix_start">6233</field>
+            <field name="code_prefix_end">6233</field>
+        </record>
+
+        <record id="6234_group" model="account.group">
+            <field name="name">Chi phí khấu hao máy thi công</field>
+            <field name="code_prefix_start">6234</field>
+            <field name="code_prefix_end">6234</field>
+        </record>
+
+        <record id="6237_group" model="account.group">
+            <field name="name">Chi phí dịch vụ mua ngoài</field>
+            <field name="code_prefix_start">6237</field>
+            <field name="code_prefix_end">6237</field>
+        </record>
+
+        <record id="6238_group" model="account.group">
+            <field name="name">Chi phí bằng tiền khác</field>
+            <field name="code_prefix_start">6238</field>
+            <field name="code_prefix_end">6238</field>
+        </record>
+
+        <record id="627_group" model="account.group">
+            <field name="name">Chi phí sản xuất chung</field>
+            <field name="code_prefix_start">627</field>
+            <field name="code_prefix_end">627</field>
+        </record>
+
+        <record id="6271_group" model="account.group">
+            <field name="name">Chi phí nhân viên phân xưởng</field>
+            <field name="code_prefix_start">6271</field>
+            <field name="code_prefix_end">6271</field>
+        </record>
+
+        <record id="6272_group" model="account.group">
+            <field name="name">Chi phí nguyên, vật liệu</field>
+            <field name="code_prefix_start">6272</field>
+            <field name="code_prefix_end">6272</field>
+        </record>
+
+        <record id="6273_group" model="account.group">
+            <field name="name">Chi phí dụng cụ sản xuất</field>
+            <field name="code_prefix_start">6273</field>
+            <field name="code_prefix_end">6273</field>
+        </record>
+
+        <record id="6274_group" model="account.group">
+            <field name="name">Chi phí khấu hao TSCĐ</field>
+            <field name="code_prefix_start">6274</field>
+            <field name="code_prefix_end">6274</field>
+        </record>
+
+        <record id="6277_group" model="account.group">
+            <field name="name">Chi phí dịch vụ mua ngoài</field>
+            <field name="code_prefix_start">6277</field>
+            <field name="code_prefix_end">6277</field>
+        </record>
+
+        <record id="6278_group" model="account.group">
+            <field name="name">Chi phí bằng tiền khác</field>
+            <field name="code_prefix_start">6278</field>
+            <field name="code_prefix_end">6278</field>
+        </record>
+
+        <record id="631_group" model="account.group">
+            <field name="name">Giá thành sản xuất</field>
+            <field name="code_prefix_start">631</field>
+            <field name="code_prefix_end">631</field>
+        </record>
+
+        <record id="632_group" model="account.group">
+            <field name="name">Giá vốn hàng hóa</field>
+            <field name="code_prefix_start">632</field>
+            <field name="code_prefix_end">632</field>
+        </record>
+
+        <record id="6321_group" model="account.group">
+            <field name="name">Giá vốn hàng bán: Hàng hóa, thành phẩm</field>
+            <field name="code_prefix_start">6321</field>
+            <field name="code_prefix_end">6321</field>
+        </record>
+
+        <record id="635_group" model="account.group">
+            <field name="name">Chi phí tài chính</field>
+            <field name="code_prefix_start">635</field>
+            <field name="code_prefix_end">635</field>
+        </record>
+
+        <record id="641_group" model="account.group">
+            <field name="name">Chi phí hàng bán</field>
+            <field name="code_prefix_start">641</field>
+            <field name="code_prefix_end">641</field>
+        </record>
+
+        <record id="6411_group" model="account.group">
+            <field name="name">Chi phí nhân viên</field>
+            <field name="code_prefix_start">6411</field>
+            <field name="code_prefix_end">6411</field>
+        </record>
+
+        <record id="6412_group" model="account.group">
+            <field name="name">Chi phí nguyên vật liệu, bao bì</field>
+            <field name="code_prefix_start">6412</field>
+            <field name="code_prefix_end">6412</field>
+        </record>
+
+        <record id="6413_group" model="account.group">
+            <field name="name">Chi phí dụng cụ, đồ dùng</field>
+            <field name="code_prefix_start">6413</field>
+            <field name="code_prefix_end">6413</field>
+        </record>
+
+        <record id="6414_group" model="account.group">
+            <field name="name">Chi phí khấu hao TSCĐ</field>
+            <field name="code_prefix_start">6414</field>
+            <field name="code_prefix_end">6414</field>
+        </record>
+
+        <record id="6415_group" model="account.group">
+            <field name="name">Chi phí bảo hành</field>
+            <field name="code_prefix_start">6415</field>
+            <field name="code_prefix_end">6415</field>
+        </record>
+
+        <record id="6417_group" model="account.group">
+            <field name="name">Chi phí dịch vụ ngoài</field>
+            <field name="code_prefix_start">6417</field>
+            <field name="code_prefix_end">6417</field>
+        </record>
+
+        <record id="6418_group" model="account.group">
+            <field name="name">Chi phí bằng tiền khác</field>
+            <field name="code_prefix_start">6418</field>
+            <field name="code_prefix_end">6418</field>
+        </record>
+
+        <record id="642_group" model="account.group">
+            <field name="name">Chi phí quản lý doanh nghiệp</field>
+            <field name="code_prefix_start">642</field>
+            <field name="code_prefix_end">642</field>
+        </record>
+
+        <record id="6421_group" model="account.group">
+            <field name="name">Chi phí nhân viên quản lý</field>
+            <field name="code_prefix_start">6421</field>
+            <field name="code_prefix_end">6421</field>
+        </record>
+
+        <record id="6422_group" model="account.group">
+            <field name="name">Chi phí vật liệu quản lý</field>
+            <field name="code_prefix_start">6422</field>
+            <field name="code_prefix_end">6422</field>
+        </record>
+
+        <record id="6423_group" model="account.group">
+            <field name="name">Chi phí đồ dùng văn phòng</field>
+            <field name="code_prefix_start">6423</field>
+            <field name="code_prefix_end">6423</field>
+        </record>
+
+        <record id="6424_group" model="account.group">
+            <field name="name">Chi phí khấu hao TSCĐ</field>
+            <field name="code_prefix_start">6424</field>
+            <field name="code_prefix_end">6424</field>
+        </record>
+
+        <record id="6425_group" model="account.group">
+            <field name="name">Thuế, phí và lệ phí</field>
+            <field name="code_prefix_start">6425</field>
+            <field name="code_prefix_end">6425</field>
+        </record>
+
+        <record id="6426_group" model="account.group">
+            <field name="name">Chi phí dự phòng</field>
+            <field name="code_prefix_start">6426</field>
+            <field name="code_prefix_end">6426</field>
+        </record>
+
+        <record id="6427_group" model="account.group">
+            <field name="name">Chi phí dịch vụ ngoài</field>
+            <field name="code_prefix_start">6427</field>
+            <field name="code_prefix_end">6427</field>
+        </record>
+
+        <record id="6428_group" model="account.group">
+            <field name="name">Chi phí bằng tiền khác</field>
+            <field name="code_prefix_start">6428</field>
+            <field name="code_prefix_end">6428</field>
+        </record>
+
+        <record id="711_group" model="account.group">
+            <field name="name">Thu nhập khác</field>
+            <field name="code_prefix_start">711</field>
+            <field name="code_prefix_end">711</field>
+        </record>
+
+        <record id="811_group" model="account.group">
+            <field name="name">Chi phí khác</field>
+            <field name="code_prefix_start">811</field>
+            <field name="code_prefix_end">811</field>
+        </record>
+
+        <record id="821_group" model="account.group">
+            <field name="name">Chi phí thuế thu nhập doanh nghiệp</field>
+            <field name="code_prefix_start">821</field>
+            <field name="code_prefix_end">821</field>
+        </record>
+
+        <record id="8211_group" model="account.group">
+            <field name="name">Chi phí thuế TNDN hiện hành</field>
+            <field name="code_prefix_start">8211</field>
+            <field name="code_prefix_end">8211</field>
+        </record>
+
+        <record id="8212_group" model="account.group">
+            <field name="name">Chi phí thuế TNDN hoãn lại</field>
+            <field name="code_prefix_start">8212</field>
+            <field name="code_prefix_end">8212</field>
+        </record>
+
+        <record id="911_group" model="account.group">
+            <field name="name">Xác định kết quả kinh doanh</field>
+            <field name="code_prefix_start">911</field>
+            <field name="code_prefix_end">911</field>
+        </record>
+    </data>
+</odoo>

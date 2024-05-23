@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="soa_external_layout_boxed">
+        <div t-attf-class="header o_company_#{company.id}_layout" t-att-style="report_header_style">
+            <div class="o_boxed_header"
+                 t-att-style="'padding: 10px 0px; ' + 'background-color:' + (company.header_color_code or '#004EAB')">
+                <div class="row">
+                    <div class="col-2 text-left" style="line-height: 60px;">
+                        <t t-if="any(key in company.name.lower() for key in ['soa', 'source', 'asia'])">
+                            <img style="max-height: 50px; margin-left: 10px; vertical-align: middle;"
+                                 t-att-src="'/soa_sale_management/static/src/img/soa_main_logo_white.png'" alt="Logo"/>
+                        </t>
+                        <t t-if="'sigma' in company.name.lower()">
+                            <img style="max-height: 70px; margin-left: 10px; vertical-align: middle;"
+                                 t-att-src="'/soa_sale_management/static/src/img/sigma_main_logo_white.png'" alt="Logo"/>
+                        </t>
+                        <t t-if="'xi am' in company.name.lower()">
+                            <img style="max-height: 50px; margin-left: 10px; vertical-align: middle;"
+                                 t-att-src="'/soa_sale_management/static/src/img/jolie_siam_logo.png'" alt="Logo"/>
+                        </t>
+                    </div>
+                    <div class="col-10">
+                        <div class="row">
+                            <div class="col-7 text-end"/>
+                            <div class="col-4 text-end">
+                                <ul class="list-unstyled" style="font-size: 9px; color: white; margin: auto">
+                                    <li><strong t-field="company.partner_id.display_name"/></li>
+                                    <li t-if="company.partner_id.vat">
+                                        <t t-if="company.country_id.name == 'Hong Kong'">
+                                            Certificate of incorporation:
+                                        </t>
+                                        <t t-else="">
+                                            Tax Code:
+                                        </t>
+                                        <span t-field="company.partner_id.vat"/>
+                                    </li>
+                                    <li style="text-align: right; word-wrap: normal"><span t-field="company.partner_id.street"/></li>
+                                    <li><span t-field="company.partner_id.email"/></li>
+                                    <li><span t-esc="(company.partner_id.website or '').replace('https://', '').replace('http://', '')"/></li>
+                                </ul>
+                            </div>
+                            <div class="col-1 text-center" style="line-height: 60px;">
+                                <t t-if="any(key in company.name.lower() for key in ['soa', 'source', 'asia'])">
+                                    <img t-att-src="'/soa_sale_management/static/src/img/soa_pin_pink_min.png'"
+                                         style="max-height: 50px; vertical-align: middle;" alt="Logo"/>
+                                </t>
+                                <t t-if="'xi am' in company.name.lower()">
+                                    <img t-att-src="'/soa_sale_management/static/src/img/soa_pin_white_min.png'"
+                                         style="max-height: 50px; vertical-align: middle;" alt="Logo"/>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div t-attf-class="article o_company_#{company.id}_layout {{  'o_report_layout_background' if company.layout_background in ['Geometric', 'Custom']  else  '' }}" t-attf-style="background-image: url({{ 'data:image/png;base64,%s' % company.layout_background_image.decode('utf-8') if company.layout_background_image and company.layout_background == 'Custom' else '/base/static/img/bg_background_template.jpg' if company.layout_background == 'Geometric' else ''}});" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+            <div style="margin-top: 20px; height: 20px; background-color: #FFFFFF">
+            </div>
+            <t t-out="0"/>
+        </div>
+
+        <div t-attf-class="footer o_company_#{company.id}_layout">
+            <div class="text-end">
+                <div t-if="report_type == 'pdf'">
+                    Page: <span class="page"/> / <span class="topage"/>
+                </div>
+            </div>
+        </div>
+
+    </template>
+
+    <template id="soa_external_layout">
+        <t t-if="not o" t-set="o" t-value="doc"/>
+
+        <t t-if="not company">
+            <!-- Multicompany -->
+            <t t-if="company_id">
+                <t t-set="company" t-value="company_id"/>
+            </t>
+            <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                <t t-set="company" t-value="o.company_id.sudo()"/>
+            </t>
+            <t t-else="else">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+        </t>
+        <t t-call="soa_sale_management.soa_external_layout_boxed"><t t-out="0"/></t>
+    </template>
+
+
+    <!-- clone from base template document_tax_totals_template -->
+    <template id="document_tax_totals_template">
+        <!--
+            Generic template to display tax totals in pdf reports.
+            Used by invoices, SO and PO.
+            ARGUMENTS:
+            - tax_totals: dict in the form generated by account.move's _get_tax_totals.
+        -->
+        <t t-foreach="tax_totals['subtotals']" t-as="subtotal">
+            <tr class="o_subtotal" style="border: solid 1px black;">
+                <td width="5%" style="border: solid 1px black;"/>
+                <td width="80%" colspan="4" style="border: solid 1px black;text-align: right !important; padding: 0px 5px">
+                    <t t-out="subtotal['name'] == 'Untaxed Amount' and 'Subtotal W/O taxes' or subtotal['name']">Subtotal W/O taxes</t>
+                </td>
+                <td width="15%" style="border: solid 1px black; text-align: center">
+                    <span
+                        t-att-class="oe_subtotal_footer_separator"
+                        t-out="subtotal['formatted_amount']"
+                    />
+                </td>
+            </tr>
+
+            <t t-set="subtotal_to_show" t-value="subtotal['name']"/>
+            <t t-call="soa_sale_management.tax_groups_totals"/>
+        </t>
+
+        <tr t-if="'formatted_rounding_amount' in tax_totals and tax_totals['rounding_amount'] != 0">
+            <td>Rounding</td>
+            <td class="text-end">
+                <span t-out="tax_totals['formatted_rounding_amount']">0</span>
+            </td>
+        </tr>
+
+        <!--Total amount with all taxes-->
+        <tr class="border-black" style="border: solid 1px black;background-color: #E6E7E8">
+            <td width="5%" style="border: solid 1px black;"/>
+            <td width="80%" colspan="4" style="border: solid 1px black; text-align: right !important; padding: 0px 5px">
+                <strong>TOTAL INCLUDING VAT</strong></td>
+            <td width="15%" style="border: solid 1px black; text-align: center">
+                <strong t-out="tax_totals['formatted_amount_total']"/>
+            </td>
+        </tr>
+    </template>
+
+    <!-- clone from base template tax_groups_totals -->
+    <template id="tax_groups_totals">
+        <!--
+            Generic template to display a list of tax groups with the related amounts.
+            ARGUMENTS:
+            - tax_totals: dict in the form generated by account.move's _get_tax_totals.
+            - subtotal_to_show: The subtotal we need to render the groups from
+        -->
+        <t t-foreach="tax_totals['groups_by_subtotal'][subtotal_to_show]" t-as="amount_by_group">
+            <t t-set="display_tax_base" t-value="tax_totals['display_tax_base']"/>
+            <tr style="border: solid 1px black;">
+                <t t-if="not display_tax_base">
+                    <td width="5%" style="border: solid 1px black;"/>
+                    <td width="80%" colspan="4" style="border: solid 1px black; text-align: right !important; padding: 0px 5px" class="text-end">
+                        <span class="text-nowrap" t-out="amount_by_group['tax_group_name']">Tax 15%</span>
+                    </td>
+                    <td width="15%" style="border: solid 1px black; text-align: center" class="o_price_total">
+                        <span class="text-nowrap" t-out="amount_by_group['formatted_tax_group_amount']">1.05</span>
+                    </td>
+                </t>
+                <t t-else="">
+                    <td width="5%" style="border: solid 1px black;"/>
+                    <td width="80%" colspan="4" style="border: solid 1px black;" class="text-end">
+                        <span t-out="amount_by_group['tax_group_name']">Tax 15%</span>
+                         on
+                        <span class="text-nowrap" t-out="amount_by_group['formatted_tax_group_base_amount']">27.00</span>
+                    </td>
+                    <td width="15%" class="o_price_total" style="border: solid 1px black; text-align: center">
+                        <span class="text-nowrap" t-out="amount_by_group['formatted_tax_group_amount']">4.05</span>
+                    </td>
+                </t>
+            </tr>
+        </t>
+    </template>
+
+</odoo>

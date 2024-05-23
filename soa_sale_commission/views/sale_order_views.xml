@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sale_order_form_inherit_soa_commission" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit.soa.commission</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//header" position="inside">
+                    <field name="is_sale_commission" invisible="1"/>
+                </xpath>
+
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_sale_commission" type="object" class="oe_stat_button"
+                            icon="fa-dollar" invisible="sale_commission_count == 0">
+                        <field name="sale_commission_count" widget="statinfo" string="Commissions"/>
+                    </button>
+                </xpath>
+
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_sale_root" type="object" class="oe_stat_button"
+                            icon="fa-dollar" invisible="sale_count == 0">
+                        <field name="sale_count" widget="statinfo" string="Sales"/>
+                    </button>
+                </xpath>
+
+                <xpath expr="//header" position="inside">
+                    <button type="object" string="Create Commission" name="create_commission" invisible="is_sale_commission or state in ['cancel']"/>
+                </xpath>
+
+                <xpath expr="//page[@name='order_lines']//field[@name='order_line']//tree//field[@name='price_unit']"
+                       position="after">
+                    <field name="commission_percent" column_invisible="not parent.is_sale_commission"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="model_sale_order_action_create_commission" model="ir.actions.server">
+            <field name="name">Create So Commission</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_view_types">form,list</field>
+            <field name="state">code</field>
+            <field name="code">action = records.create_commission()</field>
+        </record>
+
+
+    </data>
+</odoo>

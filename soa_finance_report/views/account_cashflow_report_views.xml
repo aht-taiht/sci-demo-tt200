@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="account_cashflow_report_view_tree" model="ir.ui.view">
+            <field name="name">CashFlow Report</field>
+            <field name="model">account.cashflow.report</field>
+            <field name="arch" type="xml">
+                <tree string="CashFlow Report" create="0" edit="0" delete="0" duplicate="0">
+                    <header>
+                        <button name="%(action_account_cashflow_report_wizard)d" string="Export to Excel" type="action" display="always"/>
+                    </header>
+                    <field name="cf_plan_id" column_invisible="True"/>
+                    <field name="account_move_id" column_invisible="True"/>
+                    <field name="currency_id" column_invisible="True"/>
+                    <field name="company_currency_id" column_invisible="True"/>
+                    <field name="financial_currency_id" column_invisible="True"/>
+                    <field name="ref"/>
+                    <field name="analytic_account_id"/>
+                    <field name="company_id" optional="hide"/>
+                    <field name="schedule_date" />
+                    <field name="amount_financial_currency" />
+                    <field name="actual_amount_financial_currency" />
+                    <field name="residual_amount_finanicla_currency" />
+                    <field name="description" />
+                    <field name="amount" optional="hide"/>
+                    <field name="amount_currency" optional="hide"/>
+                    <field name="actual_amount" optional="hide"/>
+                    <field name="actual_amount_currenry" optional="hide"/>
+                    <field name="note" optional="hide"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="account_cashflow_report_view_search" model="ir.ui.view">
+            <field name="name">account.cashflow.report.view.search</field>
+            <field name="model">account.cashflow.report</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="ref"/>
+                    <field name="analytic_account_id"/>
+                    <field name="schedule_date"/>
+                    <separator/>
+                    <filter name="filter_schedule_date" date="schedule_date"/>
+                    <group expand="0" string="Group By">
+                    <filter string="Schedule Date" name="schedule_date" context="{'group_by': 'schedule_date'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_account_cashflow_report" model="ir.actions.act_window">
+            <field name="name">CashFlow Report</field>
+            <field name="res_model">account.cashflow.report</field>
+            <field name="view_mode">tree</field>
+            <field name="search_view_id" ref="account_cashflow_report_view_search"/>
+            <field name="view_id" ref="account_cashflow_report_view_tree"/>
+        </record>
+
+        <record id="action_cashflow_report_scrolling_up_schedule_date" model="ir.actions.server">
+            <field name="name">Scrolling up schedule date</field>
+            <field name="model_id" ref="soa_finance_report.model_account_cashflow_report"/>
+            <field name="binding_model_id" ref="soa_finance_report.model_account_cashflow_report"/>
+            <field name="state">code</field>
+            <field name="code">action = records.action_confirm_scrolling_up()</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_account_asset_form_account_asset_custom" model="ir.ui.view">
+        <field name="name">view.account.asset.form.account_asset_custom</field>
+        <field name="model">account.asset</field>
+        <field name="inherit_id" ref="account_asset.view_account_asset_form"/>
+        <field name="arch" type="xml">
+            <button name="action_set_to_close" position="attributes">
+                <attribute name="string">Sell or Dispose or Transfer</attribute>
+            </button>
+            <field name="acquisition_date" position="after">
+                <label for="x_qty" string="To"/>
+                <div>
+                    <field name="x_qty" class="oe_inline"/>
+                    <field name="x_uom_id" options="{'no_create': True, 'no_open': True}" />
+                </div>
+            </field>
+            <xpath expr="//sheet/group[1]" position="before">
+                <label for="x_code" name="x_code" class="oe_edit_only" attrs="{'invisible': [('state', '=', 'model')]}"/>
+                <field name="x_code" attrs="{'invisible': [('state', '=', 'model')]}"/>
+            </xpath>
+            <xpath expr="//sheet/group[1]" position="inside">
+                <group name="other_info" string="Thông tin khác" attrs="{'invisible': [('state', '=', 'model')]}">
+                    <field name="x_employee_id"/>
+                    <field name="account_analytic_id"/>
+                    <field name="x_specification"/>
+                    <field name="x_info_invoice"/>
+                    <field name="x_date_invoice"/>
+                    <field name="company_name" readonly="True"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

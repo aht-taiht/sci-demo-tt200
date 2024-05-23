@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_currency_tree_account_asset_custom" model="ir.ui.view">
+        <field name="name">view.currency.tree.account_asset_custom</field>
+        <field name="model">res.currency</field>
+        <field name="inherit_id" ref="base.view_currency_tree"/>
+        <field name="arch" type="xml">
+            <field name="date" position="after">
+                <field name="x_payable_account_id"/>
+                <field name="x_transfer_journal_id"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_currency_form_account_asset_custom" model="ir.ui.view">
+        <field name="name">view.currency.form.account_asset_custom</field>
+        <field name="model">res.currency</field>
+        <field name="inherit_id" ref="base.view_currency_form"/>
+        <field name="arch" type="xml">
+            <field name="currency_subunit_label" position="after">
+                <field name="x_payable_account_id"/>
+                <field name="x_transfer_journal_id"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

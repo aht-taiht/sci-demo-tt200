@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- VAT Invoice -->
+    <menuitem web_icon="onnet_vat_base,static/icon.png" id="account_vat_invoice" name="VAT Invoice" sequence="2"/>
+
+        <menuitem id="account_vat_input_invoice_menu" action="action_account_vat_input_invoice" name="In Invoices" parent="account_vat_invoice" sequence="1"/>
+
+        <menuitem id="account_vat_output_invoice_menu" action="action_account_vat_output_invoice" name="Out Invoices" parent="account_vat_invoice" sequence="10"/>
+
+                
+        <menuitem id="action_export_vat_in_invoice_menu" action="action_export_vat_in_invoice_wizard" name="Export In Invoices" parent="account_vat_invoice" sequence="20"/>
+
+        <menuitem id="action_export_vat_out_invoice_menu" action="action_export_vat_out_invoice_wizard" name="Export Out Invoices" parent="account_vat_invoice" sequence="21"/>
+
+</odoo>

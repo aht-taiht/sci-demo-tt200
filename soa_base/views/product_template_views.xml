@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <record id="product_template_form_soa_inherit_view" model="ir.ui.view">
+           <field name="name">product.template.common.soa.inherit</field>
+           <field name="model">product.template</field>
+           <field name="inherit_id" ref="product.product_template_form_view"/>
+           <field name="arch" type="xml">
+
+               <xpath expr="//field[@name='uom_po_id']" position="after">
+                   <field name="packing_type"/>
+                   <field name="supplier_code"/>
+                   <field name="customer_code"/>
+                   <field name="factory_code"/>
+                   <field name="factory_barcode"/>
+                   <field name="const_quantity"/>
+                   <field name="material"/>
+                   <field name="color"/>
+                   <field name="shelf_life"/>
+               </xpath>
+               <xpath expr="//group[@name='group_standard_price']//field[@name='company_id']" position="after">
+                   <field name="dimension"/>
+                   <field name="w_cm"/>
+                   <field name="l_cm"/>
+                   <field name="h_cm"/>
+                   <field name="hs_code"/>
+               </xpath>
+
+           </field>
+       </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_cash_book_report" model="ir.actions.client">
+            <field name="name">Cash Book Report</field>
+            <field name="tag">account_report</field>
+            <field name="context" eval="{'report_id': ref('onnet_vas_cash_bank_report.cash_book_report')}"/>
+        </record>
+
+        <record id="action_bank_book_report" model="ir.actions.client">
+            <field name="name">Bank Book Report</field>
+            <field name="tag">account_report</field>
+            <field name="context" eval="{'report_id': ref('onnet_vas_cash_bank_report.bank_book_report')}"/>
+        </record>
+    </data>
+</odoo>

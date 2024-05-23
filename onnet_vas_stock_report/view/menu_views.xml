@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="inventory_activities_reportt_menuitem" name="Inventory Activities Report" action="action_inventory_activities_report" parent="stock.menu_warehouse_report" sequence="500"/>
+
+
+</odoo>
+

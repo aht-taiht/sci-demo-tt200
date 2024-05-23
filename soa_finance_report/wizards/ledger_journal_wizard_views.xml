@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_ledger_journal_report_wizard_form" model="ir.ui.view">
+            <field name="name">ledger.journal.report.wizard.form</field>
+            <field name="model">ledger.journal.report.wizard</field>
+            <field name="arch" type="xml">
+                <form string="LEDGER (S03b-DN)">
+                    <sheet>
+                        <group>
+                            <field name="entry_status" required="1"/>
+                            <field name="date_from" required="1"/>
+                            <field name="date_to" required="1"/>
+                            <field name="account_ids" widget="many2many_tags" required="1" />
+                            <field name="company_id" required="1" />
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_export_to_xlsx" string="Export to Excel"
+                                type="object" default_focus="1" class="oe_highlight" data-hotkey="q"/>
+                        <button string="Cancel" class="btn btn-secondary" special="cancel" data-hotkey="z" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

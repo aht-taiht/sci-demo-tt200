@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_vat_invoice_form" model="ir.ui.view">
+        <field name="name">VAT Invoice</field>
+        <field name="model">account.vat.invoice</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="type" invisible="1"/>
+                    <field name="vsi_status" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <h1 class="mt0">
+                      <field name="name" readonly="vsi_status != 'draft'"/>
+                    </h1>
+                    <group>
+                        <group name="invoice_information" string="Invoice Information" invisible="type == 'in_invoice'">
+                            
+                            <field name="date_invoice" readonly="vsi_status != 'draft'"/>
+                            <field name="date" force_save="1" readonly="vsi_status != 'draft'"/>
+                            <field name="currency_id" readonly="vsi_status != 'draft'"/>
+                        </group>
+                        <group name="bill_information" string="Bill Information" invisible="type == 'out_invoice'"> 
+                            <field name="date_invoice" readonly="vsi_status != 'draft'"/>
+                            <field name="currency_id" readonly="vsi_status != 'draft'"/>
+                        </group>
+                        <group string="Customer Information" invisible="type == 'in_invoice'">
+                            <field name="partner_id" readonly="vsi_status != 'draft'"/>
+                            <field name="buyer_name" readonly="vsi_status != 'draft'"/>
+                            <field name="street_partner" readonly="vsi_status != 'draft'"/>
+                            <field name="email_partner" readonly="vsi_status != 'draft'"/>
+                            <field name="phone_partner" readonly="vsi_status != 'draft'"/>
+                            <field name="vat_partner" readonly="vsi_status != 'draft'"/>
+                            <field name="payment_type" readonly="vsi_status != 'draft'"/>
+                        </group>
+                        <group string="Supplier Information" invisible="type == 'out_invoice'">
+                            <field name="partner_id" readonly="vsi_status != 'draft'"/>
+                            <field name="buyer_name" string="Vendor" readonly="vsi_status != 'draft'"/>
+                            <field name="street_partner" readonly="vsi_status != 'draft'"/>
+                            <field name="email_partner" readonly="vsi_status != 'draft'"/>
+                            <field name="phone_partner" readonly="vsi_status != 'draft'"/>
+                            <field name="vat_partner" readonly="vsi_status != 'draft'"/>
+                            <field name="payment_type" readonly="vsi_status != 'draft'"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Invoice details">
+                            <field name="invoice_line_ids" mode="tree" string="Items details" no_label="1" readonly="vsi_status != 'draft'">
+                                <tree string="Items details" editable="bottom">
+                                    <field name="product_id"/>
+                                    <field name="name"/>
+                                    <field name="quantity"/>
+                                    <field name="price_unit"/>
+                                    <field name="uom_id"/>
+                                    <field name="invoice_uom_id"/>
+                                    <field name="invoice_line_tax_ids"/>
+                                    <field name="vat_amount"/>
+                                    <field name="vat_rate"/>
+                                    <field name="price_total"/>
+                                    <field name="price_subtotal"/>
+                                    <field name="currency_id" invisible="1"/>
+                                </tree>
+                            </field>
+                            <group>
+                                <group>
+                                    <field name="amountinwords" readonly="vsi_status != 'draft'"/>
+                                    <field name="grossvalue" readonly="vsi_status != 'draft'"/>
+                                    <field name="grossvalue5" readonly="vsi_status != 'draft'"/>
+                                    <field name="grossvalue8" readonly="vsi_status != 'draft'"/>
+                                    <field name="grossvalue10" readonly="vsi_status != 'draft'"/>
+                                    <field name="vatamount5" readonly="vsi_status != 'draft'"/>
+                                    <field name="vatamount8" readonly="vsi_status != 'draft'"/>
+                                    <field name="vatamount10" readonly="vsi_status != 'draft'"/>
+                                </group>
+                                <group>
+                                    <field name="amount_untaxed" readonly="vsi_status != 'draft'"/>
+                                    <field name="amount_tax" readonly="vsi_status != 'draft'"/>
+                                    <field name="amount_total" readonly="vsi_status != 'draft'"/>
+                                    <field name="taxRate" readonly="vsi_status != 'draft'"/>
+                                    <field name="exchange_rate" readonly="vsi_status != 'draft'"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Reference invoice">
+                            <group>
+                                <field name="account_move_ids" mode="tree" readonly="vsi_status != 'draft'">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="invoice_origin"/>
+                                        <field name="amount_untaxed_signed"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Follow up">
+                            <group>
+                                <group>
+                                    <field name="company_id" readonly="vsi_status != 'draft'"/>
+                                    <field name="tax_company" readonly="vsi_status != 'draft'"/>
+                                    <field name="street_company" readonly="vsi_status != 'draft'"/>
+                                </group>
+                                <group>
+                                    <field name="additionalReferenceDesc" readonly="vsi_status != 'draft'"/>
+                                    <field name="additionalReferenceDate" readonly="vsi_status != 'draft'"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids" options="{'post_refresh': 'recipients'}"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="view_account_vat_invoice_list" model="ir.ui.view">
+        <field name="name">VAT Invoice</field>
+        <field name="model">account.vat.invoice</field>
+        <field name="arch" type="xml">
+            <tree string="EInvoice" default_order="date_invoice desc">
+                <field name="name"/>
+                <field name="account_move_ids" widget="many2many_tags"/>
+                <field name="partner_id"/>
+                <field name="vat_partner"/>
+                <field name="vsi_status"/>
+                <field name="date_invoice"/>
+                <field name="date" readonly="1" force_save="1"/>
+                <field name="amount_untaxed"/>
+                <field name="amount_tax"/>
+                <field name="amount_total"/>
+                <field name="currency_id"/>
+                <field name="company_id" invisible="1"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="action_account_vat_output_invoice" model="ir.actions.act_window">
+        <field name="name">Out Invoices</field>
+        <field name="res_model">account.vat.invoice</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('type', '=', 'out_invoice')]</field>
+        <field name="context">{'default_type': 'out_invoice'}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create new Out Invoices
+            </p>
+        </field>
+    </record>
+
+    <record id="action_account_vat_input_invoice" model="ir.actions.act_window">
+        <field name="name">In Invoices</field>
+        <field name="res_model">account.vat.invoice</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('type', '=', 'in_invoice')]</field>
+        <field name="context">{'default_type': 'in_invoice'}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create new In Invoices
+            </p>
+        </field>
+    </record>
+    
+    <record id="action_account_vat_invoice_context" model="ir.actions.act_window">
+        <field name="name">Output Invoices</field>
+        <field name="res_model">account.vat.invoice</field>
+        <field name="domain">[(context.get('leaf_field',1),'=', context.get('right_leaf',1))]</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_vat_invoice_form_viettel_inherit" model="ir.ui.view">
+        <field name="name">VAT Invoice - Viettel</field>
+        <field name="model">account.vat.invoice</field>
+        <field name="inherit_id" ref="onnet_vat_base.view_account_vat_invoice_form"/>
+        <field name="arch" type="xml">
+
+            <field name="vsi_status" position="before">
+                <button name="send_einvoice" string="Issue" type="object" class="oe_highlight" invisible="vsi_status in ('created', 'canceled') or is_adjustment_invoice or type == 'in_invoice'"/>
+                <button confirm="Are you sure to cancel this invoice??" name="cancel_invoice_comfirm" string="Cancel" type="object" class="oe_highlight" invisible="vsi_status in ('draft','canceled')"/>
+                <button name="adjust_einvoice" string="Issue adjustment" type="object" class="oe_highlight" invisible="not is_adjustment_invoice or type == 'in_invoice'"/>
+                <!-- <button name="resend_vnpt_email" string="Download và Gửi Lại Hóa Đơn" type="object" class="oe_highlight"/> -->
+                <button name="update_einvoice_number" string="Update number" type="object" class="oe_highlight" invisible="vsi_status not in ('created', 'canceled') or (vsi_status in ('created', 'canceled') and name not in (False, '')) or type == 'in_invoice'"/>
+
+                <button name="reset_einvoice_status" string="Reset status" type="object" class="oe_highlight" invisible="vsi_status in ('created', 'canceled', 'draft') or type == 'in_invoice'"/>
+
+                <button name="get_draft_preview" string="Preview draft" type="object" invisible="type == 'in_invoice'"/>
+            </field>
+
+            <field name="buyer_name" position="before">
+                <field name="buyer_not_get_invoice" invisible="type == 'in_invoice' or sinvoice_version != '2'" readonly="vsi_status != 'draft'"/>
+            </field>
+
+            <xpath expr="//sheet/group[1]" position="after">
+                <group groups="base.group_no_one">
+                    <group >
+                    </group>
+                    <group>
+                        <field name="pdf_file"/>
+                        <field name="pdf_draft_preview_file"/>
+                    </group>
+                </group>
+            </xpath>
+
+            <xpath expr="//group[@name='invoice_information']/field[@name='currency_id']" position="after">
+                <field name="viettel_branch_id" options="{'no_create_edit': True, 'no_create': True}" readonly="vsi_status != 'draft'"/>
+                <field name="vsi_tin" readonly="vsi_status != 'draft'"/>
+                <field name="vsi_template" readonly="vsi_status != 'draft'"/>
+                <field name="vsi_series" readonly="vsi_status != 'draft'"/>
+            </xpath>
+
+            <xpath expr="//group[@name='bill_information']/field[@name='currency_id']" position="after">
+                <field name="viettel_branch_id" options="{'no_create_edit': True, 'no_create': True}" readonly="vsi_status != 'draft'"/>
+                <field name="vsi_tin" readonly="vsi_status != 'draft'"/>
+                <field name="vsi_template" readonly="vsi_status != 'draft'"/>
+                <field name="vsi_series" readonly="vsi_status != 'draft'"/>
+            </xpath>
+
+            <field name="currency_id" position="after">
+                <field name="is_adjustment_invoice" invisible="1" readonly="vsi_status != 'draft'"/>
+                <field name="origin_invoice" invisible="not is_adjustment_invoice or type == 'in_invoice'" required="is_adjustment_invoice" readonly="vsi_status != 'draft'"/>
+                <field name="adjustment_type" invisible="not is_adjustment_invoice or type == 'in_invoice'" required="is_adjustment_invoice" readonly="vsi_status != 'draft'"/>
+                <field name="adjustment_desc" invisible="not is_adjustment_invoice or type == 'in_invoice'" readonly="vsi_status != 'draft'"/>
+                <field name="adjustment_date" invisible="not is_adjustment_invoice or type == 'in_invoice'" readonly="vsi_status != 'draft'"/>
+                <field name="sinvoice_version" invisible="1" readonly="vsi_status != 'draft'"/>
+            </field>
+
+            <notebook position="inside">
+                <page string="Other Information" invisible="type == 'in_invoice'">
+                    <group>
+                        <group>
+                            <field name="fkey" readonly="vsi_status != 'draft'"/>
+                            <field name="reservation_code" readonly="vsi_status != 'draft'"/>
+                            <field name="transaction_id" readonly="vsi_status != 'draft'"/>
+                            <field name="invoiceId" readonly="vsi_status != 'draft'"/>
+                            <field name="invoiceType" readonly="vsi_status != 'draft'"/>
+                            <field name="adjustmentType" readonly="vsi_status != 'draft'"/>
+                            <field name="total" readonly="vsi_status != 'draft'"/>
+                            <field name="issueDate" readonly="vsi_status != 'draft'"/>
+                            <field name="issueDateStr" readonly="vsi_status != 'draft'"/>
+                            <field name="requestDate" readonly="vsi_status != 'draft'"/>
+                            <field name="description" readonly="vsi_status != 'draft'"/>
+                            <field name="buyerCode" readonly="vsi_status != 'draft'"/>
+                            <field name="paymentStatus" readonly="vsi_status != 'draft'"/>
+                        </group>
+                        <group>
+                            <field name="viewStatus" readonly="vsi_status != 'draft'"/>
+                            <field name="exchangeStatus" readonly="vsi_status != 'draft'"/>
+                            <field name="numOfExchange" readonly="vsi_status != 'draft'"/>
+                            <field name="createTime" readonly="vsi_status != 'draft'"/>
+                            <field name="contractId" readonly="vsi_status != 'draft'"/>
+                            <field name="contractNo" readonly="vsi_status != 'draft'"/>
+                            <field name="totalBeforeTax" readonly="vsi_status != 'draft'"/>
+                            <field name="taxRate" readonly="vsi_status != 'draft'"/>
+                            <field name="paymentMethod" readonly="vsi_status != 'draft'"/>
+                            <field name="paymentTime" readonly="vsi_status != 'draft'"/>
+                            <field name="paymentStatusName" readonly="vsi_status != 'draft'"/>
+                        </group>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record id="view_account_vat_invoice_list_viettel_inherit" model="ir.ui.view">
+        <field name="name">VAT Invoice - Viettel</field>
+        <field name="model">account.vat.invoice</field>
+        <field name="inherit_id" ref="onnet_vat_base.view_account_vat_invoice_list"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="vsi_series" invisible="context.get('default_type', False) == 'in_invoice'"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="ir_actions_server_mass_issue_invoice" model="ir.actions.server">
+       <field name="name">Mass issue invoices</field>
+       <field name="model_id" ref="onnet_vat_base.model_account_vat_invoice"/>
+       <field name="binding_model_id" ref="onnet_vat_base.model_account_vat_invoice"/>
+        <field name="sequence">1</field>
+       <field name="state">code</field>
+       <field name="code">
+if records:
+    for record in records:
+        action = record.send_einvoice()
+       </field>
+   </record>
+
+
+</odoo>

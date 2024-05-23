@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="menu_cash_book_report"
+        name="Cash Book Report"
+        sequence="10"
+        parent="onnet_vas_base.tt200_report_root"
+        action="action_cash_book_report"/>
+    <menuitem id="menu_bank_book_report"
+        name="Bank Book Report"
+        sequence="20"
+        parent="onnet_vas_base.tt200_report_root"
+        action="action_bank_book_report"/>
+
+
+</odoo>
+

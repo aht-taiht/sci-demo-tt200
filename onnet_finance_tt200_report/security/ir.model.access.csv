@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_trial_balance_report_wizard,trial_balance_report_wizard,model_trial_balance_report_wizard,account.group_account_invoice,1,1,1,1
+access_general_journal_report_wizard,general_journal_report_wizard,model_general_journal_report_wizard,account.group_account_invoice,1,1,1,1
+access_ledger_journal_report_wizard,ledger_journal_report_wizard,model_ledger_journal_report_wizard,account.group_account_invoice,1,1,1,1

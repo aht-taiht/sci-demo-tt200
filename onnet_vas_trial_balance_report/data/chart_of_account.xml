@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="l10n_vn.chart131" model="account.account">
+            <field name="follow_by_partner">True</field>
+        </record>
+        <record id="l10n_vn.chart331" model="account.account">
+            <field name="follow_by_partner">True</field>
+        </record>
+    </data>
+</odoo>

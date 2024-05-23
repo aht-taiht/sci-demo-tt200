@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <delete model="ir.ui.menu" id="account_asset.menu_action_account_report_assets"/>
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<odoo>
+    <data noupdate="0">
+        <record id="account_type_KQKD" model="account.account.type">
+            <field name="name">Xác định KQKD</field>
+            <field name="type">regular</field>
+            <field name="internal_group">Xác định KQKD</field>
+        </record>
+    </data>
+</odoo>

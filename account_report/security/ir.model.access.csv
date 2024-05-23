@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_revenue_product_category_report,access.revenue.product.category.report,account_report.model_revenue_product_category_report,account.group_account_user,1,1,1,1
+access_allocation_deferred_expenses_report,access.allocation.deferred.expenese.report,account_report.model_allocation_deferred_expenses_report,account.group_account_user,1,1,1,1
+access_report_custom_debt,access.report.custom.debt,account_report.model_customer_debt_report,account.group_account_user,1,1,1,1

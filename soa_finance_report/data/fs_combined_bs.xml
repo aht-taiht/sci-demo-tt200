@@ -1,0 +1,1855 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="fs_combined_bs" model="account.report">
+        <field name="name">FS Combined (BS)</field>
+        <field name="line_ids">
+        	<record id="fs_combined_bs_assets" model="account.report.line">
+                <field name="name">ASSETS</field>
+                <field name="code">TITLE_ASSETS</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">0</field>
+                <field name="children_ids">
+                    <record id="fs_combined_bs_assets_111100" model="account.report.line">
+                        <field name="name">111100  Cash in Hand - VND</field>
+                        <field name="code">ASSETS_111100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">1</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_111100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">111100</field>
+                            </record>
+                        </field>
+                    </record> 
+                    
+                    <record id="fs_combined_bs_assets_111200" model="account.report.line">
+                        <field name="name">111200  Cash in Hand - Other Currency</field>
+                        <field name="code">ASSETS_111200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">2</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_111200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">111200</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112110" model="account.report.line">
+                        <field name="name">112110  VND - SOA VN - SCB (88133157488)</field>
+                        <field name="code">ASSETS_112110</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">3</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112110_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112110</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112111" model="account.report.line">
+                        <field name="name">112111  VND - SOA VN - VCB (0531002511559)</field>
+                        <field name="code">ASSETS_112111</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">4</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112111_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112111</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112112" model="account.report.line">
+                        <field name="name">112112  VND - SIGMA - VCB (0531002494011)</field>
+                        <field name="code">ASSETS_112112</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">5</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112112_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112112</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112113" model="account.report.line">
+                        <field name="name">112113  VND - SIGMA - VCB (1028738153)</field>
+                        <field name="code">ASSETS_112113</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">6</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112113_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112113</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112114" model="account.report.line">
+                        <field name="name">112114  VND - SIGMA - VCB (1032895017)</field>
+                        <field name="code">ASSETS_112114</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">7</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112114_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112114</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112115" model="account.report.line">
+                        <field name="name">112115  VND - JS - UOB (1023622055)</field>
+                        <field name="code">ASSETS_112115</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">8</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112115_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112115</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112116" model="account.report.line">
+                        <field name="name">112116  VND - JS - DONG A (001638130003)</field>
+                        <field name="code">ASSETS_112116</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">9</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112116_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112116</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112210" model="account.report.line">
+                        <field name="name">112210  USD - SOA VN - SCB (88133157466)</field>
+                        <field name="code">ASSETS_112210</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">10</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112210_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112210</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112211" model="account.report.line">
+                        <field name="name">112211  EURO - SOA VN - SCB (88133157444)</field>
+                        <field name="code">ASSETS_112211</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">11</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112211_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112211</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112212" model="account.report.line">
+                        <field name="name">112212  USD - SIGMA - VCB (0531372494012)</field>
+                        <field name="code">ASSETS_112212</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">12</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112212_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112212</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112213" model="account.report.line">
+                        <field name="name">112213  EUR - SIGMA - VCB (0531142546855)</field>
+                        <field name="code">ASSETS_112213</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">13</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112213_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112213</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112214" model="account.report.line">
+                        <field name="name">112214  USD - SOA HK - HSBC (817-306285-838)</field>
+                        <field name="code">ASSETS_112214</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">14</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112214_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112214</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112215" model="account.report.line">
+                        <field name="name">112215  EURO - SOA HK - HSBC (817-306285-838)</field>
+                        <field name="code">ASSETS_112215</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">15</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112215_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112215</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112216" model="account.report.line">
+                        <field name="name">112216  HKD - SOA HK - HSBC (817-306285-838)</field>
+                        <field name="code">ASSETS_112216</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">16</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112216_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112216</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112217" model="account.report.line">
+                        <field name="name">112217  USD - SOA HK - SCB</field>
+                        <field name="code">ASSETS_112217</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">17</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112217_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112217</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112218" model="account.report.line">
+                        <field name="name">112218  GBP - SOA HK - SCB</field>
+                        <field name="code">ASSETS_112218</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">18</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112218_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112218</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112219" model="account.report.line">
+                        <field name="name">112219  MXN - SOA HK - SCB</field>
+                        <field name="code">ASSETS_112219</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">19</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112219_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112219</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112220" model="account.report.line">
+                        <field name="name">112220  EURO - SOA HK - SCB</field>
+                        <field name="code">ASSETS_112220</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">20</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112220_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112220</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_112221" model="account.report.line">
+                        <field name="name">112221  USD - JS - UOB (1029314123)</field>
+                        <field name="code">ASSETS_112221</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">21</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_112221_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">112221</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="fs_combined_bs_assets_113000" model="account.report.line">
+                        <field name="name">113000 - Cash in transit</field>
+                        <field name="code">ASSETS_113000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">22</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_113000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">113000</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_121800" model="account.report.line">
+                        <field name="name">121800  Other securities and financial instruments</field>
+                        <field name="code">ASSETS_121800</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">23</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_121800_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">121800</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_128100" model="account.report.line">
+                        <field name="name">128100  Term deposits</field>
+                        <field name="code">ASSETS_128100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">24</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_128100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">128100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_128300" model="account.report.line">
+                        <field name="name">128300  Lending loans</field>
+                        <field name="code">ASSETS_128300</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">25</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_128300_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">128300</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_128800" model="account.report.line">
+                        <field name="name">128800  Other held to maturity investments</field>
+                        <field name="code">ASSETS_128800</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">26</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_128800_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">128800</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_131100" model="account.report.line">
+                        <field name="name">131100  Trade receivables - Foreign customers</field>
+                        <field name="code">ASSETS_131100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">27</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_131100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">131100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_131200" model="account.report.line">
+                        <field name="name">131200  Trade receivables - Local customers</field>
+                        <field name="code">ASSETS_131200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">28</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_131200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">131200</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_133110" model="account.report.line">
+                        <field name="name">133110  Deductible VAT for goods and services</field>
+                        <field name="code">ASSETS_133110</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_133110_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">133110</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_133120" model="account.report.line">
+                        <field name="name">133120  Deductible VAT import</field>
+                        <field name="code">ASSETS_133120</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_133120_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">133120</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_133210" model="account.report.line">
+                        <field name="name">133210  Deductible VAT for fixed assets</field>
+                        <field name="code">ASSETS_133210</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_133210_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">133210</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_136200" model="account.report.line">
+                        <field name="name">136200  Technical Services Receivables</field>
+                        <field name="code">ASSETS_136200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_136200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">136200</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_138100" model="account.report.line">
+                        <field name="name">138100  Shortage of assets awaiting resolution</field>
+                        <field name="code">ASSETS_138100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_138100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">138100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_138800" model="account.report.line">
+                        <field name="name">138800  Other receivables</field>
+                        <field name="code">ASSETS_138800</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_138800_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">138800</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_139100" model="account.report.line">
+                        <field name="name">139100  Provision for bad receivables</field>
+                        <field name="code">ASSETS_139100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_139100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">139100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_141000" model="account.report.line">
+                        <field name="name">141000  Advances</field>
+                        <field name="code">ASSETS_141000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_141000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">141000</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_142100" model="account.report.line">
+                        <field name="name">142100  Short-term prepaid expenses</field>
+                        <field name="code">ASSETS_142100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_142100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">142100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_144000" model="account.report.line">
+                        <field name="name">144000  Short-term deposits, mortgages and collaterals</field>
+                        <field name="code">ASSETS_144000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_144000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">144000</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_151000" model="account.report.line">
+                        <field name="name">151000  Goods in transit</field>
+                        <field name="code">ASSETS_151000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_151000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">151000</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_152100" model="account.report.line">
+                        <field name="name">152100  Main - Raw materials</field>
+                        <field name="code">ASSETS_152100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_152100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">152100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_153100" model="account.report.line">
+                        <field name="name">153100  Tools and supplies</field>
+                        <field name="code">ASSETS_153100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_153100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">153100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_153200" model="account.report.line">
+                        <field name="name">153200  Reusable packaging materials</field>
+                        <field name="code">ASSETS_153200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_153200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">153200</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_154100" model="account.report.line">
+                        <field name="name">154100  Work in progress</field>
+                        <field name="code">ASSETS_154100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_154100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">154100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_154200" model="account.report.line">
+                        <field name="name">154200  Work in progress Outsourcing</field>
+                        <field name="code">ASSETS_154200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_154200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">154200</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_154300" model="account.report.line">
+                        <field name="name">154300  Work in progress for wood ripped</field>
+                        <field name="code">ASSETS_154300</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_154300_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">154300</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_155000" model="account.report.line">
+                        <field name="name">155000  Finished goods</field>
+                        <field name="code">ASSETS_155000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_155000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">155000</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_156100" model="account.report.line">
+                        <field name="name">156100  Purchase costs</field>
+                        <field name="code">ASSETS_156100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_156100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">156100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_156200" model="account.report.line">
+                        <field name="name">156200  Incidental purchase costs</field>
+                        <field name="code">ASSETS_156200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_156200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">156200</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_156700" model="account.report.line">
+                        <field name="name">156700  Properties held for sale</field>
+                        <field name="code">ASSETS_156700</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_156700_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">156700</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_157000" model="account.report.line">
+                        <field name="name">157000  Outward goods on consignment</field>
+                        <field name="code">ASSETS_157000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_157000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">157000</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_158000" model="account.report.line">
+                        <field name="name">158000  Goods in bonded warehouse</field>
+                        <field name="code">ASSETS_158000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_158000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">158000</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_159000" model="account.report.line">
+                        <field name="name">159000  Provision for obsolete inventories</field>
+                        <field name="code">ASSETS_159000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_159000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">159000</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_211100" model="account.report.line">
+                        <field name="name">211100  Buildings and structures</field>
+                        <field name="code">ASSETS_211100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_211100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">211100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_211200" model="account.report.line">
+                        <field name="name">211200  Machinery and equipment</field>
+                        <field name="code">ASSETS_211200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_211200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">211200</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_211300" model="account.report.line">
+                        <field name="name">211300  Means of transportation and transmission</field>
+                        <field name="code">ASSETS_211300</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_211300_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">211300</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_211400" model="account.report.line">
+                        <field name="name">211400  Office equipment and furniture</field>
+                        <field name="code">ASSETS_211400</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_211400_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">211400</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_211500" model="account.report.line">
+                        <field name="name">211500  Perennial plants, working animals and farm livestocks</field>
+                        <field name="code">ASSETS_211500</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_211500_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">211500</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_211800" model="account.report.line">
+                        <field name="name">211800  Other tangible fixed assets</field>
+                        <field name="code">ASSETS_211800</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_211800_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">211800</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_212000" model="account.report.line">
+                        <field name="name">212000  Finance lease fixed assets</field>
+                        <field name="code">ASSETS_212000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_212000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">212000</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_213100" model="account.report.line">
+                        <field name="name">213100  Land use rights</field>
+                        <field name="code">ASSETS_213100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_213100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">213100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_213200" model="account.report.line">
+                        <field name="name">213200  Copyrights</field>
+                        <field name="code">ASSETS_213200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_213200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">213200</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_213300" model="account.report.line">
+                        <field name="name">213300  Patents and inventions</field>
+                        <field name="code">ASSETS_213300</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_213300_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">213300</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_213400" model="account.report.line">
+                        <field name="name">213400  Product labels and rademarks</field>
+                        <field name="code">ASSETS_213400</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_213400_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">213400</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_213500" model="account.report.line">
+                        <field name="name">213500  Computer software</field>
+                        <field name="code">ASSETS_213500</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_213500_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">213500</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_213600" model="account.report.line">
+                        <field name="name">213600  Licences and franchises</field>
+                        <field name="code">ASSETS_213600</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_213600_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">213600</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_213800" model="account.report.line">
+                        <field name="name">213800  Other intangible fixed assets</field>
+                        <field name="code">ASSETS_213800</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_213800_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">213800</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_214110" model="account.report.line">
+                        <field name="name">214110  Depreciation of tangible fixed assets</field>
+                        <field name="code">ASSETS_214110</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_214110_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">214110</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_214120" model="account.report.line">
+                        <field name="name">214120  Accumulated depreciation (house, factory)</field>
+                        <field name="code">ASSETS_214120</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_214120_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">214120</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_214130" model="account.report.line">
+                        <field name="name">214130  Accumulated depreciation (transportation and transmission)</field>
+                        <field name="code">ASSETS_214130</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_214130_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">214130</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_214140" model="account.report.line">
+                        <field name="name">214140  Accumulated depreciation (Office equipment and furniture)</field>
+                        <field name="code">ASSETS_214140</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_214140_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">214140</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_214180" model="account.report.line">
+                        <field name="name">214180  Accumulated depreciation (other)</field>
+                        <field name="code">ASSETS_214180</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_214180_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">214180</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_214200" model="account.report.line">
+                        <field name="name">214200  Depreciation of finance lease fixed assets</field>
+                        <field name="code">ASSETS_214200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_214200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">214200</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_214300" model="account.report.line">
+                        <field name="name">214300  Amortisation of intangible assets</field>
+                        <field name="code">ASSETS_214300</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_214300_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">214300</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_214700" model="account.report.line">
+                        <field name="name">214700  Depreciation of investment properties</field>
+                        <field name="code">ASSETS_214700</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_214700_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">214700</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_215000" model="account.report.line">
+                        <field name="name">215000  Goodwill</field>
+                        <field name="code">ASSETS_215000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_215000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">215000</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_229300" model="account.report.line">
+                        <field name="name">229300  Allowances for doubtful debts</field>
+                        <field name="code">ASSETS_229300</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_229300_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">229300</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_241300" model="account.report.line">
+                        <field name="name">241300  Major repairs of fixed assets</field>
+                        <field name="code">ASSETS_241300</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_241300_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">241300</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_242100" model="account.report.line">
+                        <field name="name">242100  Prepaid expenses - short time</field>
+                        <field name="code">ASSETS_242100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_242100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">242100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_242200" model="account.report.line">
+                        <field name="name">242200  Prepaid expenses - long time</field>
+                        <field name="code">ASSETS_242200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_242200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">242200</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_assets_243000" model="account.report.line">
+                        <field name="name">243000  Deferred tax assets</field>
+                        <field name="code">ASSETS_243000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_assets_243000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">243000</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="fs_combined_bs_total_assets" model="account.report.line">
+                <field name="name">TOTAL ASSETS</field>
+                <field name="code">TOTAL_ASSETS</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">30</field>
+                <field name="expression_ids">
+                    <record id="fs_combined_bs_total_assets_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">ASSETS_111100+ASSETS_111200+ASSETS_112110+ASSETS_112111+ASSETS_112112+ASSETS_112113+ASSETS_112114+ASSETS_112115+ASSETS_112116+ASSETS_112210+ASSETS_112211+ASSETS_112212+ASSETS_112213+ASSETS_112214+ASSETS_112215+ASSETS_112216+ASSETS_112217+ASSETS_112218+ASSETS_112219+ASSETS_112220+ASSETS_112221+ASSETS_121800+ASSETS_128100+ASSETS_128300+ASSETS_128800+ASSETS_131100+ASSETS_131200+ASSETS_133110+ASSETS_133120+ASSETS_133210+ASSETS_136200+ASSETS_138100+ASSETS_138800+ASSETS_139100+ASSETS_141000+ASSETS_142100+ASSETS_144000+ASSETS_151000+ASSETS_152100+ASSETS_153100+ASSETS_153200+ASSETS_154100+ASSETS_154200+ASSETS_154300+ASSETS_155000+ASSETS_156100+ASSETS_156200+ASSETS_156700+ASSETS_157000+ASSETS_158000+ASSETS_159000+ASSETS_211100+ASSETS_211200+ASSETS_211300+ASSETS_211400+ASSETS_211500+ASSETS_211800+ASSETS_212000+ASSETS_213100+ASSETS_213200+ASSETS_213300+ASSETS_213400+ASSETS_213500+ASSETS_213600+ASSETS_213800+ASSETS_214110+ASSETS_214120+ASSETS_214130+ASSETS_214140+ASSETS_214180+ASSETS_214200+ASSETS_214300+ASSETS_214700+ASSETS_215000+ASSETS_229300+ASSETS_241300+ASSETS_242100+ASSETS_242200+ASSETS_243000</field>
+                    </record>
+                </field>
+            </record>
+           	<record id="fs_combined_bs_liability" model="account.report.line">
+                <field name="name">LIABILITY</field>
+                <field name="code">TITLE_LIAB</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">30</field>
+                <field name="children_ids">
+
+                    <record id="fs_combined_bs_liability_315000" model="account.report.line">
+                        <field name="name">315000  Current portion of long-term loans</field>
+                        <field name="code">LIAB_315000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_315000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">315000</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_331100" model="account.report.line">
+                        <field name="name">331100  Account payables - VND</field>
+                        <field name="code">LIAB_331100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_331100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">331100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_331200" model="account.report.line">
+                        <field name="name">331200  Account payables - USD</field>
+                        <field name="code">LIAB_331200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_331200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">331200</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_331300" model="account.report.line">
+                        <field name="name">331300  Account payables - EUR</field>
+                        <field name="code">LIAB_331300</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_331300_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">331300</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_331400" model="account.report.line">
+                        <field name="name">331400  Account payables - GBP</field>
+                        <field name="code">LIAB_331400</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_331400_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">331400</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_331500" model="account.report.line">
+                        <field name="name">331500  Account payables - SGD</field>
+                        <field name="code">LIAB_331500</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_331500_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">331500</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_333110" model="account.report.line">
+                        <field name="name">333110  VAT Output</field>
+                        <field name="code">LIAB_333110</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_333110_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">333110</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_333120" model="account.report.line">
+                        <field name="name">333120  VAT on imported goods</field>
+                        <field name="code">LIAB_333120</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_333120_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">333120</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_333200" model="account.report.line">
+                        <field name="name">333200  Special consumption tax</field>
+                        <field name="code">LIAB_333200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_333200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">333200</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_333300" model="account.report.line">
+                        <field name="name">333300  Import and export tax</field>
+                        <field name="code">LIAB_333300</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_333300_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">333300</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_333400" model="account.report.line">
+                        <field name="name">333400  Corporate income tax</field>
+                        <field name="code">LIAB_333400</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_333400_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">333400</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_333500" model="account.report.line">
+                        <field name="name">333500  Personal income tax</field>
+                        <field name="code">LIAB_333500</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_333500_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">333500</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_333700" model="account.report.line">
+                        <field name="name">333700  Land and housing tax, and rental charges</field>
+                        <field name="code">LIAB_333700</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_333700_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">333700</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_333820" model="account.report.line">
+                        <field name="name">333820  Other taxes</field>
+                        <field name="code">LIAB_333820</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_333820_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">333820</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_333900" model="account.report.line">
+                        <field name="name">333900  Fees, charges and other payables</field>
+                        <field name="code">LIAB_333900</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_333900_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">333900</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_334100" model="account.report.line">
+                        <field name="name">334100  Payables to employees</field>
+                        <field name="code">LIAB_334100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_334100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">334100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_334800" model="account.report.line">
+                        <field name="name">334800  Payables to others</field>
+                        <field name="code">LIAB_334800</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_334800_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">334800</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_335100" model="account.report.line">
+                        <field name="name">335100  Accrued expenses</field>
+                        <field name="code">LIAB_335100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_335100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">335100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_336000" model="account.report.line">
+                        <field name="name">336000  Technical Services Payables</field>
+                        <field name="code">LIAB_336000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_336000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">336000</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_337000" model="account.report.line">
+                        <field name="name">337000  Progress billings</field>
+                        <field name="code">LIAB_337000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_337000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">337000</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_338100" model="account.report.line">
+                        <field name="name">338100  Surplus of assets waiting for resolution</field>
+                        <field name="code">LIAB_338100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_338100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">338100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_338200" model="account.report.line">
+                        <field name="name">338200  Trade union fees</field>
+                        <field name="code">LIAB_338200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_338200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">338200</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_338300" model="account.report.line">
+                        <field name="name">338300  Social insurance</field>
+                        <field name="code">LIAB_338300</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_338300_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">338300</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_338400" model="account.report.line">
+                        <field name="name">338400  Health insurance</field>
+                        <field name="code">LIAB_338400</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_338400_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">338400</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_338500" model="account.report.line">
+                        <field name="name">338500  Payables on equitization</field>
+                        <field name="code">LIAB_338500</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_338500_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">338500</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_338600" model="account.report.line">
+                        <field name="name">338600  Unemployment insurance</field>
+                        <field name="code">LIAB_338600</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_338600_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">338600</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_338700" model="account.report.line">
+                        <field name="name">338700  Unearned revenue</field>
+                        <field name="code">LIAB_338700</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_338700_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">338700</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_338810" model="account.report.line">
+                        <field name="name">338810  Others</field>
+                        <field name="code">LIAB_338810</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_338810_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">338810</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_338820" model="account.report.line">
+                        <field name="name">338820  Accident insurance</field>
+                        <field name="code">LIAB_338820</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_338820_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">338820</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_341100" model="account.report.line">
+                        <field name="name">341100  Borrowing loans</field>
+                        <field name="code">LIAB_341100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_341100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">341100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_341200" model="account.report.line">
+                        <field name="name">341200  Finance lease liabilities</field>
+                        <field name="code">LIAB_341200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_341200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">341200</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_344000" model="account.report.line">
+                        <field name="name">344000  Deposits received</field>
+                        <field name="code">LIAB_344000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_344000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">344000</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_347000" model="account.report.line">
+                        <field name="name">347000  Deferred tax liabilities</field>
+                        <field name="code">LIAB_347000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_347000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">347000</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_352000" model="account.report.line">
+                        <field name="name">352000  Provisions payable</field>
+                        <field name="code">LIAB_352000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_352000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">352000</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_353000" model="account.report.line">
+                        <field name="name">353000  Bonus and welfare fund</field>
+                        <field name="code">LIAB_353000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_353000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">353000</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_353100" model="account.report.line">
+                        <field name="name">353100  Bonus fund</field>
+                        <field name="code">LIAB_353100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_353100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">353100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_liability_353200" model="account.report.line">
+                        <field name="name">353200  Welfare fund</field>
+                        <field name="code">LIAB_353200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_liability_353200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">353200</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="fs_combined_bs_total_liability" model="account.report.line">
+                <field name="name">TOTAL LIABILITY</field>
+                <field name="code">TOTAL_LIAB</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">30</field>
+                <field name="expression_ids">
+                    <record id="fs_combined_bs_total_liability_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">LIAB_315000+LIAB_331100+LIAB_331200+LIAB_331300+LIAB_331400+LIAB_331500+LIAB_333110+LIAB_333120+LIAB_333200+LIAB_333300+LIAB_333400+LIAB_333500+LIAB_333700+LIAB_333820+LIAB_333900+LIAB_334100+LIAB_334800+LIAB_335100+LIAB_336000+LIAB_337000+LIAB_338100+LIAB_338200+LIAB_338300+LIAB_338400+LIAB_338500+LIAB_338600+LIAB_338700+LIAB_338810+LIAB_338820+LIAB_341100+LIAB_341200+LIAB_344000+LIAB_347000+LIAB_352000+LIAB_353000+LIAB_353100+LIAB_353200</field>
+                    </record>
+                </field>
+            </record>
+            <record id="fs_combined_bs_equity" model="account.report.line">
+                <field name="name">EQUITY</field>
+                <field name="code">TITLE_EQUITY</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">30</field>
+                <field name="children_ids">
+
+                    <record id="fs_combined_bs_equity_411100" model="account.report.line">
+                        <field name="name">411100  Contributed capital</field>
+                        <field name="code">EQUITY_411100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_equity_411100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">411100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_equity_411200" model="account.report.line">
+                        <field name="name">411200  Capital surplus</field>
+                        <field name="code">EQUITY_411200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_equity_411200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">411200</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_equity_411800" model="account.report.line">
+                        <field name="name">411800  Other capital</field>
+                        <field name="code">EQUITY_411800</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_equity_411800_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">411800</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_equity_412000" model="account.report.line">
+                        <field name="name">412000  Differences upon asset revaluation</field>
+                        <field name="code">EQUITY_412000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_equity_412000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">412000</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_equity_413100" model="account.report.line">
+                        <field name="name">413100  Foreign exchange revaluation differences at year end</field>
+                        <field name="code">EQUITY_413100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_equity_413100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">413100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_equity_413200" model="account.report.line">
+                        <field name="name">413200  Foreign exchange differences arising from construction stage</field>
+                        <field name="code">EQUITY_413200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_equity_413200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">413200</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_equity_421100" model="account.report.line">
+                        <field name="name">421100  Prior year undistributed earnings</field>
+                        <field name="code">EQUITY_421100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_equity_421100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">421100</field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_equity_421200" model="account.report.line">
+                        <field name="name">421200  Current year undistributed earnings</field>
+                        <field name="code">EQUITY_421200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_equity_421200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">
+511101+511102+511301+511302+511303+511304+511305 +511306+511307+511308+511309+511310+511311+511801+511802+511803+521100+521200+521300
++ 632101+632102+632103+632104+632300+632301+632302+632303
++ 632304+632305+632306+632307+632308+632309+632310+632311+632801+632802+632803+632401+632999
++ 641101+641102+641103+641104+641105
++ 641701+641702+641703+641704+641999
++ 642101+642102+642103+642104+642105+642106
++ 642301+642302+642303
++ 642401+642402+642403+642404
++ 642501+642502+642503
++ 642601+642602
++ 642701+642702+642703+642704+642705
++ 642721+642722+642723+642724+642725
++ 642741+642742+642743+642744
++ 642761+642762+642763+642764+642765+642766+642767
++ 642781+642782
++ 642801 + 642802 + 642999
++ 515001+515002+515003+515004+515005+515006
++ 635001+635002+635003+635004+635005+635006
++ 711001 + 811001
++ 821100 + 821200
+                                </field>
+                            </record>
+                        </field>
+                    </record>
+                    
+                    <record id="fs_combined_bs_equity_441000" model="account.report.line">
+                        <field name="name">441000  Capital expenditure funds</field>
+                        <field name="code">EQUITY_441000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="fs_combined_bs_equity_441000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">441000</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="fs_combined_bs_total_equity" model="account.report.line">
+                <field name="name">TOTAL EQUITY</field>
+                <field name="code">TOTAL_EQUITY</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">30</field>
+                <field name="expression_ids">
+                    <record id="fs_combined_bs_total_equity_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">EQUITY_411100+EQUITY_411200+EQUITY_411800+EQUITY_412000+EQUITY_413100+EQUITY_413200+EQUITY_421100+EQUITY_421200+EQUITY_441000</field>
+                    </record>
+                </field>
+            </record>
+        </field>
+    </record>
+</odoo>

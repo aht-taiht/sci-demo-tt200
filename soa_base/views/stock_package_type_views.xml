@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="stock_package_type_form_soa_inherit" model="ir.ui.view">
+            <field name="name">stock.package.type.form.soa.inherit</field>
+            <field name="model">stock.package.type</field>
+            <field name="inherit_id" ref="stock.stock_package_type_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//group[@name='delivery']" position="before">
+                    <group>
+                        <group>
+                            <field name="type_packing"/>
+                        </group>
+                        <group></group>
+                    </group>
+                </xpath>
+
+                <xpath expr="//div[@name='max_weight']" position="after">
+                    <label for="nw_packing"/>
+                    <div class="o_row" name="nw_packing">
+                        <field name="nw_packing"/>
+                    </div>
+                    <label for="gw_packing"/>
+                    <div class="o_row" name="gw_packing">
+                        <field name="gw_packing"/>
+                    </div>
+                </xpath>
+
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

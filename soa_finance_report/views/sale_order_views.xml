@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sale_order_payment_state_tree" model="ir.ui.view">
+            <field name="name">sale.order.payment.state</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.sale_order_tree"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='invoice_status']" position="after">
+                    <field name="payment_state" decoration-success="payment_state == 'paid'"
+                           decoration-info="payment_state == 'partial'"
+                           decoration-warning="payment_state == 'not_paid'" widget="badge" optional="show"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="sale_order_view_form_cashflow_forecast" model="ir.ui.view">
+            <field name="name">sale.order.form.cashflow.forecast</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_payment" type="object" class="oe_stat_button"
+                            icon="fa-money" invisible="payment_count == 0">
+                        <field name="payment_count" widget="statinfo" string="Payments"/>
+                    </button>
+                </xpath>
+                <xpath expr="//group[@name='sale_info']//field[@name='invoice_status']" position="after">
+                    <field name="payment_state"/>
+                </xpath>
+
+                <xpath expr="//header" position="inside">
+                    <button type="object" string="Create CF" name="action_create_cashflow_forecast"
+                            invisible="state != 'sale' or cashflow_forecast_ids"/>
+                    <button name="create_payment"
+                            type="object"
+                            invisible="state != 'sale'"
+                            context="{'default_payment_type': 'inbound', 'default_partner_type': 'customer'}"
+                            string="Create Deposit" data-hotkey="g"/>
+                </xpath>
+
+                <xpath expr="//page[@name='other_information']" position="after">
+                    <page string="CF Forecast" invisible="state != 'sale'">
+                        <button name="action_create_cashflow_forecast" type="object" string="Update CF Forecast"
+                                class="oe_highlight"/>
+                        <field name="cashflow_forecast_ids" widget="one2many">
+                            <tree editable="bottom" create="0" delete="0">
+                                <field name="sale_order_id" optional="hide" readonly="1" force_save="1"/>
+                                <field name="purchase_order_id" optional="hide" readonly="1" force_save="1"/>
+                                <field name="ref" readonly="1" force_save="1"/>
+                                <field name="payment_term_id" readonly="1" force_save="1"/>
+                                <field name="description"/>
+                                <field name="schedule_date" readonly="0" force_save="1"/>
+                                <field name="company_id" column_invisible="1"/>
+                                <field name="financial_currency_id" column_invisible="1"/>
+                                <field name="company_currency_id" column_invisible="1"/>
+                                <field name="currency_id" column_invisible="1"/>
+                                <field name="amount_currency" readonly="0" force_save="1"/>
+                                <field name="amount" sum="Sum Planned Amount" decoration-success="amount >= 0" decoration-danger="amount &lt; 0"/>
+                                <field name="amount_financial_currency" optional="hide"
+                                       sum="Planned Amount in Financial Report"/>
+                                <field name="actual_amount" sum="Sum Actual Amount"/>
+                                <field name="actual_amount_financial_currency" sum="Sum Actual Amount Financial"/>
+                                <field name="residual_amount_financial_currency" sum="Sum Residual Amount"/>
+                                <field name="note"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

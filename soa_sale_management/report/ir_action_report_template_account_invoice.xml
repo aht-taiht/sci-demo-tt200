@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_commercial_invoice_standard_document">
+        <t t-call="soa_sale_management.soa_external_layout">
+            <t t-set="doc" t-value="doc.with_context(lang=doc.partner_id.lang)" />
+            <t t-set="forced_vat" t-value="doc.fiscal_position_id.foreign_vat"/>
+            <!-- So that it appears in the footer of the report instead of the company VAT if it's set -->
+            <div class="page">
+                <div t-att-style="'
+                            color: white;
+                            text-align: center;
+                            font-size: 18px;
+                            line-height: 60px; '
+                            + 'background-color:' + (doc.company_id.header_color_code or '#004EAB')">
+                    <strong style="vertical-align: middle;">COMMERCIAL INVOICE</strong>
+                </div>
+
+                <div class="row" style="margin-top: 40px">
+                    <div class="col-7">
+                        <div class="row">
+                            <div class="col-3">
+                                <strong>Seller:</strong>
+                            </div>
+                            <div class="col-9">
+                                <p class="info-text p-info"><span class="info-text" t-field="doc.company_id.display_name"/></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <p class="p-info"><strong>Buyer:</strong></p>
+                            </div>
+                            <div class="col-9">
+                                <p class="info-text p-info" t-field="doc.partner_id.name"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <p class="p-info"><strong>Address:</strong></p>
+                            </div>
+                            <div class="col-9">
+                                <p class="info-text p-info" t-field="doc.partner_id.street"/>
+                                <p class="info-text p-info" t-field="doc.partner_id.city"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="row">
+                            <div class="col-5">
+                                <p class="p-info"><strong>Invoice No.:</strong></p>
+                            </div>
+                            <div class="col-7">
+                                <p class="p-info info-text"><span t-field="doc.name"/></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                                <p class="p-info"><strong>Invoice date:</strong></p>
+                            </div>
+                            <div class="col-7">
+                                <p class="p-info info-text"><t t-if="doc.invoice_date" t-esc="doc.invoice_date.strftime('%d-%b-%y')"/><t t-esle="">/</t></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                                <p class="p-info"><strong>Client Ref.:</strong></p>
+                            </div>
+                            <div class="col-7">
+                                <p class="p-info info-text"><t t-esc="', '.join(doc.line_ids.sale_line_ids.order_id.analytic_account_id.mapped('name'))"/></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                                <p class="p-info"><strong>Payment term:</strong></p>
+                            </div>
+                            <div class="col-7">
+                                <p class="p-info info-text"><span t-field="doc.invoice_payment_term_id.name"/></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <t t-set="contact_client" t-value="doc.partner_id.child_ids.filtered(lambda x: x.type == 'contact')"/>
+                    <div class="col-7">
+                        <p class="p-info"><strong>Contact person: </strong><span t-esc="contact_client and contact_client[-1].name or ''" /></p>
+                        <p class="p-info"><strong>Telephone: </strong><span t-esc="contact_client and contact_client[-1].phone or ''" /></p>
+                        <p class="p-info"><strong>Email:</strong><span t-esc="contact_client and contact_client[-1].email or ''" /></p>                    </div>
+                    <div class="col-5">
+                        <p class="info-text p-info"/>
+                        <p class="info-text p-info" />
+                        <p class="info-text p-info" />
+                    </div>
+                </div>
+
+                <table style="border-collapse: collapse; border: none; page-break-inside: avoid; margin-top: 30px" width="100%">
+                    <thead>
+                        <tr style="border: solid 1px black; background-color: #E6E7E8">
+                            <th width="5%" style="border: solid 1px black; padding: 0px 2px"><strong>NO</strong></th>
+                            <th width="50%" style="border: solid 1px black; padding: 0px 2px"><strong>DESCRIPTION</strong></th>
+                            <th width="15%" style="border: solid 1px black; padding: 0px 2px"><strong>QUANTITY</strong></th>
+                            <th width="15%" style="border: solid 1px black; padding: 0px 2px"><strong>UNIT PRICE</strong></th>
+<!--                            <th width="10%" style="border: solid 1px black; padding: 0px 2px"><strong>TAXES</strong></th>-->
+                            <th width="15%" style="border: solid 1px black; padding: 0px 2px"><strong>PRICE IN <t t-esc="doc.currency_id.name"/></strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-set="lines_to_report" t-value="doc.invoice_line_ids.sorted(key=lambda l: (-l.sequence, l.date, l.move_name, -l.id), reverse=True)"/>
+                        <tr style="border: solid 1px black;">
+                            <t t-set="current_subtotal" t-value="0"/>
+                            <t t-set="number" t-value="0"/>
+
+                            <t t-foreach="lines_to_report" t-as="line">
+                                <t t-set="current_subtotal" t-value="current_subtotal + line.price_subtotal"/>
+                                <tr t-att-class="'bg-200 fw-bold o_line_section' if line.display_type == 'line_section' else 'fst-italic o_line_note' if line.display_type == 'line_note' else ''">
+                                    <t t-if="line.display_type == 'product'" name="account_invoice_line_accountable">
+                                        <t t-set="number" t-value="number + 1"/>
+                                        <td width="5%" style="border: solid 1px black; text-align: center"><span t-esc="number"/>
+                                        </td>
+                                        <td width="50%" style="border: solid 1px black; padding: 0px 5px" class="text-start">
+                                            <span t-field="line.name"/>
+                                        </td>
+                                        <td width="15%" style="border: solid 1px black; text-align: center">
+                                            <t t-if="doc.company_id.id == 4">
+                                                <span t-esc="'{:,.0f}'.format(line.quantity)"/>
+                                            </t>
+                                            <t t-else="">
+                                                <span t-field="line.quantity"/>
+                                            </t>
+                                            <span t-field="line.product_uom_id"/>
+                                        </td>
+                                        <td width="15%" style="border: solid 1px black; text-align: center">
+                                            <t t-if="doc.company_id.id == 4">
+                                                <span t-esc="'{:,.0f}'.format(line.price_unit)"/>
+                                            </t>
+                                            <t t-else="">
+                                                <span t-esc="'{:,.2f}'.format(line.price_unit)"/>
+                                            </t>
+                                        </td>
+<!--                                        <td width="10%" style="border: solid 1px black; text-align: center">-->
+<!--                                            <span t-out="', '.join(map(lambda x: (x.description or x.name), line.tax_ids))"/>-->
+<!--                                        </td>-->
+                                        <td width="15%" style="border: solid 1px black; text-align: center">
+                                            <span t-field="line.price_subtotal"/>
+                                        </td>
+                                    </t>
+                                    <t t-elif="line.display_type == 'line_section'">
+                                        <td name="td_section_line" colspan="99">
+                                            <span t-field="line.name"/>
+                                        </td>
+                                        <t t-set="current_section" t-value="line"/>
+                                        <t t-set="current_subtotal" t-value="0"/>
+                                    </t>
+                                    <t t-elif="line.display_type == 'line_note'">
+                                        <td name="td_note_line" colspan="99">
+                                            <span t-field="line.name"/>
+                                        </td>
+                                    </t>
+                                </tr>
+                            </t>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="clearfix" name="so_total_summary" style="page-break-inside: avoid;">
+                    <div id="total" class="row" name="total">
+                        <div t-attf-class="'ms-auto'">
+                            <table class="" style="width: 100%; border-collapse: collapse; border: none">
+                                <!-- Tax totals -->
+                                <t t-set="tax_totals" t-value="doc.tax_totals"/>
+                                <t t-call="soa_sale_management.document_tax_totals_template"/>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <table style="border: solid 1px black; border-collapse: collapse; border: none; page-break-inside: avoid;" width="100%">
+                <tr t-if="doc.company_id.id != 4">
+                    <td width="5%" style="border: solid 1px black;"/>
+                    <td width="80%" clspan="4" style="border: solid 1px black; text-align: right !important; padding: 0px 5px">
+                        <strong>Deposit received on date of payment informed by Accounting</strong>
+                    </td>
+                    <td width="15%" style="border: solid 1px black; text-align: center !important">
+                        <strong t-esc="doc._get_paid_amount()" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="5%" style="border: solid 1px black;"/>
+                    <td width="80%"  style="border: solid 1px black; text-align: right !important; padding: 0px 5px">
+                        <strong>Balance to be paid after reception of this invoice</strong>
+                    </td>
+                    <td width="15%"  style="border: solid 1px black; text-align: center !important">
+                        <strong t-field="doc.amount_residual" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="oe_structure"/>
+            <div style="page-break-inside: avoid;">
+                <div class="row mt-4" style="padding-top: 30px">
+                    <div class="col-12>" style="padding-left: 45px;">
+                        <p class="p-height-24" style="margin: 0px 0px;"><strong style="text-decoration: underline;">Banking information:</strong></p>
+                    </div>
+                </div>
+                <t>
+                    <t t-set="bank_ids" t-value="doc.company_id.partner_id.bank_ids"/>
+                    <div class="row">
+                        <div class="col-4" style="padding-left: 45px">
+                            <p style="margin: 0px 0px"><strong>Beneficiary:</strong></p>
+                        </div>
+                        <div class="col-8">
+                            <p style="margin: 0px 2px"><span t-field="doc.company_id.name"/></p>
+                        </div>
+                    </div>
+                    <t t-set="count" t-value="0"/>
+                    <t t-if="bank_ids" t-foreach="bank_ids" t-as="bank">
+                        <t t-set="count" t-value="count + 1"/>
+                        <div class="row">
+                            <div class="col-4" style="padding-left: 45px">
+                                <p t-if="count == 1" style="margin: 0px 0px"><strong><t t-esc="doc._field_titles()['account']" /></strong></p>
+                            </div>
+                            <div class="col-8">
+                                <p style="margin: 0px 2px;">
+                                    <span t-field="bank.acc_number"/>
+                                    <t t-if="bank.currency_id">
+                                        (<span t-field="bank.currency_id.name"/>)
+                                    </t>
+                                </p>
+                            </div>
+                        </div>
+                    </t>
+                    <div class="row">
+                            <div class="col-4" style="padding-left: 45px">
+                                <p style="margin: 0px 0px"><strong><t t-esc="doc._field_titles()['bank']" /></strong></p>
+                            </div>
+                            <div class="col-8">
+                                <p style="margin: 0px 2px;"><span t-field="bank_ids[0].bank_id.name"/></p>
+                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4" style="padding-left: 45px">
+                            <p style="margin: 0px 0px"><strong>Bank address: </strong></p>
+                        </div>
+                        <div class="col-8">
+                            <p style="margin: 0px 2px;"><span t-field="bank_ids[0].bank_id.street"/></p>
+                        </div>
+                    </div>
+                    <div t-if="bank_ids[0].bank_id.street2" class="row">
+                        <div class="col-4" style="padding-left: 45px">
+                        </div>
+                        <div class="col-8">
+                            <p style="margin: 0px 2px;"><span t-field="bank_ids[0].bank_id.street2"/></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4" style="padding-left: 45px">
+                            <p t-if="bank_ids[0].bank_id.bic" style="margin: 0px 2px;"><strong>Swift Code: </strong>
+                            </p>
+                        </div>
+                        <div class="col-8">
+                            <p t-if="bank_ids[0].bank_id.bic" style="margin: 0px 2px;">
+                                <span t-field="bank_ids[0].bank_id.bic"/>
+                            </p>
+                        </div>
+                    </div>
+                </t>
+                <div class="row mt4">
+                    <div class="col-12" style="padding-left: 45px">
+                        <i style="color: red; text-decoration: underline; font-weight: bold; ">
+                            All banking charges (including intermediary bank’s fee, if any) are to be borne by the Buyer.
+                        </i>
+                    </div>
+                </div>
+            </div>
+            <br/><br/><br/>
+            <div class="row" style="page-break-inside: avoid; padding-top: 30px">
+                <div class="col-6 text-center">
+                    <p><strong>Buyer's Signature</strong></p>
+                    <br/>
+                    <br/>
+<!--                    <span t-field="doc.partner_id.name"/>-->
+                </div>
+                <div class="col-6 text-center">
+                    <p><strong>Seller's Signature</strong></p>
+
+<!--                    <t t-if="doc.company_id.id in (3, 4)">-->
+<!--                        <img t-att-src="'/soa_sale_management/static/src/img/jolie_sigma_signature.jpg'"-->
+<!--                         style="max-height: 180px; vertical-align: middle; padding-left: 110px" alt="Logo"/>-->
+<!--                    </t>-->
+                </div>
+            </div>
+            <t t-if="doc.has_narration_content()">
+                <p style="page-break-before:always;"/>
+                <div>
+                    <div style="text-align: center; margin-bottom: 20px; padding-top: 5px"><strong>TERMS AND CONDITIONS</strong></div>
+                    <t t-raw="doc.narration"/>
+                </div>
+            </t>
+            <style>
+                .info-text {
+                    text-transform: uppercase;
+                }
+                .p-height-24 {
+                    height: 24px;
+                }
+                .p-info {
+                    margin: 0px 2px;
+                }
+            </style>
+        </t>
+    </template>
+
+    <template id="report_commercial_invoice_standard">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="soa_sale_management.report_commercial_invoice_standard_document" t-lang="doc.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+
+</odoo>

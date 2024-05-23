@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="crm_tag_buying_office" model="crm.tag">
+        <field name="name">Buying Office</field>
+    </record>
+</odoo>

@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_vat_invoice,access_account_vat_invoice,model_account_vat_invoice,account.group_account_user,1,1,1,1
+access_account_vat_invoice_line,access_account_vat_invoice_line,model_account_vat_invoice_line,account.group_account_user,1,1,1,1
+
+
+access_export_vat_in_invoice_wizard,access_export_vat_in_invoice_wizard,model_export_vat_in_invoice_wizard,account.group_account_user,1,1,1,1
+access_export_vat_out_invoice_wizard,access_export_vat_out_invoice_wizard,model_export_vat_out_invoice_wizard,account.group_account_user,1,1,1,1

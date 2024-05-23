@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_cash_book_report" model="ir.actions.client">
+            <field name="name">Cash Book Report</field>
+            <field name="tag">account_report</field>
+            <field name="context" eval="{'report_id': ref('soa_finance_report.cash_book_report')}"/>
+        </record>
+
+        <record id="action_bank_book_report" model="ir.actions.client">
+            <field name="name">Bank Book Report</field>
+            <field name="tag">account_report</field>
+            <field name="context" eval="{'report_id': ref('soa_finance_report.bank_book_report')}"/>
+        </record>
+
+        <record id="action_general_journal_report" model="ir.actions.act_window">
+            <field name="name">GENERAL JOURNAL (S03a-DN)</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">general.journal.report.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="action_ledger_journal_report" model="ir.actions.act_window">
+            <field name="name">LEDGER (S03b-DN)</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ledger.journal.report.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

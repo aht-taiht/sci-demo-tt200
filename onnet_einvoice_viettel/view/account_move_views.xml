@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_move_form_asset_inherit_viettel_inherit" model="ir.ui.view">
+        <field name="name">account.move.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="onnet_vat_base.view_move_form_asset_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@id='vat_invoice_tab_group_right']" position="inside">
+                <field name="viettel_branch_id" invisible="move_type in ('entry', 'in_invoice')" options="{'no_create_edit': True, 'no_create': True}"/>
+                <field name="viettel_branch_vat" invisible="move_type not in ('entry', 'in_invoice')"/>
+                <field name="vsi_template" invisible="move_type == 'entry' or not viettel_branch_id"/>
+                <field name="vsi_series" invisible="move_type == 'entry' or not viettel_branch_id"/>
+            </xpath>
+
+        </field>
+    </record>
+  </odoo>

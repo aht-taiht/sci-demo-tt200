@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sale_order_form_inherit_custom" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit.custom</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//header" position="inside">
+                    <button type="object" string="Create PO" name="create_purchase_order" invisible="state != 'sale'"/>
+                </xpath>
+
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="email"/>
+                    <field name="tel"/>
+                </xpath>
+
+                <xpath expr="//group[@name='order_details']" position="inside">
+                    <xpath expr="//field[@name='analytic_account_id']" position="move"/>
+                </xpath>
+
+                <xpath expr="//field[@name='analytic_account_id']" position="attributes">
+                    <attribute name="string">Project Code</attribute>
+                </xpath>
+
+                <xpath expr="//tree//field[@name='name']" position="after">
+                    <field name="margin"/>
+                    <field name="hidden_margin"/>
+                    <field name="image" widget="image"/>
+                    <field name="customer_item_no"/>
+                    <field name="supplier_item_no"/>
+                </xpath>
+
+                <xpath expr="//field[@name='order_line']/tree/field[@name='product_uom_qty']" position="before">
+                    <field name="product_litre_qty"/>
+                </xpath>
+
+                <xpath expr="//page[@name='customer_signature']" position="after">
+                    <page string="Logistics Info" name="logistics_info">
+                        <group>
+                            <group>
+                                <field name="atd_order"/>
+                                <field name="etd_order"/>
+                                <field name="forwarder"/>
+                                <field name="po_no"/>
+                                <field name="cbm"/>
+                            </group>
+                            <group>
+                                <field name="const"/>
+                                <field name="const_type"/>
+                                <field name="country_of_origin"/>
+                                <field name="port_of_discharge"/>
+                                <field name="port_of_loading"/>
+                                <field name="seal"/>
+<!--                                <field name="legal"/>-->
+                                <field name="delivery_term"/>
+                                <field name="receiver_note"/>
+                            </group>
+                        </group>
+                    </page>
+                    <page string="Sourcing Order Line" name="sourcing_orderline">
+                      <field name="order_line"
+                            widget="section_and_note_one2many"
+                            mode="tree,from"
+                            readonly="state in ('done', 'cancel')">
+                            <tree string="Sale Order Lines" editable="bottom" create="0">
+                                <field name="sequence" widget="handle"/>
+                                <field name="product_uom_category_id" column_invisible="1"/>
+                                <field name="company_id" column_invisible="1"/>
+                                <field name="product_id" readonly="1"/>
+                                <field name="customer_item_no"/>
+                                <field name="supplier_item_no"/>
+                                <field name="image" widget="image" />
+                                <field name="name" widget="section_and_note_text"/>
+                                <field name="material"/>
+                                <field name="color"/>
+                                <field name="w_cm"/>
+                                <field name="h_cm"/>
+                                <field name="l_cm"/>
+                                <field name="hs_code"/>
+                                <field name="product_uom_qty"/>
+                                <field name="price_unit"/>
+                                <field name="product_uom"/>
+                                <field name="price_subtotal"/>
+                                <field name="product_packaging_id" invisible="not product_id" context="{'default_product_id': product_id, 'tree_view_ref':'product.product_packaging_tree_view', 'form_view_ref':'product.product_packaging_form_view'}" groups="product.group_stock_packaging" optional="show"/>
+                                <field name="package_type_id" invisible="not product_id" groups="product.group_stock_packaging" optional="show"/>
+                                <field name="product_packaging_qty"/>
+                                <field name="package_w_cm"/>
+                                <field name="package_h_cm"/>
+                                <field name="package_l_cm"/>
+                                <field name="nw_packing"/>
+                                <field name="gw_packing"/>
+                                <field name="volume_export"/>
+                                <field name="total_volume"/>
+                            </tree>
+                            <form string="Purchase Order Line">
+                                    <field name="tax_calculation_rounding_method" invisible="1"/>
+                                    <field name="state" invisible="1"/>
+                                    <field name="display_type" invisible="1"/>
+                                    <field name="company_id" invisible="1"/>
+                                    <field name="product_uom_category_id" invisible="1"/>
+                                    <group invisible="display_type">
+                                        <field name="product_id"/>
+                                        <field name="customer_item_no"/>
+                                        <field name="supplier_item_no"/>
+                                        <field name="image"/>
+                                        <field name="name" widget="section_and_note_text"/>
+                                        <field name="material"/>
+                                        <field name="color"/>
+                                        <field name="w_cm"/>
+                                        <field name="h_cm"/>
+                                        <field name="l_cm"/>
+                                        <field name="hs_code"/>
+                                        <field name="product_uom_qty"/>
+                                        <field name="price_unit"/>
+                                        <field name="product_uom"/>
+                                        <field name="price_subtotal"/>
+                                        <field name="product_packaging_id" invisible="not product_id" context="{'default_product_id': product_id, 'tree_view_ref':'product.product_packaging_tree_view', 'form_view_ref':'product.product_packaging_form_view'}" groups="product.group_stock_packaging" optional="show"/>
+                                        <field name="package_type_id" invisible="not product_id" groups="product.group_stock_packaging"/>
+                                        <field name="product_packaging_qty"/>
+                                        <field name="package_w_cm"/>
+                                        <field name="package_h_cm"/>
+                                        <field name="package_l_cm"/>
+                                        <field name="nw_packing"/>
+                                        <field name="gw_packing"/>
+                                        <field name="volume_export"/>
+                                        <field name="total_volume"/>
+                                    </group>
+                            </form>
+                        </field>
+                   </page>
+                </xpath>
+
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

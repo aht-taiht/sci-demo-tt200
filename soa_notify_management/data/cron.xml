@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Reminder CRON -->
+    <record model="ir.cron" id="_cron">
+        <field name="name">Purchase: Cron to remind deposit after 7 days of purchase order confirmation</field>
+        <field name="model_id" ref="soa_purchase_management.model_purchase_order"/>
+        <field name="state">code</field>
+        <field name="code">model.cron_remind_deposit()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+        <field name="numbercall">-1</field>
+        <field name="nextcall" eval="(DateTime.today() + relativedelta(hours=1)).strftime('%Y-%m-%d %H:00:00')"/>
+    </record>
+
+    <record model="ir.cron" id="_cron_remind_labeling_carton">
+        <field name="name">Purchase: Remind Labeling/Carton layout 3-4 weeks after PO is confirmed</field>
+        <field name="model_id" ref="soa_purchase_management.model_purchase_order"/>
+        <field name="state">code</field>
+        <field name="code">model.cron_remind_labeling_carton()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+        <field name="numbercall">-1</field>
+        <field name="nextcall" eval="(DateTime.today() + relativedelta(hours=1)).strftime('%Y-%m-%d %H:00:00')"/>
+    </record>
+
+    <record model="ir.cron" id="_cron_remind_balance_payment">
+        <field name="name">Purchase: Remind balance payment after ATD 14 days that PO is confirmed</field>
+        <field name="model_id" ref="soa_purchase_management.model_purchase_order"/>
+        <field name="state">code</field>
+        <field name="code">model.cron_remind_balance_payment()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="nextcall" eval="(DateTime.today() + relativedelta(days=1)).strftime('%Y-%m-%d 00:00:00')"/>
+    </record>
+</odoo>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <data>
+       <record id="email_template_remind_deposit_of_purchase_order_confirmation" model="mail.template">
+           <field name="name">Purchase: Remind deposit after 7 days of purchase order confirmation</field>
+           <field name="model_id" ref="soa_notify_management.model_purchase_order"/>
+           <field name="subject">Nhắc nhở khách hàng thanh toán deposit</field>
+           <field name="email_from">{{ object.company_id.email_formatted }}</field>
+           <field name="email_to">{{ (object.user_id.login or object.user_id.email) }}</field>
+           <field name="body_html" type="html">
+               <div>
+                   <p>
+                      Nhắc nhở khách hàng thanh toán deposit <t t-out="object.name or ''"/>
+                   </p>
+               </div>
+           </field>
+       </record>
+
+       <record id="email_template_remind_labeling_carton_layout_of_purchase_order_confirmation" model="mail.template">
+           <field name="name">Purchase: Remind Labeling/Carton layout 3-4 weeks of PO confirmation</field>
+           <field name="model_id" ref="soa_notify_management.model_purchase_order"/>
+           <field name="subject">Nhắc nhở dán nhãn/bố trí thùng carton</field>
+           <field name="email_from">{{ object.company_id.email_formatted }}</field>
+           <field name="email_to">{{ (object.user_id.login or object.user_id.email) }}</field>
+           <field name="body_html" type="html">
+               <div>
+                   <p>
+                      Nhắc nhở dán nhãn/bố trí thùng carton <t t-out="object.name or ''"/>
+                   </p>
+               </div>
+           </field>
+       </record>
+
+       <record id="email_template_remind_balance_payment_of_purchase_order_confirmation" model="mail.template">
+           <field name="name">Purchase: Remind balance payment of PO confirmation</field>
+           <field name="model_id" ref="soa_notify_management.model_purchase_order"/>
+           <field name="subject">Nhắc nhở khách hàng thanh toán balance</field>
+           <field name="email_from">{{ object.company_id.email_formatted }}</field>
+           <field name="email_to">{{ (object.user_id.login or object.user_id.email) }}</field>
+           <field name="body_html" type="html">
+               <div>
+                   <p>
+                      Nhắc nhở khách hàng thanh toán balance <t t-out="object.name or ''"/>
+                   </p>
+               </div>
+           </field>
+       </record>
+   </data>
+</odoo>

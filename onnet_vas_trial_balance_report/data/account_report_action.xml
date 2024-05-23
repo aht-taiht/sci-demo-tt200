@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_vas_trial_balance_report" model="ir.actions.client">
+            <field name="name">VAS - Trial Balance</field>
+            <field name="tag">account_report</field>
+            <field name="context" eval="{'report_id': ref('onnet_vas_trial_balance_report.vas_trial_balance_report')}"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="account_account_111" model="account.account">
+            <field name="code">111</field>
+            <field name="name">Tiền mặt</field>
+            <field name="account_type">asset_cash</field>
+        </record>
+        <record id="account_account_112" model="account.account">
+            <field name="code">112</field>
+            <field name="name">Tiền gửi ngân hàng</field>
+            <field name="account_type">asset_cash</field>
+        </record>
+        <record id="account_account_1121" model="account.account">
+            <field name="code">1121</field>
+            <field name="name">Tiền việt nam</field>
+            <field name="account_type">asset_cash</field>
+        </record>
+        <record id="account_account_128" model="account.account">
+            <field name="code">128</field>
+            <field name="name">Đầu tư nắm giữ đến ngày đáo hạn</field>
+            <field name="account_type">asset_current</field>
+        </record>
+        <record id="account_account_131" model="account.account">
+            <field name="code">131</field>
+            <field name="name">Phải thu của khách hàng</field>
+            <field name="account_type">asset_receivable</field>
+            <field name="reconcile">True</field>
+            <field name="non_trade">False</field>
+        </record>
+        <record id="account_account_133" model="account.account">
+            <field name="code">133</field>
+            <field name="name">Thuế GTGT được khấu trừ</field>
+            <field name="account_type">asset_current</field>
+        </record>
+        <record id="account_account_138" model="account.account">
+            <field name="code">138</field>
+            <field name="name">Phải thu khác</field>
+            <field name="account_type">asset_current</field>
+            <field name="reconcile">True</field>
+        </record>
+        <record id="account_account_154" model="account.account">
+            <field name="code">154</field>
+            <field name="name">Chi phí sản xuất, kinh doanh dở dang</field>
+            <field name="account_type">asset_current</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_156" model="account.account">
+            <field name="code">156</field>
+            <field name="name">Hàng hóa</field>
+            <field name="account_type">asset_current</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_211" model="account.account">
+            <field name="code">211</field>
+            <field name="name">Tài sản cố định hữu hình</field>
+            <field name="account_type">asset_fixed</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_214" model="account.account">
+            <field name="code">214</field>
+            <field name="name">Hao mòn tài sản cố định</field>
+            <field name="account_type">asset_non_current</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_242" model="account.account">
+            <field name="code">242</field>
+            <field name="name">Chi phí trả trước</field>
+            <field name="account_type">asset_non_current</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_331" model="account.account">
+            <field name="code">331</field>
+            <field name="name">Phải trả cho người bán</field>
+            <field name="account_type">liability_payable</field>
+            <field name="reconcile">True</field>
+            <field name="non_trade">False</field>
+        </record>
+        <record id="account_account_3335" model="account.account">
+            <field name="code">3335</field>
+            <field name="name">Thuế thu nhập cá nhân</field>
+            <field name="account_type">liability_current</field>
+            <field name="reconcile">True</field>
+            <field name="non_trade">False</field>
+        </record>
+        <record id="account_account_333" model="account.account">
+            <field name="code">333</field>
+            <field name="name">Thuế và các khoản phải nộp nhà nước</field>
+            <field name="account_type">liability_current</field>
+            <field name="reconcile">True</field>
+            <field name="non_trade">False</field>
+        </record>
+        <record id="account_account_3331" model="account.account">
+            <field name="code">3331</field>
+            <field name="name">Thuế GTGT phải nộp</field>
+            <field name="account_type">liability_current</field>
+            <field name="reconcile">True</field>
+            <field name="non_trade">False</field>
+        </record>
+        <record id="account_account_3338" model="account.account">
+            <field name="code">3338</field>
+            <field name="name">Thuế bảo vệ môi trường và các loại thuế khác</field>
+            <field name="account_type">liability_current</field>
+            <field name="reconcile">True</field>
+        </record>
+        <record id="account_account_334" model="account.account">
+            <field name="code">334</field>
+            <field name="name">Phải trả người lao động</field>
+            <field name="account_type">liability_payable</field>
+            <field name="reconcile">True</field>
+            <field name="non_trade">False</field>
+        </record>
+        <record id="account_account_338" model="account.account">
+            <field name="code">338</field>
+            <field name="name">Phải trả và phải nộp khác</field>
+            <field name="account_type">liability_current</field>
+            <field name="reconcile">True</field>
+            <field name="non_trade">False</field>
+        </record>
+        <record id="account_account_3388" model="account.account">
+            <field name="code">3388</field>
+            <field name="name">Phải trả, phải nộp khác</field>
+            <field name="account_type">liability_current</field>
+            <field name="reconcile">True</field>
+            <field name="non_trade">False</field>
+        </record>
+        <record id="account_account_341" model="account.account">
+            <field name="code">341</field>
+            <field name="name">Vay và nợ thuê tài chính</field>
+            <field name="account_type">liability_current</field>
+            <field name="reconcile">True</field>
+            <field name="non_trade">False</field>
+        </record>
+        <record id="account_account_411" model="account.account">
+            <field name="code">411</field>
+            <field name="name">Vốn đầu tư của chủ sở hữu</field>
+            <field name="account_type">equity</field>
+        </record>
+        <record id="account_account_421" model="account.account">
+            <field name="code">421</field>
+            <field name="name">Lợi nhuận sau thuế chưa phân phối</field>
+            <field name="account_type">equity</field>
+        </record>
+        <record id="account_account_511" model="account.account">
+            <field name="code">511</field>
+            <field name="name">Doanh thu bán hàng</field>
+            <field name="account_type">income</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_5111" model="account.account">
+            <field name="code">5111</field>
+            <field name="name">Doanh thu bán hàng hóa</field>
+            <field name="account_type">income</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_5113" model="account.account">
+            <field name="code">5113</field>
+            <field name="name">Doanh thu cung cấp dịch vụ</field>
+            <field name="account_type">income</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_515" model="account.account">
+            <field name="code">515</field>
+            <field name="name">Doanh thu hoạt động tài chính</field>
+            <field name="account_type">income_other</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_521" model="account.account">
+            <field name="code">521</field>
+            <field name="name">Các khoản giảm trừ doanh thu</field>
+            <field name="account_type">income</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_632" model="account.account">
+            <field name="code">632</field>
+            <field name="name">Giá vốn hàng bán</field>
+            <field name="account_type">expense_direct_cost</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_6321" model="account.account">
+            <field name="code">6321</field>
+            <field name="name">Giá vốn hàng bán: Hàng hóa, thành phẩm</field>
+            <field name="account_type">expense_direct_cost</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_6328" model="account.account">
+            <field name="code">6328</field>
+            <field name="name">Chi phí bằng tiền khác</field>
+            <field name="account_type">expense_direct_cost</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_635" model="account.account">
+            <field name="code">635</field>
+            <field name="name">Chi phí tài chính</field>
+            <field name="account_type">expense</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_641" model="account.account">
+            <field name="code">641</field>
+            <field name="name">Chi phí bán hàng</field>
+            <field name="account_type">expense</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_6417" model="account.account">
+            <field name="code">6417</field>
+            <field name="name">Chi phí dịch vụ mua ngoài</field>
+            <field name="account_type">expense</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_6418" model="account.account">
+            <field name="code">6418</field>
+            <field name="name">Chi phí bằng tiền khác</field>
+            <field name="account_type">expense</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_6411" model="account.account">
+            <field name="code">6411</field>
+            <field name="name">Chi phí nhân viên</field>
+            <field name="account_type">expense</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_642" model="account.account">
+            <field name="code">642</field>
+            <field name="name">Chi phí quản lý doanh nghiệp</field>
+            <field name="account_type">expense</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_6427" model="account.account">
+            <field name="code">6427</field>
+            <field name="name">Chi phí dịch vụ mua ngoài</field>
+            <field name="account_type">expense</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_6428" model="account.account">
+            <field name="code">6428</field>
+            <field name="name">Chi phí bằng tiền khác</field>
+            <field name="account_type">expense</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_6421" model="account.account">
+            <field name="code">6421</field>
+            <field name="name">Chi phí nhân viên quản lý</field>
+            <field name="account_type">expense</field>
+            <field name="reconcile">False</field>
+        </record>
+        <record id="account_account_711" model="account.account">
+            <field name="code">711</field>
+            <field name="name">Thu nhập khác</field>
+            <field name="account_type">income_other</field>
+            <field name="reconcile">False</field>
+        </record>
+        
+        
+    </data>
+</odoo>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Create new menu -->
+    <menuitem id="pnl_report_root"
+            name="PNL Reports"
+            sequence="2"
+            parent="account.menu_finance_reports"
+            groups="account.group_account_user,account.group_account_manager">
+    </menuitem>
+
+    <!--  TT200 Report  -->
+     <menuitem id="tt200_report_root"
+            name="TT200 Reports"
+            sequence="4"
+            parent="account.menu_finance_reports"
+            groups="account.group_account_user,account.group_account_manager">
+    </menuitem>
+
+
+    <menuitem id="menu_financial_statement_root"
+              name="Financial Statement"
+              sequence="6"
+              parent="account.menu_finance_reports"
+              groups="account.group_account_user,account.group_account_manager">
+    </menuitem>
+
+</odoo>
+

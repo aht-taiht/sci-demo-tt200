@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+       <record id="purchase_order_form_soa_inherit_view" model="ir.ui.view">
+           <field name="name">purchase.order.form.soa.inherit</field>
+           <field name="model">purchase.order</field>
+           <field name="inherit_id" ref="purchase.purchase_order_form"/>
+           <field name="arch" type="xml">
+
+               <xpath expr="//field[@name='partner_ref']" position="after">
+                   <field name="purchase_etd"/>
+                   <field name="purchase_atd"/>
+               </xpath>
+
+                <xpath expr="//div[@name='reminder']" position="after">
+                  <field name="analytic_account_id" require="1" string="Project Code"/>
+                </xpath>
+
+               <xpath expr="//page[@name='products']//field[@name='order_line']//tree//field[@name='name']" position="after">
+                   <field name="customer_item_no"/>
+                   <field name="supplier_item_no"/>
+                   <field name="image_po" widget="image"/>
+                   <field name="material_po"/>
+               </xpath>
+
+               <xpath expr="//page[@name='purchase_delivery_invoice']" position="after">
+                   <page string="Logistics Info" name="logistics_info">
+                       <group>
+                           <group>
+                               <field name="purchase_no"/>
+                               <field name="purchase_cbm"/>
+                               <field name="forwarder"/>
+                               <field name="country_origin"/>
+                           </group>
+                           <group>
+                               <field name="port_discharge"/>
+                               <field name="port_loading"/>
+                               <field name="cont_no"/>
+                               <field name="seal_no"/>
+                               <field name="delivery_term"/>
+                           </group>
+                       </group>
+                   </page>
+                  <page string="Sourcing Order Line" name="sourcing_orderline">
+                      <field name="order_line"
+                            widget="section_and_note_one2many"
+                            mode="tree,from"
+                            readonly="state in ('done', 'cancel')">
+                            <tree string="Purchase Order Lines" editable="bottom" create="0">
+                                <field name="sequence" widget="handle"/>
+                                <field name="product_uom_category_id" column_invisible="1"/>
+                                <field name="company_id" column_invisible="1"/>
+                                <field name="product_id" readonly="1"/>
+                                <field name="customer_item_no"/>
+                                <field name="supplier_item_no"/>
+                                <field name="image_po" widget="image" />
+                                <field name="name" widget="section_and_note_text"/>
+                                <field name="material"/>
+                                <field name="color"/>
+                                <field name="w_cm"/>
+                                <field name="h_cm"/>
+                                <field name="l_cm"/>
+                                <field name="hs_code"/>
+                                <field name="product_qty"/>
+                                <field name="price_unit"/>
+                                <field name="product_uom"/>
+                                <field name="price_subtotal"/>
+                                <field name="product_packaging_id" invisible="not product_id" context="{'default_product_id': product_id, 'tree_view_ref':'product.product_packaging_tree_view', 'form_view_ref':'product.product_packaging_form_view'}" groups="product.group_stock_packaging" optional="show"/>
+                                <field name="package_type_id" invisible="not product_id" groups="product.group_stock_packaging" optional="show"/>
+                                <field name="product_packaging_qty"/>
+                                <field name="package_w_cm"/>
+                                <field name="package_h_cm"/>
+                                <field name="package_l_cm"/>
+                                <field name="nw_packing"/>
+                                <field name="gw_packing"/>
+                                <field name="volume_export"/>
+                                <field name="total_volume"/>
+                            </tree>
+                            <form string="Purchase Order Line">
+                                    <field name="tax_calculation_rounding_method" invisible="1"/>
+                                    <field name="state" invisible="1"/>
+                                    <field name="display_type" invisible="1"/>
+                                    <field name="company_id" invisible="1"/>
+                                    <field name="product_uom_category_id" invisible="1"/>
+                                    <group invisible="display_type">
+                                        <field name="product_id"/>
+                                        <field name="customer_item_no"/>
+                                        <field name="supplier_item_no"/>
+                                        <field name="image_po"/>
+                                        <field name="name" widget="section_and_note_text"/>
+                                        <field name="material"/>
+                                        <field name="color"/>
+                                        <field name="w_cm"/>
+                                        <field name="h_cm"/>
+                                        <field name="l_cm"/>
+                                        <field name="hs_code"/>
+                                        <field name="product_qty"/>
+                                        <field name="price_unit"/>
+                                        <field name="product_uom"/>
+                                        <field name="price_subtotal"/>
+                                        <field name="product_packaging_id" invisible="not product_id" context="{'default_product_id': product_id, 'tree_view_ref':'product.product_packaging_tree_view', 'form_view_ref':'product.product_packaging_form_view'}" groups="product.group_stock_packaging" optional="show"/>
+                                        <field name="package_type_id" invisible="not product_id" groups="product.group_stock_packaging"/>
+                                        <field name="product_packaging_qty"/>
+                                        <field name="package_w_cm"/>
+                                        <field name="package_h_cm"/>
+                                        <field name="package_l_cm"/>
+                                        <field name="nw_packing"/>
+                                        <field name="gw_packing"/>
+                                        <field name="volume_export"/>
+                                        <field name="total_volume"/>
+                                    </group>
+                            </form>
+                        </field>
+                   </page>
+               </xpath>
+
+           </field>
+       </record>
+
+
+    </data>
+</odoo>

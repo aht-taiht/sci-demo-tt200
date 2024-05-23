@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="crossovered_budget_view_form_inherit" model="ir.ui.view">
+        <field name="name">crossovered.budget.form.inherit</field>
+        <field name="model">crossovered.budget</field>
+        <field name="inherit_id" ref="account_budget.crossovered_budget_view_form"/>
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="currency_id"/>
+            </field>
+            <xpath expr="//sheet/group/group[2]/field[@name='company_id']" position="attributes">
+                <attribute name="required">0</attribute>
+            </xpath>
+            <xpath expr="//page[@name='budget_lines']/field[@name='crossovered_budget_line']/tree/field[@name='analytic_account_id']" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </xpath>
+            <xpath expr="//page[@name='budget_lines']/field[@name='crossovered_budget_line']/tree/field[@name='paid_date']" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </xpath>
+            <xpath expr="//page[@name='budget_lines']/field[@name='crossovered_budget_line']/tree/field[@name='planned_amount']" position="after">
+                <field name="reforecast_amount" optional="hide" readonly="parent.state in ('cancel', 'done')"/>
+            </xpath>
+            <xpath expr="//page[@name='budget_lines']/field[@name='crossovered_budget_line']/tree/field[@name='general_budget_id']" position="after">
+                <field name="analytic_plan_id" required="1" readonly="parent.state != 'draft'"/>
+            </xpath>
+            <xpath expr="//page[@name='budget_lines']/field[@name='crossovered_budget_line']/form/group/group[1]/field[@name='general_budget_id']" position="after">
+                <field name="analytic_plan_id" required="1" readonly="parent.state != 'draft'"/>
+            </xpath>
+            <!-- Allow edit field reforecast_amount in the all of state-->
+            <xpath expr="//page[@name='budget_lines']/field[@name='crossovered_budget_line']" position="attributes">
+                <attribute name="readonly" eval="0"/>
+            </xpath>
+            <xpath expr="//page[@name='budget_lines']/field[@name='crossovered_budget_line']/tree/field[@name='general_budget_id']" position="attributes">
+                <attribute name="readonly">parent.state != 'draft'</attribute>
+            </xpath>
+            <xpath expr="//page[@name='budget_lines']/field[@name='crossovered_budget_line']/tree/field[@name='date_from']" position="attributes">
+                <attribute name="readonly">parent.state != 'draft'</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='budget_lines']/field[@name='crossovered_budget_line']/tree/field[@name='date_to']" position="attributes">
+                <attribute name="readonly">parent.state != 'draft'</attribute>
+            </xpath>
+            <xpath expr="//page[@name='budget_lines']/field[@name='crossovered_budget_line']/tree/field[@name='planned_amount']" position="attributes">
+                <attribute name="readonly">parent.state != 'draft'</attribute>
+            </xpath>
+            <!-- New Tab: Expense allocation -->
+            <xpath expr="//notebook" position="inside">
+                <page string="P&amp;L Allocation" name="pnl_allocation">
+                    <field name="expense_allocation_ids" readonly="state in ('done', 'cancel')">
+                        <tree editable="bottom">
+                            <field name="from_analytic_plan_ids" widget="many2many_tags" required="1"/>
+                            <field name="to_analytic_plan_id" required="1"/>
+                            <field name="date_from" required="1"/>
+                            <field name="date_to" required="1"/>
+                            <field name="rate" sum="Rate Total"/>
+                        </tree>
+                        <form>
+                            <group>
+                                <field name="from_analytic_plan_ids" widget="many2many_tags"/>
+                                <field name="to_analytic_plan_id"/>
+                                <field name="date_from"/>
+                                <field name="date_to"/>
+                                <field name="rate"/>
+                            </group>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

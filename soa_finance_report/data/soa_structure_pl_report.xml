@@ -1,0 +1,2632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="structure_pl" model="account.report">
+        <field name="name">SOA Structure</field>
+        <field name="soa_structure" eval="True"/>
+        <field name="financial_report_currency" ref="base.USD"/>
+        <field name="line_ids">
+            <record id="structure_pl_sale" model="account.report.line">
+                <field name="name">SALE</field>
+                <field name="code">TITLE_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">1</field>
+                <field name="children_ids">
+                	<record id="structure_pl_sale_511101" model="account.report.line">
+                        <field name="name">511101 - Sales Goods / Trading</field>
+                        <field name="code">SALE_511101</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">2</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511101_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511101</field>
+                            </record>
+                        </field>
+                    </record>
+                    <record id="structure_pl_sale_511102" model="account.report.line">
+                        <field name="name">511102 - Sales WOOD / Trading</field>
+                        <field name="code">SALE_511102</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">3</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511102_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511102</field>
+                            </record>
+                        </field>
+                    </record>
+                    <record id="structure_pl_sale_511300" model="account.report.line">
+                        <field name="name">511300 - Sales Buying Office</field>
+                        <field name="code">SALE_511300</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">4</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511300_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511300</field>
+                            </record>
+                        </field>
+                    </record>
+                    <record id="structure_pl_sale_511301" model="account.report.line">
+                        <field name="name">511301 - Sales Services</field>
+                        <field name="code">SALE_511301</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">5</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511301_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511301</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_sale_511302" model="account.report.line">
+                        <field name="name">511302 - Sales Services LSS</field>
+                        <field name="code">SALE_511302</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">6</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511302_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511302</field>
+                            </record>
+                        </field>
+                    </record>
+					<record id="structure_pl_sale_511303" model="account.report.line">
+                        <field name="name">511303 - Sales Long Term Mission</field>
+                        <field name="code">SALE_511303</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">7</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511303_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511303</field>
+                            </record>
+                        </field>
+                    </record>
+					<record id="structure_pl_sale_511304" model="account.report.line">
+                        <field name="name">511304 - Sales Outsourcing</field>
+                        <field name="code">SALE_511304</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">8</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511304_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511304</field>
+                            </record>
+                        </field>
+                    </record>
+					<record id="structure_pl_sale_511305" model="account.report.line">
+                        <field name="name">511305 - Sales Working Space</field>
+                        <field name="code">SALE_511305</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">9</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511305_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511305</field>
+                            </record>
+                        </field>
+                    </record>
+					<record id="structure_pl_sale_511306" model="account.report.line">
+                        <field name="name">511306 - Sales Expat management</field>
+                        <field name="code">SALE_511306</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">10</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511306_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511306</field>
+                            </record>
+                        </field>
+                    </record>
+					<record id="structure_pl_sale_511307" model="account.report.line">
+                        <field name="name">511307 - Sales Recruitment</field>
+                        <field name="code">SALE_511307</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">11</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511307_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511307</field>
+                            </record>
+                        </field>
+                    </record>
+					<record id="structure_pl_sale_511308" model="account.report.line">
+                        <field name="name">511308 - Sales Company Establishment</field>
+                        <field name="code">SALE_511308</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">12</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511308_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511308</field>
+                            </record>
+                        </field>
+                    </record>
+					<record id="structure_pl_sale_511309" model="account.report.line">
+                        <field name="name">511309 - Sales Secretarial Services</field>
+                        <field name="code">SALE_511309</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">13</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511309_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511309</field>
+                            </record>
+                        </field>
+                    </record>
+					<record id="structure_pl_sale_511310" model="account.report.line">
+                        <field name="name">511310 - Sales Payroll</field>
+                        <field name="code">SALE_511310</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">14</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511310_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511310</field>
+                            </record>
+                        </field>
+                    </record>
+					<record id="structure_pl_sale_511311" model="account.report.line">
+                        <field name="name">511311 - Package Full services</field>
+                        <field name="code">SALE_511311</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">15</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511311_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511311</field>
+                            </record>
+                        </field>
+                    </record>
+					<record id="structure_pl_sale_511312" model="account.report.line">
+                        <field name="name">511312 - Package Staffing services</field>
+                        <field name="code">SALE_511312</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">16</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511312_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511312</field>
+                            </record>
+                        </field>
+                    </record>
+					<record id="structure_pl_sale_511313" model="account.report.line">
+                        <field name="name">511313 - HR Consulting services</field>
+                        <field name="code">SALE_511313</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">17</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511313_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511313</field>
+                            </record>
+                        </field>
+                    </record>
+					<record id="structure_pl_sale_511801" model="account.report.line">
+                        <field name="name">511801 - Sales Technical services</field>
+                        <field name="code">SALE_511801</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">18</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511801_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511801</field>
+                            </record>
+                        </field>
+                    </record>
+
+					<record id="structure_pl_sale_511802" model="account.report.line">
+                        <field name="name">511802 - Other Sales</field>
+                        <field name="code">SALE_511802</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">19</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511802_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511802</field>
+                            </record>
+                        </field>
+                    </record>
+					<record id="structure_pl_sale_511803" model="account.report.line">
+                        <field name="name">511803 - Accrued Income</field>
+                        <field name="code">SALE_511803</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">20</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_511803_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">511803</field>
+                            </record>
+                        </field>
+                    </record>
+					<record id="structure_pl_sale_521100" model="account.report.line">
+                        <field name="name">521100 - Sales Discounts</field>
+                        <field name="code">SALE_521100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">21</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_521100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">521100</field>
+                            </record>
+                        </field>
+                    </record>
+<!--					<record id="structure_pl_sale_521201" model="account.report.line">-->
+<!--                        <field name="name">521201 - Sales Allowances</field>-->
+<!--                        <field name="code">SALE_521201</field>-->
+<!--                        <field name="hierarchy_level">3</field>-->
+<!--                        <field name="expression_ids">-->
+<!--                            <record id="structure_pl_sale1_521201_balance" model="account.report.expression">-->
+<!--                                <field name="label">balance</field>-->
+<!--                                <field name="engine">account_codes</field>-->
+<!--                                <field name="formula">521201</field>-->
+<!--                            </record>-->
+<!--                        </field>-->
+<!--                    </record>-->
+					<record id="structure_pl_sale_521200" model="account.report.line">
+                        <field name="name">521200 - Sales Return</field>
+                        <field name="code">SALE_521200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">22</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_521200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">521200</field>
+                            </record>
+                        </field>
+                    </record>
+					<record id="structure_pl_sale_521300" model="account.report.line">
+                        <field name="name">521300 - Devaluation of Sales</field>
+                        <field name="code">SALE_521300</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">23</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sale1_521300_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">521300</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_income" model="account.report.line">
+                <field name="name">TOTAL INCOME</field>
+                <field name="code">TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">24</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_income_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">SALE_511101+SALE_511102+SALE_511300+SALE_511301+SALE_511302+SALE_511303+SALE_511304+SALE_511305+SALE_511306+SALE_511307+SALE_511308+SALE_511309+SALE_511310+SALE_511311+SALE_511312+SALE_511313+SALE_511801+SALE_511802+SALE_511803+SALE_521100+SALE_521200+SALE_521300</field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_cost_of_sales" model="account.report.line">
+                <field name="name">COST OF SALES</field>
+                <field name="code">TITLE_COST_SALE</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">25</field>
+                <field name="children_ids">
+                    <record id="structure_pl_cost_of_sales_632101" model="account.report.line">
+                        <field name="name">632101 - Cost of Goods sold</field>
+                        <field name="code">COST_632101</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">25</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632101_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632101</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632102" model="account.report.line">
+                        <field name="name">632102 - Cost of WOOD sold</field>
+                        <field name="code">COST_632102</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">26</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632102_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632102</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632103" model="account.report.line">
+                        <field name="name">632103 - QC</field>
+                        <field name="code">COST_632103</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">27</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632103_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632103</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632104" model="account.report.line">
+                        <field name="name">632104 - Cost forwarder</field>
+                        <field name="code">COST_632104</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">28</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632104_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632104</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632300" model="account.report.line">
+                        <field name="name">632300 - Cost of Buying Office</field>
+                        <field name="code">COST_632300</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">29</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632300_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632300</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632301" model="account.report.line">
+                        <field name="name">632301 - Cost of Services</field>
+                        <field name="code">COST_632301</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">30</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632301_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632301</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632302" model="account.report.line">
+                        <field name="name">632302 - Cost of Services LSS</field>
+                        <field name="code">COST_632302</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">31</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632302_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632302</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632303" model="account.report.line">
+                        <field name="name">632303 - Cost Long Term Mission</field>
+                        <field name="code">COST_632303</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">32</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632303_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632303</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632304" model="account.report.line">
+                        <field name="name">632304 - Cost Outsourcing</field>
+                        <field name="code">COST_632304</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">33</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632304_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632304</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632305" model="account.report.line">
+                        <field name="name">632305 - Cost Working Space</field>
+                        <field name="code">COST_632305</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">34</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632305_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632305</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632306" model="account.report.line">
+                        <field name="name">632306 - Cost Expat management</field>
+                        <field name="code">COST_632306</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">35</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632306_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632306</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632307" model="account.report.line">
+                        <field name="name">632307 - Cost Recruitment</field>
+                        <field name="code">COST_632307</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">36</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632307_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632307</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632308" model="account.report.line">
+                        <field name="name">632308 - Cost Company Establishement</field>
+                        <field name="code">COST_632308</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">37</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632308_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632308</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632309" model="account.report.line">
+                        <field name="name">632309 - Cost Secretarial Services</field>
+                        <field name="code">COST_632309</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">38</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632309_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632309</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632310" model="account.report.line">
+                        <field name="name">632310 - Cost Payroll</field>
+                        <field name="code">COST_632310</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">39</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632310_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632310</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632311" model="account.report.line">
+                        <field name="name">632311 - Cost of Package Full services</field>
+                        <field name="code">COST_632311</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">40</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632311_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632311</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632312" model="account.report.line">
+                        <field name="name">632312 - Cost of Package Staffing services</field>
+                        <field name="code">COST_632312</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">41</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632312_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632312</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632313" model="account.report.line">
+                        <field name="name">632313 - Cost of HR Consulting services</field>
+                        <field name="code">COST_632313</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">41</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632313_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632313</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632801" model="account.report.line">
+                        <field name="name">632801 - Cost Technical services</field>
+                        <field name="code">COST_632801</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">42</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632801_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632801</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632802" model="account.report.line">
+                        <field name="name">632802 - Cost Other Sales</field>
+                        <field name="code">COST_632802</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">43</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632802_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632802</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632803" model="account.report.line">
+                        <field name="name">632803 - Accrued Expesnes</field>
+                        <field name="code">COST_632803</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">44</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632803_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632803</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632401" model="account.report.line">
+                        <field name="name">632401 - Commission Agent SOA</field>
+                        <field name="code">COST_632401</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">45</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632401_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632401</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632402" model="account.report.line">
+                        <field name="name">632402 - Commission Agent LSS</field>
+                        <field name="code">COST_632402</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">46</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632402_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632402</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_cost_of_sales_632999" model="account.report.line">
+                        <field name="name">632999 - Non deductible Expenses for COGS</field>
+                        <field name="code">COST_632999</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">47</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_cost_of_sales_632999_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">632999</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_cost_of_sales" model="account.report.line">
+                <field name="name">TOTAL COST OF SALES</field>
+                <field name="code">TOTAL_COST_SALE</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">48</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_cost_of_sales_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">COST_632101+COST_632102+COST_632103+COST_632104+COST_632300+COST_632301+COST_632302+COST_632303+COST_632304+COST_632305+COST_632306+COST_632307+COST_632308+COST_632309+COST_632310+COST_632311+COST_632312+COST_632313+COST_632801+COST_632802+COST_632803+COST_632401+COST_632999</field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_cost_of_sales_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_COST_SALE_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">48</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_cost_of_sales_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_COST_SALE/TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_gross_margin" model="account.report.line">
+                <field name="name">GROSS MARGIN</field>
+                <field name="code">GROSS_MAR</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">48</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_gross_margin_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_SALE_INC-(-TOTAL_COST_SALE)</field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_gross_margin_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">GROSS_MAR_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">48</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_gross_margin_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">GROSS_MAR/TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_labor_cost" model="account.report.line">
+                <field name="name">LABOR COST (SALES &#38; SERVICES</field>
+                <field name="code">TITLE_LAB_COS</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">50</field>
+                <field name="children_ids">
+                    <record id="structure_pl_labor_cost_641101" model="account.report.line">
+                        <field name="name">641101 - BU Payroll</field>
+                        <field name="code">LABOR_COS_641101</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">50</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_labor_cost_641101_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">641101</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_labor_cost_641102" model="account.report.line">
+                        <field name="name">641102 - 13th Month Salary</field>
+                        <field name="code">LABOR_COS_641102</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">51</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_labor_cost_641102_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">641102</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_labor_cost_641103" model="account.report.line">
+                        <field name="name">641103 - Social Insurance</field>
+                        <field name="code">LABOR_COS_641103</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">52</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_labor_cost_641103_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">641103</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_labor_cost_641104" model="account.report.line">
+                        <field name="name">641104 - Trade Union</field>
+                        <field name="code">LABOR_COS_641104</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">53</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_labor_cost_641104_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">641104</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_labor_cost_641105" model="account.report.line">
+                        <field name="name">641105 - Other</field>
+                        <field name="code">LABOR_COS_641105</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">54</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_labor_cost_641105_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">641105</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_labor_cost" model="account.report.line">
+                <field name="name">TOTAL LABOR COST (SALES &#38; SERVICES)</field>
+                <field name="code">TOTAL_LAB_COS</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">55</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_labor_cost_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">LABOR_COS_641101+LABOR_COS_641102+LABOR_COS_641103+LABOR_COS_641104+LABOR_COS_641105</field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_labor_cost_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_LAB_COS_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">55</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_labor_cost_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_LAB_COS/TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_sales_cost" model="account.report.line">
+                <field name="name">SALES COST</field>
+                <field name="code">TITLE_SALE_COS</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">56</field>
+                <field name="children_ids">
+                    <record id="structure_pl_sales_cost_641701" model="account.report.line">
+                        <field name="name">641701 - Business Trip</field>
+                        <field name="code">SALE_COS_641701</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">57</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sales_cost_641701_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">641701</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_sales_cost_641702" model="account.report.line">
+                        <field name="name">641702 - Transportation</field>
+                        <field name="code">SALE_COS_641702</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">58</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sales_cost_641702_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">641702</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_sales_cost_641703" model="account.report.line">
+                        <field name="name">641703 - Partnership</field>
+                        <field name="code">SALE_COS_641703</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">59</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sales_cost_641703_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">641703</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_sales_cost_641704" model="account.report.line">
+                        <field name="name">641704 - Networking</field>
+                        <field name="code">SALE_COS_641704</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">60</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sales_cost_641704_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">641704</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_sales_cost_641801" model="account.report.line">
+                        <field name="name">641801 - Other</field>
+                        <field name="code">SALE_COS_641801</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">61</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sales_cost_641801_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">641801</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_sales_cost_641999" model="account.report.line">
+                        <field name="name">641999 - Non Deductible expenses for Sales Cost</field>
+                        <field name="code">SALE_COS_641999</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">62</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_sales_cost_641999_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">641999</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_sales_cost" model="account.report.line">
+                <field name="name">TOTAL SALES COST</field>
+                <field name="code">TOTAL_SALE_COS</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">63</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_sales_cost_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">SALE_COS_641701+SALE_COS_641702+SALE_COS_641703+SALE_COS_641704+SALE_COS_641801+SALE_COS_641999</field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_sales_cost_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_SALE_COS_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">63</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_sales_cost_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_SALE_COS/TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_net_margin" model="account.report.line">
+                <field name="name">NET MARGIN</field>
+                <field name="code">NET_MAR</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">64</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_net_margin_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">GROSS_MAR-(-TOTAL_LAB_COS-TOTAL_SALE_COS)</field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_net_margin_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">NET_MAR_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">64</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_net_margin_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">NET_MAR/TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+            <!-- TODO: Next -->
+            <record id="structure_pl_general_admin_expenses" model="account.report.line">
+                <field name="name">GENERAL AND ADMIN EXPENSES</field>
+                <field name="code">TITLE_GE_AD_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">65</field>
+            </record>
+            <record id="structure_pl_payroll_ge" model="account.report.line">
+                <field name="name">PAYROLL G&#38;E</field>
+                <field name="code">TITLE_PAYROLL_GE</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">66</field>
+                <field name="children_ids">
+
+                    <record id="structure_pl_payroll_ge_642101" model="account.report.line">
+                        <field name="name">642101 - BOM</field>
+                        <field name="code">PAYROLL_GE_642101</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">67</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_payroll_ge_642101_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642101</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_payroll_ge_642102" model="account.report.line">
+                        <field name="name">642102 - BU Payroll</field>
+                        <field name="code">PAYROLL_GE_642102</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">68</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_payroll_ge_642102_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642102</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_payroll_ge_642103" model="account.report.line">
+                        <field name="name">642103 - 13th Month Salary</field>
+                        <field name="code">PAYROLL_GE_642103</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">69</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_payroll_ge_642103_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642103</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_payroll_ge_642104" model="account.report.line">
+                        <field name="name">642104- Social Insurance</field>
+                        <field name="code">PAYROLL_GE_642104</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">70</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_payroll_ge_642104_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642104</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_payroll_ge_642105" model="account.report.line">
+                        <field name="name">642105 - Trade Union</field>
+                        <field name="code">PAYROLL_GE_642105</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">71</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_payroll_ge_642105_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642105</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_payroll_ge_642106" model="account.report.line">
+                        <field name="name">642106 - Other</field>
+                        <field name="code">PAYROLL_GE_642106</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">72</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_payroll_ge_642106_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642106</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_payroll_ge" model="account.report.line">
+                <field name="name">TOTAL PAYROLL G&#38;E</field>
+                <field name="code">TOTAL_PAYROLL_GE</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">73</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_payroll_ge_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">PAYROLL_GE_642101+PAYROLL_GE_642102+PAYROLL_GE_642103+PAYROLL_GE_642104+PAYROLL_GE_642105+PAYROLL_GE_642106</field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_payroll_ge_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_PAYROLL_GE_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">73</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_payroll_ge_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_PAYROLL_GE/TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_office_supply_stationnery" model="account.report.line">
+                <field name="name">** Office Supply - Stationnery</field>
+                <field name="code">TITLE_OFFI_STA_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">73</field>
+                <field name="children_ids">
+
+                    <record id="structure_pl_office_supply_stationnery_642301" model="account.report.line">
+                        <field name="name">642301 - Office Supplies - General</field>
+                        <field name="code">OFFI_STA_EXP_642301</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">73</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_office_supply_stationnery_642301_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642301</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_office_supply_stationnery_642302" model="account.report.line">
+                        <field name="name">642302 - Equipment Rental</field>
+                        <field name="code">OFFI_STA_EXP_642302</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">73</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_office_supply_stationnery_642302_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642302</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_office_supply_stationnery_642303" model="account.report.line">
+                        <field name="name">642303 - Equipment Repairs &amp; maintenace</field>
+                        <field name="code">OFFI_STA_EXP_642303</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">73</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_office_supply_stationnery_642303_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642303</field>
+                            </record>
+                        </field>
+                    </record>
+
+<!--                    <record id="structure_pl_office_supply_stationnery_642205" model="account.report.line">-->
+<!--                        <field name="name">642205 - Car Expenses - Other</field>-->
+<!--                        <field name="code">OFFI_STA_EXP_642205</field>-->
+<!--                        <field name="hierarchy_level">3</field>-->
+<!--                        <field name="expression_ids">-->
+<!--                            <record id="structure_pl_office_supply_stationnery_642205_balance" model="account.report.expression">-->
+<!--                                <field name="label">balance</field>-->
+<!--                                <field name="engine">account_codes</field>-->
+<!--                                <field name="formula">642205</field>-->
+<!--                            </record>-->
+<!--                        </field>-->
+<!--                    </record>-->
+
+<!--                    <record id="structure_pl_office_supply_stationnery_642206" model="account.report.line">-->
+<!--                        <field name="name">642206 - taxi</field>-->
+<!--                        <field name="code">OFFI_STA_EXP_642206</field>-->
+<!--                        <field name="hierarchy_level">3</field>-->
+<!--                        <field name="expression_ids">-->
+<!--                            <record id="structure_pl_office_supply_stationnery_642206_balance" model="account.report.expression">-->
+<!--                                <field name="label">balance</field>-->
+<!--                                <field name="engine">account_codes</field>-->
+<!--                                <field name="formula">642206</field>-->
+<!--                            </record>-->
+<!--                        </field>-->
+<!--                    </record>-->
+
+<!--                    <record id="structure_pl_office_supply_stationnery_643101" model="account.report.line">-->
+<!--                        <field name="name">643101 - Stationnary</field>-->
+<!--                        <field name="code">OFFI_STA_EXP_643101</field>-->
+<!--                        <field name="hierarchy_level">3</field>-->
+<!--                        <field name="expression_ids">-->
+<!--                            <record id="structure_pl_office_supply_stationnery_643101_balance" model="account.report.expression">-->
+<!--                                <field name="label">balance</field>-->
+<!--                                <field name="engine">account_codes</field>-->
+<!--                                <field name="formula">643101</field>-->
+<!--                            </record>-->
+<!--                        </field>-->
+<!--                    </record>-->
+                </field>
+            </record>
+            <record id="structure_pl_totl_office_supply_stationnery" model="account.report.line">
+                <field name="name">TOTAL Office Supply - stationnery</field>
+                <field name="code">TOTAL_OFFI_STA_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">73</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_totl_office_supply_stationnery_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">OFFI_STA_EXP_642301+OFFI_STA_EXP_642302+OFFI_STA_EXP_642303</field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_office_supply_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_OFFI_STA_EXP_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">73</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_office_supply_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_OFFI_STA_EXP/TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_dept_amo_exp" model="account.report.line">
+                <field name="name">** Depreciation &#38; Amortization</field>
+                <field name="code">TITLE_DEPR_AMO_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">73</field>
+                <field name="children_ids">
+
+                    <record id="structure_pl_dept_amo_exp_642401" model="account.report.line">
+                        <field name="name">642401 - Office Furniture &amp; Fixtures</field>
+                        <field name="code">DEPR_AMO_EXP_642401</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">73</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_dept_amo_exp_642401_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642401</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_dept_amo_exp_642402" model="account.report.line">
+                        <field name="name">642402 - Office Equipment </field>
+                        <field name="code">DEPR_AMO_EXP_642402</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">73</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_dept_amo_exp_642402_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642402</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_dept_amo_exp_642403" model="account.report.line">
+                        <field name="name">642403 - Other Tangible Fixed Assets</field>
+                        <field name="code">DEPR_AMO_EXP_642403</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">73</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_dept_amo_exp_642403_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642403</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_dept_amo_exp_642404" model="account.report.line">
+                        <field name="name">642404 - Other Intangible Fixed Assets</field>
+                        <field name="code">DEPR_AMO_EXP_642404</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">73</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_dept_amo_exp_642404_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642404</field>
+                            </record>
+                        </field>
+                    </record>
+
+<!--                    <record id="structure_pl_dept_amo_exp_642405" model="account.report.line">-->
+<!--                        <field name="name">642405 - Other Fixed Assets</field>-->
+<!--                        <field name="code">DEPR_AMO_EXP_642405</field>-->
+<!--                        <field name="hierarchy_level">3</field>-->
+<!--                        <field name="expression_ids">-->
+<!--                            <record id="structure_pl_dept_amo_exp_642405_balance" model="account.report.expression">-->
+<!--                                <field name="label">balance</field>-->
+<!--                                <field name="engine">account_codes</field>-->
+<!--                                <field name="formula">642405</field>-->
+<!--                            </record>-->
+<!--                        </field>-->
+<!--                    </record>-->
+                </field>
+            </record>
+            <record id="structure_pl_total_dept_amo_exp" model="account.report.line">
+                <field name="name">TOTAL Depreciation &#38; Amortization</field>
+                <field name="code">TOTAL_DEPR_AMO_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">73</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_dept_amo_exp_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">DEPR_AMO_EXP_642401+DEPR_AMO_EXP_642402+DEPR_AMO_EXP_642403+DEPR_AMO_EXP_642404</field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_dept_amo_exp_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_DEPR_AMO_EXP_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">73</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_dept_amo_exp_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_DEPR_AMO_EXP/TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_tax_fee_char_exp" model="account.report.line">
+                <field name="name">** Tax, Fees, Charges</field>
+                <field name="code">TITLE_TAX_FEE_CHAR_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">74</field>
+                <field name="children_ids">
+
+                    <record id="structure_pl_tax_fee_char_exp_642501" model="account.report.line">
+                        <field name="name">642501 - Tax</field>
+                        <field name="code">TAX_FEE_CHAR_EXP_642501</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">75</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_tax_fee_char_exp_642501_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642501</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_tax_fee_char_exp_642502" model="account.report.line">
+                        <field name="name">642502 - Fees</field>
+                        <field name="code">TAX_FEE_CHAR_EXP_642502</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">76</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_tax_fee_char_exp_642502_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642502</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_tax_fee_char_exp_642503" model="account.report.line">
+                        <field name="name">642503 - Charge</field>
+                        <field name="code">TAX_FEE_CHAR_EXP_642503</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">77</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_tax_fee_char_exp_642503_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642503</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_toal_tax_fee_char_exp" model="account.report.line">
+                <field name="name">TOTAL Tax, Fees, Charges</field>
+                <field name="code">TOTAL_TAX_FEE_CHAR_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">78</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_toal_tax_fee_char_exp_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TAX_FEE_CHAR_EXP_642501+TAX_FEE_CHAR_EXP_642502+TAX_FEE_CHAR_EXP_642503</field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_tax_fee_char_exp_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_TAX_FEE_CHAR_EXP_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">78</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_tax_fee_char_exp_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_TAX_FEE_CHAR_EXP/TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_prov_wr_exp" model="account.report.line">
+                <field name="name">** Provision &#38; Write Off</field>
+                <field name="code">TITLE_PROV_WR_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">79</field>
+                <field name="children_ids">
+
+                    <record id="structure_pl_prov_wr_exp_642601" model="account.report.line">
+                        <field name="name">642601 - Provision for Bad Debts</field>
+                        <field name="code">PROV_WR_EXP_642601</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">80</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_prov_wr_exp_642601_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642601</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_prov_wr_exp_642602" model="account.report.line">
+                        <field name="name">642602 - Write Off</field>
+                        <field name="code">PROV_WR_EXP_642602</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">81</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_prov_wr_exp_642602_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642602</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_prov_wr_exp" model="account.report.line">
+                <field name="name">TOTAL Provision &#38; Write Off</field>
+                <field name="code">TOTAL_PROV_WR_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">82</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_tax_fee_char_exp_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">PROV_WR_EXP_642601+PROV_WR_EXP_642602</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_total_prov_wr_exp_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_PROV_WR_EXP_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">83</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_prov_wr_exp_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_PROV_WR_EXP/TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_faclt_exp" model="account.report.line">
+                <field name="name">** Facilities</field>
+                <field name="code">TITLE_FACLT_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">84</field>
+                <field name="children_ids">
+
+                    <record id="structure_pl_faclt_exp_642701" model="account.report.line">
+                        <field name="name">642701 - Rental - Office</field>
+                        <field name="code">FACLT_EXP_642701</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">84</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_faclt_exp_642701_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642701</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_faclt_exp_642702" model="account.report.line">
+                        <field name="name">642702 - Office Repairs &#38; Maintenance</field>
+                        <field name="code">FACLT_EXP_642702</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">85</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_faclt_exp_642702_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642702</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_faclt_exp_642703" model="account.report.line">
+                        <field name="name">642703 - Utilities</field>
+                        <field name="code">FACLT_EXP_642703</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">86</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_faclt_exp_642703_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642703</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_faclt_exp_642704" model="account.report.line">
+                        <field name="name">642704 - Parking</field>
+                        <field name="code">FACLT_EXP_642704</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">87</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_faclt_exp_642704_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642704</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_faclt_exp_642705" model="account.report.line">
+                        <field name="name">642705 - Security</field>
+                        <field name="code">FACLT_EXP_642705</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">88</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_faclt_exp_642705_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642705</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_faclt_exp" model="account.report.line">
+                <field name="name">TOTAL - Facilities</field>
+                <field name="code">TOTAL_FACLT_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">89</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_faclt_exp_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">FACLT_EXP_642701+FACLT_EXP_642702+FACLT_EXP_642703+FACLT_EXP_642704+FACLT_EXP_642705</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_total_faclt_exp_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_FACLT_EXP_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">89</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_faclt_exp_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_FACLT_EXP / TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_comm_exp" model="account.report.line">
+                <field name="name">** Communications</field>
+                <field name="code">TITLE_COMM_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">90</field>
+                <field name="children_ids">
+
+                    <record id="structure_pl_comm_exp_642721" model="account.report.line">
+                        <field name="name">642721 - Telephone - Land lines</field>
+                        <field name="code">COMM_EXP_642721</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">91</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_comm_exp_642721_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642721</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_comm_exp_642722" model="account.report.line">
+                        <field name="name">642722 - Telephone - Mobile</field>
+                        <field name="code">COMM_EXP_642722</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">92</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_comm_exp_642722_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642722</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_comm_exp_642723" model="account.report.line">
+                        <field name="name">642723 - Internet</field>
+                        <field name="code">COMM_EXP_642723</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">93</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_comm_exp_642723_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642723</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_comm_exp_642724" model="account.report.line">
+                        <field name="name">642724 - IT Support</field>
+                        <field name="code">COMM_EXP_642724</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">94</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_comm_exp_642724_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642724</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_comm_exp_642725" model="account.report.line">
+                        <field name="name">642725 - Courrier</field>
+                        <field name="code">COMM_EXP_642725</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">95</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_comm_exp_642725_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642725</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_comm_exp" model="account.report.line">
+                <field name="name">TOTAL Communications &amp; Courrier</field>
+                <field name="code">TOTAL_COMM_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">96</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_comm_exp_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">COMM_EXP_642721+COMM_EXP_642722+COMM_EXP_642723+COMM_EXP_642724+COMM_EXP_642725</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_total_comm_exp_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_COMM_EXP_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">96</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_comm_exp_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_COMM_EXP / TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_prof_act_exp" model="account.report.line">
+                <field name="name">** Professional Activities and Insurance</field>
+                <field name="code">TITLE_PROF_ACT_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">97</field>
+                <field name="children_ids">
+
+                    <record id="structure_pl_prof_act_exp_642741" model="account.report.line">
+                        <field name="name">642741 - Audit Fee</field>
+                        <field name="code">PROF_ACT_EXP_642741</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">98</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_prof_act_exp_642741_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642741</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_prof_act_exp_642742" model="account.report.line">
+                        <field name="name">642742 - Legal, Tax and Accounting Consultancy</field>
+                        <field name="code">PROF_ACT_EXP_642742</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">99</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_prof_act_exp_642742_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642742</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_prof_act_exp_642743" model="account.report.line">
+                        <field name="name">642743 - Other Professionnal Activities</field>
+                        <field name="code">PROF_ACT_EXP_642743</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">100</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_prof_act_exp_642743_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642743</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_prof_act_exp_642744" model="account.report.line">
+                        <field name="name">642744 - Insurance</field>
+                        <field name="code">PROF_ACT_EXP_642744</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">101</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_prof_act_exp_642744_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642744</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_prof_act_exp" model="account.report.line">
+                <field name="name">TOTAL Professional Activities</field>
+                <field name="code">TOTAL_PROF_ACT_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">102</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_prof_act_exp_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">PROF_ACT_EXP_642741+PROF_ACT_EXP_642742+PROF_ACT_EXP_642743+PROF_ACT_EXP_642744</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_total_prof_act_exp_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_PROF_ACT_EXP_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">102</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_prof_act_exp_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_PROF_ACT_EXP / TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_buss_exp" model="account.report.line">
+                <field name="name">** Business Development</field>
+                <field name="code">TITLE_BUSS_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">103</field>
+                <field name="children_ids">
+
+                    <record id="structure_pl_buss_exp_642761" model="account.report.line">
+                        <field name="name">642761 - Business Trip BOM</field>
+                        <field name="code">BUSS_EXP_642761</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">104</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_buss_exp_642761_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642761</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_buss_exp_642762" model="account.report.line">
+                        <field name="name">642762 - Business Trip</field>
+                        <field name="code">BUSS_EXP_642762</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">105</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_buss_exp_642762_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642762</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_buss_exp_642763" model="account.report.line">
+                        <field name="name">642763 - Transportation</field>
+                        <field name="code">BUSS_EXP_642763</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">106</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_buss_exp_642763_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642763</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_buss_exp_642764" model="account.report.line">
+                        <field name="name">642764 - Partnership</field>
+                        <field name="code">BUSS_EXP_642764</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">107</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_buss_exp_642764_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642764</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_buss_exp_642765" model="account.report.line">
+                        <field name="name">642765 - Networking</field>
+                        <field name="code">BUSS_EXP_642765</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">108</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_buss_exp_642765_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642765</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_buss_exp_642766" model="account.report.line">
+                        <field name="name">642766 - Internal expense</field>
+                        <field name="code">BUSS_EXP_642766</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">109</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_buss_exp_642766_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642766</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_buss_exp_642767" model="account.report.line">
+                        <field name="name">642767 - Other BOM expense</field>
+                        <field name="code">BUSS_EXP_642767</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">110</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_buss_exp_642767_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642767</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_buss_exp" model="account.report.line">
+                <field name="name">TOTAL Professional Activities</field>
+                <field name="code">TOTAL_BUSS_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">111</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_buss_exp_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">BUSS_EXP_642761+BUSS_EXP_642762+BUSS_EXP_642763+BUSS_EXP_642764+BUSS_EXP_642765+BUSS_EXP_642766+BUSS_EXP_642767</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_total_buss_exp_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_BUSS_EXP_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">111</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_buss_exp_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_BUSS_EXP / TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_event_team_building" model="account.report.line">
+                <field name="name">** Company events and team building</field>
+                <field name="code">TITLE_EVENT_TEAM_BUILDING</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">112</field>
+                <field name="children_ids">
+                    <record id="structure_pl_event_team_building_642781" model="account.report.line">
+                        <field name="name">642781 - Company events</field>
+                        <field name="code">EVENT_TEAM_BUILDING_642781</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">113</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_event_team_building_642781_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642781</field>
+                            </record>
+                        </field>
+                    </record>
+                    <record id="structure_pl_event_team_building_642782" model="account.report.line">
+                        <field name="name">642782 - Company trips</field>
+                        <field name="code">EVENT_TEAM_BUILDING_642782</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">114</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_event_team_building_642782_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642782</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_total_event_team_building" model="account.report.line">
+                <field name="name">TOTAL Company events and team building</field>
+                <field name="code">TOTAL_EVENT_TEAM_BUILDING</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">115</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_event_team_building_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">EVENT_TEAM_BUILDING_642781+EVENT_TEAM_BUILDING_642782</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_total_event_team_building_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_EVENT_TEAM_BUILDING_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">115</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_event_team_building_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_EVENT_TEAM_BUILDING / TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_other_exp" model="account.report.line">
+                <field name="name">** Other Expense</field>
+                <field name="code">TITLE_OTH_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">116</field>
+                <field name="children_ids">
+
+                    <record id="structure_pl_other_exp_642801" model="account.report.line">
+                        <field name="name">642801 - Bank fee</field>
+                        <field name="code">OTH_EXP_642801</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">117</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_other_exp_642801_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642801</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_other_exp_642802" model="account.report.line">
+                        <field name="name">642802 - Other Cost</field>
+                        <field name="code">OTH_EXP_642802</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">118</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_other_exp_642802_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642802</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_other_exp_642999" model="account.report.line">
+                        <field name="name">642999 - Non Deductible expenses GE</field>
+                        <field name="code">OTH_EXP_642999</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">119</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_other_exp_642999_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">642999</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_other_exp" model="account.report.line">
+                <field name="name">TOTAL Other Expenses</field>
+                <field name="code">TOTAL_OTH_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">120</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_other_exp_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">OTH_EXP_642801 + OTH_EXP_642802 + OTH_EXP_642999</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_total_other_exp_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_OTH_EXP_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">120</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_other_exp_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_OTH_EXP / TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_total_ge_exp" model="account.report.line">
+                <field name="name">TOTAL G&#38;E EXPENSES</field>
+                <field name="code">TOTAL_GE_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">121</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_ge_exp_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_PAYROLL_GE+TOTAL_TAX_FEE_CHAR_EXP+TOTAL_PROV_WR_EXP+TOTAL_FACLT_EXP+TOTAL_COMM_EXP+TOTAL_PROF_ACT_EXP+TOTAL_BUSS_EXP+TOTAL_EVENT_TEAM_BUILDING+TOTAL_OTH_EXP</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_total_ge_exp_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_GE_EXP_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">121</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_ge_exp_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_GE_EXP / TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_gross_op_mar" model="account.report.line">
+                <field name="name">GROSS OPERATING MARGIN</field>
+                <field name="code">CROSS_OP_MAR</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">122</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_gross_op_mar_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">GROSS_MAR-(-TOTAL_LAB_COS-TOTAL_SALE_COS-TOTAL_GE_EXP)</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_gross_op_mar_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">CROSS_OP_MAR_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">122</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_gross_op_mar_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">CROSS_OP_MAR / TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_fin_inc" model="account.report.line">
+                <field name="name">*Financial Income</field>
+                <field name="code">TITLE_FIN_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">123</field>
+                <field name="children_ids">
+
+                    <record id="structure_pl_fin_inc_515001" model="account.report.line">
+                        <field name="name">515001 - Interest on Deposit</field>
+                        <field name="code">FIN_INC_515001</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">124</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_fin_inc_515001_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">515001</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_fin_inc_515002" model="account.report.line">
+                        <field name="name">515002 - Interest on Loan to BOD</field>
+                        <field name="code">FIN_INC_515002</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">125</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_fin_inc_515002_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">515002</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_fin_inc_515003" model="account.report.line">
+                        <field name="name">515003 - Interest Other</field>
+                        <field name="code">FIN_INC_515003</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">126</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_fin_inc_515003_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">515003</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_fin_inc_515004" model="account.report.line">
+                        <field name="name">515004 - Finance income - leases premises IFRS</field>
+                        <field name="code">FIN_INC_515004</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">127</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_fin_inc_515004_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">515004</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_fin_inc_515005" model="account.report.line">
+                        <field name="name">515005 - Foreign Exchange Gain</field>
+                        <field name="code">FIN_INC_515005</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">128</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_fin_inc_515005_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">515005</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_fin_inc_515006" model="account.report.line">
+                        <field name="name">515006 - Other Financial Income</field>
+                        <field name="code">FIN_INC_515006</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">129</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_fin_inc_515006_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">515006</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_fin_inc" model="account.report.line">
+                <field name="name">TOTAL FINANCIAL INCOME</field>
+                <field name="code">TOTAL_FIN_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">130</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_fin_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">FIN_INC_515001+FIN_INC_515002+FIN_INC_515003+FIN_INC_515004+FIN_INC_515005+FIN_INC_515006</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_total_fin_inc_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_FIN_INC_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">130</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_fin_inc_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_FIN_INC / TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_fin_exp" model="account.report.line">
+                <field name="name">*Financial Expenses</field>
+                <field name="code">TITLE_FIN_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">131</field>
+                <field name="children_ids">
+
+                    <record id="structure_pl_fin_exp_635001" model="account.report.line">
+                        <field name="name">635001 - Interest to Bank</field>
+                        <field name="code">FIN_EXP_635001</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">132</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_fin_exp_635001_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">635001</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_fin_exp_635002" model="account.report.line">
+                        <field name="name">635002 - Interest on Loan From BOD</field>
+                        <field name="code">FIN_EXP_635002</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">133</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_fin_exp_635002_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">635002</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_fin_exp_635003" model="account.report.line">
+                        <field name="name">635003 - Interest Other</field>
+                        <field name="code">FIN_EXP_635003</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">134</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_fin_exp_635003_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">635003</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_fin_exp_635004" model="account.report.line">
+                        <field name="name">635004 - Finance expenses - leases premises IFRS</field>
+                        <field name="code">FIN_EXP_635004</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">135</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_fin_exp_635004_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">635004</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_fin_exp_635005" model="account.report.line">
+                        <field name="name">635005 - Foreign Exchange Loss</field>
+                        <field name="code">FIN_EXP_635005</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">136</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_fin_exp_635005_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">635005</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_fin_exp_635006" model="account.report.line">
+                        <field name="name">635006 - Other Financial Loss</field>
+                        <field name="code">FIN_EXP_635006</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">137</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_fin_exp_635006_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">635006</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_fin_exp" model="account.report.line">
+                <field name="name">TOTAL FINANCIAL EXPENSES</field>
+                <field name="code">TOTAL_FIN_EXP</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">138</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_fin_exp_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">FIN_EXP_635001+FIN_EXP_635002+FIN_EXP_635003+FIN_EXP_635004+FIN_EXP_635005+FIN_EXP_635006</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_total_fin_exp_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_FIN_EXP_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">138</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_fin_exp_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_FIN_EXP / TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_other_inc" model="account.report.line">
+                <field name="name">*Other Income</field>
+                <field name="code">TITLE_OTH_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">139</field>
+                <field name="children_ids">
+
+                    <record id="structure_pl_other_inc_711001" model="account.report.line">
+                        <field name="name">711001 - Extraordinary Income</field>
+                        <field name="code">OTH_INC_711001</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">140</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_other_inc_711001_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">711001</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_other_inc" model="account.report.line">
+                <field name="name">TOTAL OTHER INCOME</field>
+                <field name="code">TOTAL_OTH_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">141</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_other_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">OTH_INC_711001</field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_other_exp2" model="account.report.line">
+                <field name="name">*Other Expenses</field>
+                <field name="code">TITLE_OTH_EXP2</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">142</field>
+                <field name="children_ids">
+
+                    <record id="structure_pl_other_exp2_811001" model="account.report.line">
+                        <field name="name">811001 - Extraordinary Expenses</field>
+                        <field name="code">OTH_EXP2_811001</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">143</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_other_exp2_811001_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">811001</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_other_exp2" model="account.report.line">
+                <field name="name">TOTAL OTHER EXPENSES</field>
+                <field name="code">TOTAL_OTH_EXP2</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">144</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_other_exp2_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">OTH_EXP2_811001</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_total_other_exp2_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_OTH_EXP2_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">144</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_other_exp2_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_OTH_EXP2 / TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_net_pro_bef_tax" model="account.report.line">
+                <field name="name">NET PROFIT BEFORE TAX</field>
+                <field name="code">NET_PRO_BEF_TAX</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">145</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_net_pro_bef_tax_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">CROSS_OP_MAR+TOTAL_FIN_INC+TOTAL_FIN_EXP+TOTAL_OTH_INC+TOTAL_OTH_EXP2</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_net_pro_bef_tax_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">NET_PRO_BEF_TAX_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">146</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_net_pro_bef_tax_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">NET_PRO_BEF_TAX / TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_net_tax_deffered_tax" model="account.report.line">
+                <field name="name">*Profit Tax and Deffered Tax</field>
+                <field name="code">TITLE_NET_P_AF_TAX_BEF_REALC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">147</field>
+                <field name="children_ids">
+
+                    <record id="structure_pl_net_tax_deffered_tax_821100" model="account.report.line">
+                        <field name="name">821100 TAX - Corporate Income Tax Expense</field>
+                        <field name="code">NET_P_AF_TAX_BEF_REALC_821100</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">148</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_net_tax_deffered_tax_821100_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">821100</field>
+                            </record>
+                        </field>
+                    </record>
+
+                    <record id="structure_pl_net_tax_deffered_tax_821200" model="account.report.line">
+                        <field name="name">821200 TAX - Deffered Tax</field>
+                        <field name="code">NET_P_AF_TAX_BEF_REALC_821200</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">149</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_net_tax_deffered_tax_821200_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">account_codes</field>
+                                <field name="formula">821200</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_net_tax_deffered_tax" model="account.report.line">
+                <field name="name">NET PROFIT AFTER TAX - Before Reallocation</field>
+                <field name="code">TOTAL_NET_P_AF_TAX_BEF_REALC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">150</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_net_tax_deffered_tax_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">NET_PRO_BEF_TAX-(-NET_P_AF_TAX_BEF_REALC_821100-NET_P_AF_TAX_BEF_REALC_821200)</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_total_net_tax_deffered_tax_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_NET_P_AF_TAX_BEF_REALC_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">151</field>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_net_tax_deffered_tax_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_NET_P_AF_TAX_BEF_REALC / TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_realc_cos" model="account.report.line">
+                <field name="name">*Reallocation</field>
+                <field name="code">TITLE_REALC_COS</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">152</field>
+                <field name="children_ids">
+                    <record id="structure_pl_payroll_cost_reallocated_915001" model="account.report.line">
+                        <field name="name">915001 - Payroll Cost reallocated</field>
+                        <field name="code">REALC_PAR_COS_915001</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">153</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_payroll_cost_reallocated_915001_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">custom</field>
+                                <field name="formula">TOTAL_PAYROLL_GE</field>
+                            </record>
+                        </field>
+                    </record>
+                    <record id="structure_pl_other_cost_reallocated_915002" model="account.report.line">
+                        <field name="name">915002 - Other Cost reallocated</field>
+                        <field name="code">REALC_OTH_COS_915002</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="sequence">153</field>
+                        <field name="expression_ids">
+                            <record id="structure_pl_other_cost_reallocated_915002_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">custom</field>
+                                <field name="formula">TOTAL_GE_EXP-TOTAL_PAYROLL_GE+TOTAL_FIN_EXP+TOTAL_OTH_EXP2</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+            <record id="structure_pl_total_realc_cos" model="account.report.line">
+                <field name="name">TOTAL REALLOCATION</field>
+                <field name="code">TOTAL_REALC_COS</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">154</field>
+                <field name="compute_after" eval="True"/>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_realc_cos_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">REALC_PAR_COS_915001+REALC_OTH_COS_915002</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_total_realc_cos_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_REALC_COS_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">155</field>
+                <field name="compute_after" eval="True"/>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_realc_cos_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_REALC_COS / TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_total_net_profit_after_tax_after_reallocation" model="account.report.line">
+                <field name="name">NET PROFIT AFTER TAX - After Reallocation</field>
+                <field name="code">TOTAL_NET_P_AF_TAX_AFF_REALC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">156</field>
+                <field name="compute_after" eval="True"/>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_net_profit_after_tax_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_NET_P_AF_TAX_BEF_REALC - (-REALC_PAR_COS_915001 - REALC_OTH_COS_915002)</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_total_net_profit_after_tax_after_realloc_on_sale_inc" model="account.report.line">
+                <field name="name">% of Sales</field>
+                <field name="code">TOTAL_NET_P_AF_TAX_AFF_REALC_ON_TOTAL_SALE_INC</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">157</field>
+                <field name="compute_after" eval="True"/>
+                <field name="expression_ids">
+                    <record id="structure_pl_total_net_profit_after_tax_after_realloc_on_sale_inc_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">TOTAL_NET_P_AF_TAX_AFF_REALC / TOTAL_SALE_INC * 100</field>
+                    </record>
+                </field>
+            </record>
+
+            <record id="structure_pl_evaluation_bussiness" model="account.report.line">
+                <field name="name">*Evaluation of Business Result VAS</field>
+                <field name="code">TITLE_EVAL_BUSS_RSLT</field>
+                <field name="hierarchy_level">1</field>
+                <field name="sequence">158</field>
+                <field name="children_ids">
+                    <record id="structure_pl_evaluation_bussiness_911000" model="account.report.line">
+                        <field name="name">911000 - Evaluation of Business Result VAS</field>
+                        <field name="code">EVAL_BUSS_RSLT_911000</field>
+                        <field name="hierarchy_level">3</field>
+                        <field name="compute_after" eval="True"/>
+                        <field name="expression_ids">
+                            <record id="structure_pl_evaluation_bussiness_911000_balance" model="account.report.expression">
+                                <field name="label">balance</field>
+                                <field name="engine">custom</field>
+                                <field name="formula">TOTAL_NET_P_AF_TAX_AFF_REALC</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+        </field>
+    </record>
+
+    <record id="structure_pl_payroll_cost_reallocated_915001" model="account.report.line">
+        <field name="reallocation_compute" eval="True"/>
+    </record>
+
+    <record id="structure_pl_other_cost_reallocated_915002" model="account.report.line">
+        <field name="reallocation_compute" eval="True"/>
+    </record>
+
+</odoo>

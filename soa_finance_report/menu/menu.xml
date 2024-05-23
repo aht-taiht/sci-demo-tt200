@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_budget_management_root"
+              name="Budget Management"
+              sequence="5"
+              parent="account.menu_finance_reports"
+              groups="account.group_account_user,account.group_account_manager"
+    >
+        <menuitem id="menu_budget_combined_report"
+              name="Budget Combined"
+              sequence="18"
+              action="action_budget_combined_report"/>
+
+        <menuitem id="menu_budget_reforecast_combined_report"
+              name="Budget Reforecast"
+              sequence="19"
+              action="action_budget_reforecast_combined_report"/>
+    </menuitem>
+
+    <!-- Inherit the Odoo base record -->
+    <record id="account_budget.menu_act_crossovered_budget_lines_view" model="ir.ui.menu">
+            <field name="parent_id" ref="menu_budget_management_root"/>
+            <field name="sequence" eval="20"/>
+    </record>
+
+    <!-- Create new menu -->
+    <menuitem id="menu_cashflow_report" name="CashFlow Report"
+            parent="account.account_reports_legal_statements_menu" sequence="1"
+            action="soa_finance_report.action_account_cashflow_report"/>
+
+    <menuitem id="pnl_report_root"
+            name="SOA - PNL Reports"
+            sequence="2"
+            parent="account.menu_finance_reports"
+            groups="account.group_account_user,account.group_account_manager"
+        >
+        <menuitem id="menu_soa_pnl_report"
+                name="PNL Analytical"
+                sequence="100"
+                action="action_soa_profit_and_loss_report"/>
+        <menuitem id="menu_soa_pnl_bu_combined_report"
+                name="PNL BU Combined"
+                sequence="101"
+                action="action_pnl_bu_combined_report"/>
+        <menuitem id="menu_soa_pnl_bu_alloc_report"
+                name="PNL BU Allocation"
+                sequence="102"
+                action="action_pnl_bu_alloc_report"/>
+    </menuitem>
+
+    <!--  TT200 Report  -->
+     <menuitem id="tt200_report_root"
+            name="TT200 Reports"
+            sequence="4"
+            parent="account.menu_finance_reports"
+            groups="account.group_account_user,account.group_account_manager">
+         <menuitem id="menu_cash_book_report"
+                name="Cash Book Report"
+                sequence="10"
+                action="action_cash_book_report"/>
+         <menuitem id="menu_bank_book_report"
+                name="Bank Book Report"
+                sequence="20"
+                action="action_bank_book_report"/>
+         <menuitem id="menu_general_journal_report"
+                name="General Journal Report"
+                sequence="30"
+                action="action_general_journal_report"/>
+
+         <menuitem id="menu_ledger_journal_report"
+                name="Ledger Journal Report"
+                sequence="40"
+                action="action_ledger_journal_report"/>
+    </menuitem>
+
+
+     <menuitem id="menu_financial_statement_root"
+              name="Financial Statement"
+              sequence="6"
+              parent="account.menu_finance_reports"
+              groups="account.group_account_user,account.group_account_manager"
+    >
+        <menuitem id="menu_soa_fs_combined_pl_report"
+              name="FS Combined (P&#38;L)"
+              sequence="10"
+              action="action_soa_fs_combined_pl_report"/>
+
+        <menuitem id="menu_soa_fs_combined_bs_report"
+              name="FS Combined (BS)"
+              sequence="20"
+              action="action_soa_fs_combined_bs_report"/>
+
+    </menuitem>
+
+    <menuitem id="menu_soa_financial_report_summary"
+              name="Report Combined"
+              sequence="0"
+              action="action_soa_financial_report_summary"
+              parent="account.account_reports_legal_statements_menu"
+    />
+
+</odoo>
+

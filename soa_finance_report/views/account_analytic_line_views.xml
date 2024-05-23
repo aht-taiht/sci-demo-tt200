@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_account_analytic_line_tree_inherit" model="ir.ui.view">
+        <field name="name">account.analytic.line.tree.inherit</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_line_tree"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='amount']" position="after">
+                    <field name="currency_amount"/>
+                    <field name="cf_currency_id" optional="hide"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="view_account_analytic_line_form_inherit" model="ir.ui.view">
+        <field name="name">account.analytic.line.form.inherit</field>
+        <field name="model">account.analytic.line</field>
+        <field name="priority" eval="0"/>
+        <field name="inherit_id" ref="analytic.view_account_analytic_line_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='amount']" position="after">
+                    <field name="currency_amount"/>
+                    <field name="cf_currency_id" optional="hide"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="view_account_analytic_line_pivot_inherit" model="ir.ui.view">
+        <field name="name">account.analytic.line.pivot</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_line_pivot"/>
+        <field name="arch" type="xml">
+            <field name="amount" position="after">
+                <field name="currency_amount" type="measure"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>
