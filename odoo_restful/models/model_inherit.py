@@ -172,10 +172,10 @@ class AccountAnalyticLine(models.Model):
     _name = "account.analytic.line"
     _inherit = ['account.analytic.line', 'synced.mixin']
 
-class AccountAnalyticGroup(models.Model):
+# class AccountAnalyticGroup(models.Model):
 
-    _name = "account.analytic.group"
-    _inherit = ['account.analytic.group', 'synced.mixin']
+#     _name = "account.analytic.group"
+#     _inherit = ['account.analytic.group', 'synced.mixin']
 
 class AccountAccountType(models.Model):
 
