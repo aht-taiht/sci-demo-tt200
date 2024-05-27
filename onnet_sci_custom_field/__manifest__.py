@@ -6,7 +6,7 @@
         'account_accountant', 'account_asset',
     ],
     'data': [
-        'data/data.xml'
+        
     ],
     'installable': True,
     'auto_install': True,
