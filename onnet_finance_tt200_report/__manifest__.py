@@ -12,7 +12,7 @@
         'security/ir.model.access.csv',
         # Data
         'data/account_report_action.xml',
-        'data/chart_account_data.xml',
+        # 'data/chart_account_data.xml',
         # Wizard
         'wizards/trial_balance_wizard_views.xml',
         'wizards/general_journal_wizard_views.xml',
