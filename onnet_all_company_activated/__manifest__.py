@@ -13,10 +13,10 @@ This module edit menu company.
         """,
     'depends': ['web'],
     'auto_install': True,
-    'data': [
-        "views/webclient_templates.xml"
-    ],
-    'qweb': [
-        "static/src/xml/multi_company.xml",
-    ],
+    # 'data': [
+    #     "views/webclient_templates.xml"
+    # ],
+    # 'qweb': [
+    #     "static/src/xml/multi_company.xml",
+    # ],
 }
