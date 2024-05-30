@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_account_type_mapping,account.type.mapping,model_account_type_mapping,account.group_account_manager,1,1,1,1
+access_account_type_mapping_manager,account.type.mapping.manager,model_account_type_mapping,account.group_account_manager,1,1,1,1
+access_account_type_mapping_user,account.type.mapping.user,model_account_type_mapping,account.group_account_readonly,1,0,0,0
+access_account_account_type_manager,account.account.type.manager,model_account_account_type,account.group_account_manager,1,1,1,1
+access_account_account_type_user,account.account.type.user,model_account_account_type,account.group_account_readonly,1,0,0,0

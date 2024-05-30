@@ -7,7 +7,7 @@
                 <tree editable="bottom">
                     <field name="sequence" widget="handle"/>
                     <field name="name"/>
-                    <field name="account_type_ids" widget="many2many_tags"/>
+                    <field name="account_type_ids" widget="many2many_tags" options="{'no_create': True,'no_create_edit': True}"/>
                 </tree>
             </field>
         </record>
@@ -26,7 +26,6 @@
             </field>
         </record>
 
-        <menuitem id="account_type_menu" name="Account Types" action="account.action_account_type_form" parent="account.account_account_menu"/>
         <menuitem id="account_type_mapping_menu" name="Account Types Mapping" action="onnet_account_type_mapping.action_account_type_mapping" parent="account.account_account_menu"/>
     </data>
 </odoo>
