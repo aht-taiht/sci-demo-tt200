@@ -31,6 +31,7 @@ class AccountMoveLine(models.Model):
                                  )
 
     def get_data(self, account_type):
+        _logger.info(str(account_type))
         query = """
             SELECT aat.key AS account_type
             FROM account_account_type_account_type_mapping_rel AS type_mapping
@@ -47,6 +48,7 @@ class AccountMoveLine(models.Model):
         """.format(account_type=account_type)
         self.env.cr.execute(query)
         data = self.env.cr.dictfetchall()
+        _logger.info(str(data))
         return data
 
     @api.depends('account_id', 'move_id.line_ids', 'debit', 'credit')
@@ -55,13 +57,16 @@ class AccountMoveLine(models.Model):
             try:
                 # line.offset_account_ids = line._get_offset_account(line)
                 # line.offset_account = get_string_offset_account(line.offset_account_ids.mapped('code')) if line.offset_account_ids else ""
+                _logger.info('--------------------------------------- _compute_offset_account -------------------------------------')
                 account_ids = line._get_offset_account(line)
+                _logger.info(str(line.move_id.id))
+                _logger.info(str(account_ids))
                 self.delete_account_account_account_move_line_rel(line.id)
                 for account_id in account_ids:
                     self.insert_account_account_account_move_line_rel(line.id, account_id.id)
                     self.update_account_move_line(line.id, get_string_offset_account(line.offset_account_ids.mapped('code')) if line.offset_account_ids else "")
             except Exception as e:
-                _logger.info('--------------------------------------- _compute_offset_account -------------------------------------')
+                
                 _logger.info(str(e))
                 pass
 
