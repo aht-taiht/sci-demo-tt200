@@ -74,7 +74,6 @@ class AccountMoveLine(models.Model):
 
     def insert_account_account_account_move_line_rel(self, move_line_id, account_id):
         query = f"""
-                DELETE FROM account_account_account_move_line_rel WHERE account_move_line_id = {move_line_id}
                 INSERT INTO account_account_account_move_line_rel (account_move_line_id, account_account_id) VALUES ({move_line_id}, {account_id})
             """
         self.env.cr.execute(query)
