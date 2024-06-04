@@ -2,6 +2,9 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from odoo import fields, models, api
 import time
+import logging
+
+_logger = logging.getLogger(__name__)
 
 
 def get_string_offset_account(account_codes):
