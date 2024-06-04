@@ -28,33 +28,33 @@ class AccountMoveLine(models.Model):
                                  )
 
     def get_data(self, account_type):
-        query = f"""
-            select a.account_account_type_id
-            from account_account_type_account_type_mapping_rel as a left join (
-                select * 
-                from account_account_type_account_type_mapping_rel 
-                where account_account_type_id = {account_type}
-            ) as b on a.account_type_mapping_id = b.account_type_mapping_id
-            where b.account_type_mapping_id is not Null
-            and a.account_account_type_id != {account_type}
+        query = """
+            SELECT aat.key AS account_type
+            FROM account_account_type_account_type_mapping_rel AS type_mapping
+            LEFT JOIN (
+                SELECT * 
+                FROM account_account_type_account_type_mapping_rel AS mapping_rel
+                JOIN account_account_type ON account_account_type.id = mapping_rel.type_id
+                WHERE account_account_type.key = '{account_type}'
+            ) AS type_mapping_2 ON type_mapping.mapping_id = type_mapping_2.mapping_id
+            JOIN account_account_type AS aat ON aat.id = type_mapping.type_id
+            WHERE type_mapping_2.mapping_id IS NOT NULL
+                AND aat.key != '{account_type}'
 
-        """
+        """.format(account_type=account_type)
         self.env.cr.execute(query)
         data = self.env.cr.dictfetchall()
         return data
 
     @api.depends('account_id', 'move_id.line_ids', 'debit', 'credit')
     def _compute_offset_account(self):
-        date_compute = datetime.today() - relativedelta(months=2)
-        for line in self.filtered(lambda x: x.date.strftime('%Y-%m-%d') >= date_compute.strftime('%Y-%m-%d')):
+        for line in self:
             line.offset_account_ids = line._get_offset_account(line)
             line.offset_account = get_string_offset_account(
                 line.offset_account_ids.mapped('code')) if line.offset_account_ids else ""
 
     def _set_offset_account(self):
-        selected_ids = self.env.context.get('active_ids', [])
-        selected_lines = self.env['account.move.line'].browse(selected_ids)
-        for line in selected_lines:
+        for line in self:
             if not line.offset_account_ids:
                 line.offset_account_ids = line._get_offset_account(line)
                 line.offset_account = get_string_offset_account(
@@ -62,19 +62,18 @@ class AccountMoveLine(models.Model):
 
     def _get_offset_account(self, line):
         offset_accounts = []
-        if line.move_id.is_invoice(True) and line.balance != 0 and line.account_id:
+        if line.move_id.is_invoice(True) and line.account_id and line.balance != 0:
             # get account type have same mapping
-            account_type_list = self.get_data(line.account_id.user_type_id.id)
-            account_type = [rec['account_account_type_id'] for rec in account_type_list]
+            account_type_list = self.get_data(line.account_id.account_type)
+            account_type = [rec['account_type'] for rec in account_type_list]
             offset_lines = line.move_id.line_ids.filtered(lambda x:
                                                           abs(x.balance * line.balance) != x.balance * line.balance
-                                                          and x.account_id.user_type_id.id in account_type
+                                                          and x.account_id.account_type in account_type
                                                           )
-            offset_accounts = offset_lines.mapped('account_id').ids
-        elif line.move_id.move_type == 'entry' and line.balance != 0 and line.account_id:
+            offset_accounts = offset_lines.mapped('account_id').ids or False
+        elif line.move_id.move_type == 'entry' and line.account_id and line.balance != 0:
             offset_lines = line.move_id.line_ids.filtered(lambda x:
                                                           abs(x.balance * line.balance) != x.balance * line.balance
                                                           )
-            offset_accounts = offset_lines.mapped('account_id').ids
-
+            offset_accounts = offset_lines.mapped('account_id').ids or False
         return offset_accounts

@@ -4,17 +4,17 @@
         <record model="account.type.mapping" id="account_map_invoice">
             <field name="name">Invoice</field>
             <field name="sequence">0</field>
-            <field name="account_type_ids" eval="[(4, ref('account.data_account_type_receivable')), (4, ref('account.data_account_type_revenue'))]"/>
+            <field name="account_type_ids" eval="[(4, ref('account_account_type_asset_receivable')), (4, ref('account_account_type_income'))]"/>
         </record>
         <record model="account.type.mapping" id="account_map_bill">
             <field name="name">Bill</field>
             <field name="sequence">1</field>
-            <field name="account_type_ids" eval="[(4, ref('account.data_account_type_payable')), (4, ref('account.data_account_type_current_assets'))]"/>
+            <field name="account_type_ids" eval="[(4, ref('account_account_type_liability_payable')), (4, ref('account_account_type_asset_current'))]"/>
         </record>
         <record model="account.type.mapping" id="account_map_cost_material">
             <field name="name">Cost, Material</field>
             <field name="sequence">2</field>
-            <field name="account_type_ids" eval="[(4, ref('account.data_account_type_current_assets')), (4, ref('account.data_account_type_direct_costs')), (4, ref('account.data_account_type_expenses'))]"/>
+            <field name="account_type_ids" eval="[(4, ref('account_account_type_asset_current')), (4, ref('account_account_type_expense_direct_cost'))]"/>
         </record>
     </data>
 </odoo>
