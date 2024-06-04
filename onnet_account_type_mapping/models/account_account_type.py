@@ -15,4 +15,4 @@ class AccountAccountType(models.Model):
 
     name = fields.Char(string='Account Type', required=True, translate=True)
     key = fields.Char(string="Key")
-    # type = fields.Selection(TYPE, string='Loại')
+    type = fields.Selection(TYPE, string='Loại')
