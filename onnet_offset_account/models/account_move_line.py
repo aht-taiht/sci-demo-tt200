@@ -62,7 +62,7 @@ class AccountMoveLine(models.Model):
                     self.update_account_move_line(line.id, get_string_offset_account(line.offset_account_ids.mapped('code')) if line.offset_account_ids else "")
             except Exception as e:
                 _logger.info('--------------------------------------- _compute_offset_account -------------------------------------')
-                _logger.info(Exception)
+                _logger.info(str(e))
                 pass
 
     def delete_account_account_account_move_line_rel(self, move_line_id):
