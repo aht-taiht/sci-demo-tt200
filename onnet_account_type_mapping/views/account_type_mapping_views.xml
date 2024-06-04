@@ -1,5 +1,31 @@
 <odoo>
     <data>
+
+        <record id="view_account_type_tree" model="ir.ui.view">
+            <field name="name">account.type.tree</field>
+            <field name="model">account.type</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <field name="name"/>
+                    <field name="key"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_account_type" model="ir.actions.act_window">
+            <field name="name">Account Type</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.type</field>
+            <field name="view_id" ref="onnet_account_type_mapping.view_account_type_tree"/>
+            <field name="view_mode">tree</field>
+            <field name="target">current</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new record.
+              </p>
+            </field>
+        </record>
+
         <record id="view_account_type_mapping_tree" model="ir.ui.view">
             <field name="name">account.type.mapping.tree</field>
             <field name="model">account.type.mapping</field>
@@ -26,6 +52,7 @@
             </field>
         </record>
 
+        <menuitem id="account_type_menu" name="Account Types" action="onnet_account_type_mapping.action_account_type" parent="account.account_account_menu"/>
         <menuitem id="account_type_mapping_menu" name="Account Types Mapping" action="onnet_account_type_mapping.action_account_type_mapping" parent="account.account_account_menu"/>
     </data>
 </odoo>
