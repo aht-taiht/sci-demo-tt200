@@ -53,7 +53,8 @@ class AccountMoveLine(models.Model):
                 line.offset_account_ids = line._get_offset_account(line)
                 line.offset_account = get_string_offset_account(line.offset_account_ids.mapped('code')) if line.offset_account_ids else ""
             except Exception as e:
-                print(e)
+                _logger.info('--------------------------------------- _compute_offset_account -------------------------------------')
+                _logger.info(e)
                 pass
 
     def _set_offset_account(self):
