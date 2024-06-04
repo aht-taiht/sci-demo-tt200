@@ -53,12 +53,39 @@ class AccountMoveLine(models.Model):
     def _compute_offset_account(self):
         for line in self:
             try:
-                line.offset_account_ids = line._get_offset_account(line)
-                line.offset_account = get_string_offset_account(line.offset_account_ids.mapped('code')) if line.offset_account_ids else ""
+                # line.offset_account_ids = line._get_offset_account(line)
+                # line.offset_account = get_string_offset_account(line.offset_account_ids.mapped('code')) if line.offset_account_ids else ""
+                account_ids = line._get_offset_account(line)
+                self.delete_account_account_account_move_line_rel(line.id)
+                for account_id in account_ids:
+                    self.insert_account_account_account_move_line_rel(line.id, account_id.id)
+                    self.update_account_move_line(line.id, get_string_offset_account(line.offset_account_ids.mapped('code')) if line.offset_account_ids else "")
             except Exception as e:
                 _logger.info('--------------------------------------- _compute_offset_account -------------------------------------')
                 _logger.info(Exception)
                 pass
+
+    def delete_account_account_account_move_line_rel(self, move_line_id):
+        query = f"""
+                    DELETE FROM account_account_account_move_line_rel WHERE account_move_line_id = {move_line_id}
+                """
+        self.env.cr.execute(query)
+        return True
+
+    def insert_account_account_account_move_line_rel(self, move_line_id, account_id):
+        query = f"""
+                DELETE FROM account_account_account_move_line_rel WHERE account_move_line_id = {move_line_id}
+                INSERT INTO account_account_account_move_line_rel (account_move_line_id, account_account_id) VALUES ({move_line_id}, {account_id})
+            """
+        self.env.cr.execute(query)
+        return True
+
+    def update_account_move_line(self, move_line_id, offset_account):
+        query = f"""
+                        UPDATE account_move_line SET offset_account = {offset_account} WHERE id = {move_line_id}
+                    """
+        self.env.cr.execute(query)
+        return True
 
     def _set_offset_account(self):
         for line in self:
