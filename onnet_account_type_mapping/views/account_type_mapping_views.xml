@@ -1,7 +1,7 @@
 <odoo>
     <data>
 
-        <record id="account_account_view_inherit" model="ir.ui.view">
+<!--         <record id="account_account_view_inherit" model="ir.ui.view">
             <field name="name">account.account.view.inherit</field>
             <field name="model">account.account</field>
             <field name="priority">10</field>
@@ -11,7 +11,7 @@
                     <field name="user_type_id"/>
                 </xpath>
             </field>
-        </record>
+        </record> -->
 
         <record id="view_account_type_tree" model="ir.ui.view">
             <field name="name">account.type.tree</field>
@@ -20,8 +20,7 @@
                 <tree editable="bottom">
                     <field name="name"/>
                     <field name="key"/>
-                    <field name="type"/>
-                    <field name="type"/>
+                    
                 </tree>
             </field>
         </record>
