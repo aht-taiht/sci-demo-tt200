@@ -49,16 +49,18 @@ class AccountMoveLine(models.Model):
     @api.depends('account_id', 'move_id.line_ids', 'debit', 'credit')
     def _compute_offset_account(self):
         for line in self:
-            line.offset_account_ids = line._get_offset_account(line)
-            line.offset_account = get_string_offset_account(
-                line.offset_account_ids.mapped('code')) if line.offset_account_ids else ""
+            try:
+                line.offset_account_ids = line._get_offset_account(line)
+                line.offset_account = get_string_offset_account(line.offset_account_ids.mapped('code')) if line.offset_account_ids else ""
+            except Exception as e:
+                print(e)
+                pass
 
     def _set_offset_account(self):
         for line in self:
             if not line.offset_account_ids:
                 line.offset_account_ids = line._get_offset_account(line)
-                line.offset_account = get_string_offset_account(
-                    line.offset_account_ids.mapped('code')) if line.offset_account_ids else ""
+                line.offset_account = get_string_offset_account(line.offset_account_ids.mapped('code')) if line.offset_account_ids else ""
 
     def _get_offset_account(self, line):
         offset_accounts = []
