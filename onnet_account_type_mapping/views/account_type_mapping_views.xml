@@ -1,6 +1,18 @@
 <odoo>
     <data>
 
+        <record id="account_account_view_inherit" model="ir.ui.view">
+            <field name="name">account.account.view.inherit</field>
+            <field name="model">account.account</field>
+            <field name="priority">10</field>
+            <field name="inherit_id" ref="account.view_account_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='account_type']" position="after">
+                    <field name="user_type_id"/>
+                </xpath>
+            </field>
+        </record>
+
         <record id="view_account_type_tree" model="ir.ui.view">
             <field name="name">account.type.tree</field>
             <field name="model">account.account.type</field>
@@ -8,6 +20,8 @@
                 <tree editable="bottom">
                     <field name="name"/>
                     <field name="key"/>
+                    <field name="type"/>
+                    <field name="type"/>
                 </tree>
             </field>
         </record>
@@ -33,7 +47,9 @@
                 <tree editable="bottom">
                     <field name="sequence" widget="handle"/>
                     <field name="name"/>
-                    <field name="account_type_ids" widget="many2many_tags" options="{'no_create': True,'no_create_edit': True}"/>
+<!--                    <field name="account_type_ids" widget="many2many_tags" options="{'no_create': True,'no_create_edit': True}"/>-->
+                    <field name="type_1"/>
+                    <field name="type_2"/>
                 </tree>
             </field>
         </record>
