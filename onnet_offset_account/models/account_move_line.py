@@ -43,8 +43,8 @@ class AccountMoveLine(models.Model):
         # """
         query = f"""
             SELECT id FROM account_account_type 
-            WHERE type in (SELECT type_1 FROM account_type_mapping WHERE type_2 == {account_type})
-            OR  type in (SELECT type_2 FROM account_type_mapping WHERE type_1 == {account_type})
+            WHERE type in (SELECT type_1 FROM account_type_mapping WHERE type_2 = '{account_type}')
+            OR  type in (SELECT type_2 FROM account_type_mapping WHERE type_1 = '{account_type}')
         """
 
         self.env.cr.execute(query)
@@ -54,8 +54,8 @@ class AccountMoveLine(models.Model):
 
     @api.depends('account_id', 'move_id.line_ids', 'debit', 'credit')
     def _compute_offset_account(self):
-        date_compute = datetime.today() - relativedelta(months=2)
-        for line in self.filtered(lambda x: x.date.strftime('%Y-%m-%d') >= date_compute.strftime('%Y-%m-%d')):
+        # date_compute = datetime.today() - relativedelta(months=2)
+        for line in self:
             try:
                 # line.offset_account_ids = line._get_offset_account(line)
                 # line.offset_account = get_string_offset_account(
@@ -63,8 +63,8 @@ class AccountMoveLine(models.Model):
                 account_ids = line._get_offset_account(line)
                 self.delete_account_account_account_move_line_rel(line.id)
                 for account_id in account_ids:
-                    self.insert_account_account_account_move_line_rel(line.id, account_id.id)
-                    self.update_account_move_line(line.id, get_string_offset_account(line.offset_account_ids.mapped('code')) if line.offset_account_ids else "")
+                    self.insert_account_account_account_move_line_rel(line.id, account_id)
+                self.update_account_move_line(line.id, get_string_offset_account(line.offset_account_ids.mapped('code')) if line.offset_account_ids else "")
             except Exception as e:
                 _logger.info(str(e))
                 pass
@@ -85,7 +85,7 @@ class AccountMoveLine(models.Model):
 
     def update_account_move_line(self, move_line_id, offset_account):
         query = f"""
-                        UPDATE account_move_line SET offset_account = {offset_account} WHERE id = {move_line_id}
+                        UPDATE account_move_line SET offset_account = '{offset_account}' WHERE id = {move_line_id}
                     """
         self.env.cr.execute(query)
         return True
@@ -103,7 +103,7 @@ class AccountMoveLine(models.Model):
         if line.move_id.is_invoice(True) and line.balance != 0 and line.account_id:
             # get account type have same mapping
             account_type_list = self.get_data(line.account_id.type)
-            account_type = [rec['account_account_type_id'] for rec in account_type_list]
+            account_type = [rec['id'] for rec in account_type_list]
             offset_lines = line.move_id.line_ids.filtered(lambda x:
                                                           abs(x.balance * line.balance) != x.balance * line.balance
                                                           and x.account_id.user_type_id.id in account_type
