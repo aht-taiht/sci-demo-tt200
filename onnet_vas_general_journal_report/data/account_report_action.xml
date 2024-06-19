@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_vas_general_ledger_report" model="ir.actions.client">
+            <field name="name">VAS - General Ledger</field>
+            <field name="tag">account_report</field>
+            <field name="context" eval="{'report_id': ref('onnet_vas_general_journal_report.vas_general_ledger_report')}"/>
+        </record>
+    </data>
+</odoo>

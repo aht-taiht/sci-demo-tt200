@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_vas_account_closing_entry,access_vas_account_closing_entry,model_vas_account_closing_entry,base.group_user,1,1,1,1
+access_vas_account_closing_entry_line,access_vas_account_closing_entry_line,model_vas_account_closing_entry_line,base.group_user,1,1,1,1
+access_vas_account_transfer,access_vas_account_transfer,model_vas_account_transfer,base.group_user,1,1,1,1
+access_vas_account_transfer_wizard,access_vas_account_transfer_wizard,model_vas_account_transfer_wizard,base.group_user,1,1,1,1

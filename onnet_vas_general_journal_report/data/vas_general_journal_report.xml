@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="vas_general_ledger_report" model="account.report">
+        <field name="name">VAS - General Ledger</field>
+        <field name="filter_hierarchy">never</field>
+        <field name="load_more_limit">0</field>
+        <field name="filter_journals" eval="True"/>
+        <field name="filter_analytic" eval="True"/>
+        <field name="filter_period_comparison" eval="False"/>
+        <field name="filter_multi_company">selector</field>
+        <field name="filter_unfold_all" eval="True"/>
+        <field name="filter_hide_0_lines">never</field>
+        <field name="default_opening_date_filter">this_month</field>
+        <field name="search_bar" eval="True"/>
+        <field name="load_more_limit" eval="80"/>
+        <field name="custom_handler_model_id" ref="model_vas_general_ledger_report_handler"/>
+        <field name="column_ids">
+            <record id="vas_general_ledger_report_date" model="account.report.column">
+                <field name="name">Invoice Date</field>
+                <field name="sequence">1</field>
+                <field name="expression_label">invoice_date</field>
+                <field name="figure_type">date</field>
+            </record>
+            <record id="vas_general_ledger_report_communication" model="account.report.column">
+                <field name="name">Communication</field>
+                <field name="sequence">2</field>
+                <field name="expression_label">communication</field>
+                <field name="figure_type">string</field>
+            </record>
+            <!-- <record id="vas_general_ledger_report_amount_currency" model="account.report.column">
+                <field name="name">Currency</field>
+                <field name="expression_label">amount_currency</field>
+            </record> -->
+            <record id="vas_general_ledger_report_account_code" model="account.report.column">
+                <field name="name">Account</field>
+                <field name="sequence">3</field>
+                <field name="expression_label">account_code</field>
+            </record>
+            <record id="vas_general_ledger_report_offset_account" model="account.report.column">
+                <field name="name">Offset Account</field>
+                <field name="sequence">4</field>
+                <field name="expression_label">offset_account</field>
+            </record>
+            <record id="vas_general_ledger_report_debit" model="account.report.column">
+                <field name="name">Debit</field>
+                <field name="sequence">5</field>
+                <field name="expression_label">debit</field>
+            </record>
+            <record id="vas_general_ledger_report_credit" model="account.report.column">
+                <field name="name">Credit</field>
+                <field name="sequence">6</field>
+                <field name="expression_label">credit</field>
+            </record>
+        </field>
+    </record>
+</odoo>
