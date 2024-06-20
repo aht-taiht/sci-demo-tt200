@@ -8,5 +8,10 @@
             <field name="view_mode">form</field>
             <field name="target">new</field>
         </record>
+<!--	<record id="action_detailed_debt_report" model="ir.actions.client">-->
+<!--            <field name="name">Detailed Debt Report</field>-->
+<!--            <field name="tag">account_report</field>-->
+<!--            <field name="context" eval="{'report_id': ref('onnet_finance_tt200_report.detailed_debt_report')}"/>-->
+<!--        </record>-->
     </data>
 </odoo>

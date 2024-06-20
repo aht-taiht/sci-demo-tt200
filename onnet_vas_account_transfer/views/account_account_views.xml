@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="onnet_vas_view_account_form_inherit" model="ir.ui.view">
+        <field name="name">account.account.form.onnet.vas</field>
+        <field name="model">account.account</field>
+        <field name="inherit_id" ref="account.view_account_form" />
+        <field name="arch" type="xml">
+            <field name="group_id" position="after">
+                <field name="parent_id" options="{'no_create': True}" />
+            </field>
+        </field>
+    </record>
+</odoo>

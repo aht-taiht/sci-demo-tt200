@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_vas_general_ledger_report_handler,access_vas_general_ledger_report_handler,model_vas_general_ledger_report_handler,account.group_account_user,1,1,1,1

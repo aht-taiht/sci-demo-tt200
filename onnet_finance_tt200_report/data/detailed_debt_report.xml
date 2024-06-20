@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="detailed_debt_report" model="account.report">
+        <field name="name">Detailed Debt Report</field>
+        <field name="filter_journals" eval="True"/>
+        <field name="filter_analytic" eval="False"/>
+        <field name='filter_partner'/>
+        <field name="filter_growth_comparison" eval="False"/>
+        <field name="filter_multi_company">selector</field>
+        <field name="filter_unfold_all" eval="True"/>
+        <field name="filter_hierarchy">by_default</field>
+        <field name="filter_hide_0_lines">never</field>
+        <field name="default_opening_date_filter">this_month</field>
+        <field name="search_bar" eval="True"/>
+        <field name="filter_hide_0_lines">never</field>
+        <field name="default_opening_date_filter">this_year</field>
+        
+        <field name="custom_handler_model_id" ref="onnet_finance_tt200_report.model_detailed_debt_report_custom_handler"/>
+        <field name="column_ids">
+            <record id="detailed_debt_report_code" model="account.report.column">
+                <field name="name">Code</field>
+                <field name="expression_label">move_name</field>
+                <field name="figure_type">string</field>
+                <field name='sequence'>10</field>
+            </record>
+            <record id="detailed_debt_report_move_line_date" model="account.report.column">
+                <field name="name">Date</field>
+                <field name="expression_label">invoice_date</field>
+                <field name="figure_type">string</field>
+                <field name="sortable" eval="True"/>
+                <field name='sequence'>20</field>
+            </record>
+            <record id="detailed_debt_report_number" model="account.report.column">
+                <field name="name">Number</field>
+                <field name="expression_label">number</field>
+                <field name="figure_type">string</field>
+                <field name="sortable" eval="True"/>
+                <field name='sequence'>30</field>
+            </record>
+            <record id="cash_book_report_move_name" model="account.report.column">
+                <field name="name">Label</field>
+                <field name="expression_label">name</field>
+                <field name="figure_type">string</field>
+                <field name='sequence'>40</field>
+            </record>
+            <record id="detailed_debt_report_move_line_offset_account" model="account.report.column">
+                <field name="name">Offset Account</field>
+                <field name="expression_label">offset_account</field>
+                <field name="figure_type">string</field>
+                <field name='sequence'>50</field>
+            </record>
+            <record id="detailed_debt_report_amount_currency" model="account.report.column">
+                <field name="name">Debit</field>
+                <field name="expression_label">debit</field>
+                <field name='sequence'>60</field>
+            </record>
+            <record id="detailed_debt_report_debit" model="account.report.column">
+                <field name="name">Credit</field>
+                <field name="expression_label">credit</field>
+                <field name='sequence'>70</field>
+            </record>
+            <record id="detailed_debt_report_balance" model="account.report.column">
+                <field name="name">Balance</field>
+                <field name="expression_label">balance</field>
+                <field name='sequence'>80</field>
+            </record>
+        </field> 
+    </record>
+</odoo>

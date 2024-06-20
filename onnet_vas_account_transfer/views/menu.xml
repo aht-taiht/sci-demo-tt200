@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_vas_account_transfer"
+              action="action_vas_account_transfer"
+              parent="account.menu_finance_entries_management" sequence="40"/>
+        <menuitem id="menu_vas_account_closing_entry"
+              action="action_vas_account_closing_entry"
+              parent="account.menu_finance_entries_management" sequence="42"/>
+    </data>
+</odoo>

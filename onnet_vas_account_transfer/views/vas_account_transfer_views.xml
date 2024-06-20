@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="vas_account_transfer_tree">
+      <field name="name">vas.account.transfer.tree</field>
+      <field name="model">vas.account.transfer</field>
+      <field name="arch" type="xml">
+        <tree editable="top">
+          <header>
+            <button name="action_transfer_account" type="object" class="o_button_generate_leads"
+                    string="Transfer Account" display="always"
+                    invisible="context.get('active_model', 'vas.account.transfer') != 'vas.account.transfer'"/>
+            </header>
+          <field name="ordinal_number" />
+          <field name="name" />
+          <field name="company_id" column_invisible="1" />
+          <field name="origin_account_group" options="{'no_create': True}" domain="['|',('company_id','=',company_id),('company_id','=',False)]"/>
+          <field name="origin_account_id" options="{'no_create': True}" domain="['|',('company_id','=',company_id),('company_id','=',False)]"/>
+          <field name="dest_account_id" options="{'no_create': True}" domain="[('child_ids','=',False), '|', ('company_id','=',company_id), ('company_id','=',False)]"/>
+          <field name="company_id" groups="base.group_multi_company" />
+          <field name="state" />
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_vas_account_transfer">
+      <field name="name">VAS Account Transfers</field>
+      <field name="res_model">vas.account.transfer</field>
+      <field name="view_mode">tree</field>
+    </record>
+
+
+  </data>
+</odoo>
