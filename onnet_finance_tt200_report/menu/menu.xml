@@ -21,10 +21,10 @@
             sequence="40"
             parent="onnet_vas_base.tt200_report_root"
             action="action_ledger_journal_report"/>
-    <menuitem id="menu_detailed_debt_report"
-            name="VAS - Detailed Debt Report"
-            parent="onnet_vas_base.tt200_report_root"
-            sequence="70"
-            action="action_detailed_debt_report"/>
+<!--    <menuitem id="menu_detailed_debt_report"-->
+<!--            name="VAS - Detailed Debt Report"-->
+<!--            parent="onnet_vas_base.tt200_report_root"-->
+<!--            sequence="70"-->
+<!--            action="action_detailed_debt_report"/>-->
 </odoo>
 
