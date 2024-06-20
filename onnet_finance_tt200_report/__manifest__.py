@@ -21,5 +21,10 @@
         # Menu
         'menu/menu.xml'
     ],
+    'assets': {
+        'web.assets_backend': [
+            'onnet_finance_tt200_report/static/src/scss/custom.scss'
+        ]
+    },
     'license': 'OEEL-1',
 }
